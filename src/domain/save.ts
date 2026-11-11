@@ -76,6 +76,8 @@ export interface Profile {
   missionSpeedPct: number
   /** Iconic droid ids you owned before a super rebirth and can reclaim (1M credits each). */
   reclaimable: string[]
+  /** Slot corrections you made when the game showed a different count: applied from `level` onward. */
+  slotFixes: { level: number; area: Area; delta: 1 | -1; at: number }[]
   /** Manual overrides for derived unlock values. */
   overrides: { slots?: Partial<Record<Area | 'lounge', number>>; protocolSlots?: string[]; hiveMind?: { perOtherScourge?: number; primeEffectiveMembers?: number } }
   ui: { retro: 'clean' | 'terminal' }
@@ -114,6 +116,7 @@ export const newSave = (): Save => ({
     cb23MissionMinutes: 20,
     missionSpeedPct: 0,
     reclaimable: [],
+    slotFixes: [],
     overrides: {},
     ui: { retro: 'terminal' },
   },

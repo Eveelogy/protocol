@@ -3,7 +3,9 @@
     "Droid ECG: no income data",
     "Droid JO9-4MN: no income data",
     "Droid MPH: no income data",
-    "Droid PLNK: no income data"
+    "Droid PLNK: no income data",
+    "Slots: astromech reaches 6 at rebirth 40 but the game max is 9 — check initialSlots or the wiki unlock table",
+    "Slots: battle reaches 9 at rebirth 40 but the game max is 11 — check initialSlots or the wiki unlock table"
   ],
   "disputes": [],
   "overlaps": [],
@@ -23,5 +25,5 @@
     "Trak-R beskar income: 11220/s on List of Droids, 11200/s on its page (using list)"
   ],
   "problems": [],
-  "builtAt": "2026-11-11T23:35:26.254Z"
+  "builtAt": "2026-11-11T23:46:40.612Z"
 }

@@ -183,6 +183,13 @@ export function buildGameData(
     if (d.craftSeconds && !Object.keys(d.craftSeconds).length) delete d.craftSeconds
   }
 
+  // --- hand-written slot unlocks the wiki table is missing
+  for (const x of (sup.constants as { extraSlotUnlocks?: { list: { level: number; area: 'worker' | 'astromech' | 'battle' }[] } }).extraSlotUnlocks?.list ?? []) {
+    const u = unlocks.data.find((y) => y.level === x.level)
+    if (u) u.slots[x.area] = (u.slots[x.area] ?? 0) + 1
+    else unlocks.data.push({ level: x.level, slots: { [x.area]: 1 } })
+  }
+
   // --- slot totals: starting slots + wiki unlocks should reach the in-game maximum
   const max = sup.constants.maxSlots
   if (max)

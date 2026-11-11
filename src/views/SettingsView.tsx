@@ -1,6 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
 import { type Save, newSave } from '../domain/save.ts'
-import { AREAS } from '../domain/types.ts'
 import { formatAmount } from '../engine/format.ts'
 import { computeIncome } from '../engine/income.ts'
 import { slotCounts } from '../engine/slots.ts'
@@ -140,7 +139,10 @@ export function WorkshopSettings() {
   const counts = slotCounts(data, save)
   const o = save.profile.overrides
   return (
-    <Section title="Workshop & slots" hint="Slots are worked out from your rebirth and Nova levels. Override any number that doesn't match your game.">
+    <Section
+      title="Workshop & slots"
+      hint="Earning slots come from your rebirth (the wiki's unlock list is partly outdated). If the game shows a different number, use − / + on that area in the Base tab: it's saved from your current rebirth on."
+    >
       <label className="flex items-center gap-2 text-sm">
         <span className="text-dim">Total crafting speed bonus %</span>
         <input
@@ -150,8 +152,32 @@ export function WorkshopSettings() {
           onBlur={(e) => update((s) => void (s.profile.craftSpeedPct = Math.max(0, Number(e.target.value) || 0)))}
         />
       </label>
+      <div className="text-sm">
+        Now: <span className="num">{counts.areas.worker}</span> worker · <span className="num">{counts.areas.astromech}</span> astromech ·{' '}
+        <span className="num">{counts.areas.battle}</span> battle · <span className="num">{counts.lounge}</span> lounge
+      </div>
+      {save.profile.slotFixes.length > 0 && (
+        <div className="space-y-1 text-sm">
+          <div className="heading text-xs text-dim">Your slot corrections</div>
+          <ul className="divide-y divide-line">
+            {[...save.profile.slotFixes]
+              .sort((a, b) => a.level - b.level)
+              .map((f) => (
+                <li key={f.at} className="flex items-center justify-between py-1">
+                  <span>
+                    {f.delta > 0 ? '+1' : '−1'} {f.area} from rebirth {f.level}
+                  </span>
+                  <button className="btn px-2 text-xs" onClick={() => update((s) => void (s.profile.slotFixes = s.profile.slotFixes.filter((x) => x.at !== f.at)), 'Removed slot correction')}>
+                    Remove
+                  </button>
+                </li>
+              ))}
+          </ul>
+          <p className="text-xs text-dim">These teach Protocol where the wiki is wrong. Share them and they can go into the game data for everyone.</p>
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4">
-        {[...AREAS, 'lounge' as const].map((k) => (
+        {(['lounge'] as const).map((k) => (
           <label key={k} className="space-y-1">
             <div className="capitalize text-dim">
               {k} slots {o.slots?.[k] !== undefined && <span className="text-warn">(override)</span>}

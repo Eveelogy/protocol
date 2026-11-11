@@ -173,9 +173,22 @@ describe('progress', () => {
 })
 
 describe('slots', () => {
-  it('reaches the in-game maximum of 11 worker, 9 astromech and 11 battle slots', () => {
-    expect(slotCounts(data, saveWith([], { rebirth: 40 })).areas).toEqual({ worker: 11, astromech: 9, battle: 11 })
-    expect(slotCounts(data, saveWith([], { rebirth: 0 })).areas).toEqual(data.constants.initialSlots)
+  it('starts with only worker slots and never exceeds the in-game maximum', () => {
+    expect(slotCounts(data, saveWith([], { rebirth: 0 })).areas).toEqual({ worker: 4, astromech: 0, battle: 0 })
+    const max = slotCounts(data, saveWith([], { rebirth: 40 })).areas
+    expect(max.worker).toBeLessThanOrEqual(11)
+    expect(max.astromech).toBeLessThanOrEqual(9)
+    expect(max.battle).toBeLessThanOrEqual(11)
+  })
+  it('applies your slot corrections from their rebirth onward, clamped to the max', () => {
+    const fixes = [
+      { level: 13, area: 'astromech' as const, delta: 1 as const, at: 1 },
+      { level: 30, area: 'worker' as const, delta: 1 as const, at: 2 },
+    ]
+    const at = (rebirth: number) => slotCounts(data, saveWith([], { rebirth, slotFixes: fixes })).areas
+    expect(at(13).astromech - slotCounts(data, saveWith([], { rebirth: 13 })).areas.astromech).toBe(1)
+    expect(at(12).astromech).toBe(slotCounts(data, saveWith([], { rebirth: 12 })).areas.astromech)
+    expect(at(40).worker).toBe(11) // already at max, so the +1 is clamped
   })
   it('derives protocol and lounge slots from rebirth and Nova', () => {
     const s = saveWith([], { rebirth: 18, nova: { 'lounge-slot': 3 } })

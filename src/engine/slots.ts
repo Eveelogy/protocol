@@ -22,8 +22,11 @@ export function slotCounts(data: GameData, save: Save): SlotCounts {
   const protocol = c.protocolSlots.filter((s) => s.unlockAt <= profile.rebirth).map((s) => s.id)
   const chipStations = Math.min(2, profile.nova['upgrade-chip-station'] ?? 0)
 
+  // Your own corrections ("the game shows one more astromech slot at rebirth 13"), applied from that rebirth on.
+  for (const f of profile.slotFixes ?? []) if (f.level <= profile.rebirth) areas[f.area] += f.delta
+  for (const a of AREAS) areas[a] = Math.max(0, Math.min(c.maxSlots?.[a] ?? 99, areas[a]))
+
   const o = profile.overrides
-  for (const a of AREAS) if (o.slots?.[a] !== undefined) areas[a] = o.slots[a]!
   return {
     areas,
     lounge: o.slots?.lounge ?? lounge,

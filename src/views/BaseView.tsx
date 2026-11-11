@@ -1,6 +1,6 @@
 import { type ReactNode, useMemo, useState } from 'react'
 import { type Location, type OwnedDroid, uid } from '../domain/save.ts'
-import { AREAS, type KyberColor, type Tier, TIERS, tierIndex } from '../domain/types.ts'
+import { AREAS, type Area, type KyberColor, type Tier, TIERS, tierIndex } from '../domain/types.ts'
 import { formatAmount } from '../engine/format.ts'
 import { computeIncome } from '../engine/income.ts'
 import { bestLayout, isSingle, locKey, moveDroid } from '../engine/layout.ts'
@@ -98,9 +98,12 @@ export function BaseView() {
 
       {AREAS.map((area) => (
         <section key={area} className="panel p-4">
-          <h2 className="heading mb-2 font-bold">
-            {AREA_LABEL[area]} <span className="num text-xs text-dim">{counts.areas[area]} slots</span>
-          </h2>
+          <div className="mb-2 flex items-center justify-between gap-2">
+            <h2 className="heading font-bold">
+              {AREA_LABEL[area]} <span className="num text-xs text-dim">{counts.areas[area]} slots</span>
+            </h2>
+            <SlotFix area={area} count={counts.areas[area]} />
+          </div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
             {Array.from({ length: Math.max(counts.areas[area], highestIndex(save.droids, area) + 1) }, (_, i) => {
               const loc: Location = { kind: 'slot', area, index: i }
@@ -209,6 +212,34 @@ export function BaseView() {
         </Sheet>
       )}
     </div>
+  )
+}
+
+/** "Game shows a different number" — records a correction from the current rebirth onward. */
+function SlotFix({ area, count }: { area: Area; count: number }) {
+  const rebirth = useStore((s) => s.save.profile.rebirth)
+  const update = useStore((s) => s.update)
+  const max = data.constants.maxSlots?.[area] ?? 99
+  const fix = (delta: 1 | -1) =>
+    update(
+      (s) => {
+        // Undo an opposite fix made at this same rebirth instead of stacking +1/−1 pairs.
+        const i = s.profile.slotFixes.findIndex((f) => f.area === area && f.level === s.profile.rebirth && f.delta === -delta)
+        if (i >= 0) s.profile.slotFixes.splice(i, 1)
+        else s.profile.slotFixes.push({ level: s.profile.rebirth, area, delta, at: Date.now() })
+      },
+      `${AREA_LABEL[area]} slots ${delta > 0 ? '+1' : '−1'} from rebirth ${rebirth}`,
+    )
+  return (
+    <span className="inline-flex items-center gap-1 text-xs text-dim" title="Game shows a different number? Correct it here; it applies from your current rebirth on.">
+      <span className="hidden sm:inline">game differs?</span>
+      <button className="btn px-2 py-0.5" onClick={() => fix(-1)} disabled={count <= 0} aria-label={`One fewer ${area} slot`}>
+        −
+      </button>
+      <button className="btn px-2 py-0.5" onClick={() => fix(1)} disabled={count >= max} aria-label={`One more ${area} slot`}>
+        +
+      </button>
+    </span>
   )
 }
 
