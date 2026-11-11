@@ -59,6 +59,9 @@ export interface DroidDef {
   iconicShare?: number
   /** Protocol droids: area bonus per tier (e.g. 0.08 at default). */
   protocolBonus?: Partial<Record<Tier, number>>
+  /** Companion perk text and release version, from the droid's wiki page. */
+  companion?: string
+  released?: string
   /** True when key facts (rarity/class/income) are placeholders waiting for a supplement. */
   incomplete?: boolean
 }
@@ -135,6 +138,7 @@ export interface GameData {
   resetRules: ResetRules
   disputes: Dispute[]
   warnings: string[]
+  inconsistencies: string[]
 }
 
 export const tierIndex = (t: Tier): number => TIERS.indexOf(t)

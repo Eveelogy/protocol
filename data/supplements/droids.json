@@ -1,20 +1,61 @@
 {
-  "_comment": "Droids the wiki list lacks, plus field overrides. Entries merge by id over wiki data. Set \"incomplete\": false once you have filled a placeholder in. Income is per second at each tier.",
+  "_comment": "Values the wiki lacks, merged by id over wiki data (wiki List of Droids + each droid's own page). Protocol droid area bonuses live here. To fill a droid the wiki has no income for, add e.g. { \"id\": \"mph\", \"income\": { \"default\": 100, \"gold\": 200 }, \"incomplete\": false }.",
   "droids": [
-    { "id": "r2-d2", "name": "R2-D2", "rarity": "iconic", "class": "astromech", "income": {}, "iconicShare": 0.25 },
-    { "id": "c-3po", "name": "C-3PO", "rarity": "iconic", "class": "protocol", "income": {}, "iconicShare": 0.25 },
-    { "id": "cb-23", "name": "CB-23", "rarity": "iconic", "class": "astromech", "income": {}, "iconicShare": 0.15 },
-    { "id": "bb-8", "name": "BB-8", "rarity": "iconic", "class": "astromech", "income": {}, "iconicShare": 0.15 },
-    { "id": "scourge-prime", "name": "Scourge Prime", "rarity": "iconic", "class": "protocol", "income": {}, "iconicShare": 0.15 },
-
-    { "id": "sa-5", "protocolBonus": { "default": 0.08, "gold": 0.16, "diamond": 0.24, "rainbow": 0.32, "beskar": 0.4, "galactic": 0.48, "stellar": 0.56, "kyber": 0.64, "scourge": 0.56 } },
-    { "id": "lom", "protocolBonus": { "default": 0.12, "gold": 0.24, "diamond": 0.36, "rainbow": 0.48, "beskar": 0.6, "galactic": 0.72, "stellar": 0.84, "kyber": 0.96, "scourge": 0.84 } },
-    { "id": "pz", "protocolBonus": { "default": 0.16, "gold": 0.32, "diamond": 0.48, "rainbow": 0.64, "beskar": 0.8, "galactic": 0.96, "stellar": 1.12, "kyber": 1.28, "scourge": 1.12 } },
-    { "id": "tda", "protocolBonus": { "default": 0.2, "gold": 0.4, "diamond": 0.6, "rainbow": 0.8, "beskar": 1.0, "galactic": 1.2, "stellar": 1.4, "kyber": 1.6, "scourge": 1.4 } },
-
-    { "id": "mph", "name": "MPH", "rarity": "common", "class": "worker", "income": {}, "incomplete": true },
-    { "id": "jo9-4mn", "name": "JO9-4MN", "rarity": "common", "class": "worker", "income": {}, "incomplete": true },
-    { "id": "plnk", "name": "PLNK", "rarity": "common", "class": "worker", "income": {}, "incomplete": true },
-    { "id": "ecg", "name": "ECG", "rarity": "common", "class": "worker", "income": {}, "incomplete": true }
+    {
+      "id": "sa-5",
+      "protocolBonus": {
+        "default": 0.08,
+        "gold": 0.16,
+        "diamond": 0.24,
+        "rainbow": 0.32,
+        "beskar": 0.4,
+        "galactic": 0.48,
+        "stellar": 0.56,
+        "kyber": 0.64,
+        "scourge": 0.56
+      }
+    },
+    {
+      "id": "lom",
+      "protocolBonus": {
+        "default": 0.12,
+        "gold": 0.24,
+        "diamond": 0.36,
+        "rainbow": 0.48,
+        "beskar": 0.6,
+        "galactic": 0.72,
+        "stellar": 0.84,
+        "kyber": 0.96,
+        "scourge": 0.84
+      }
+    },
+    {
+      "id": "pz",
+      "protocolBonus": {
+        "default": 0.16,
+        "gold": 0.32,
+        "diamond": 0.48,
+        "rainbow": 0.64,
+        "beskar": 0.8,
+        "galactic": 0.96,
+        "stellar": 1.12,
+        "kyber": 1.28,
+        "scourge": 1.12
+      }
+    },
+    {
+      "id": "tda",
+      "protocolBonus": {
+        "default": 0.2,
+        "gold": 0.4,
+        "diamond": 0.6,
+        "rainbow": 0.8,
+        "beskar": 1,
+        "galactic": 1.2,
+        "stellar": 1.4,
+        "kyber": 1.6,
+        "scourge": 1.4
+      }
+    }
   ]
 }

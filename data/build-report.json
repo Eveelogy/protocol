@@ -1,7 +1,27 @@
 {
-  "warnings": [],
+  "warnings": [
+    "Droid ECG: no income data",
+    "Droid JO9-4MN: no income data",
+    "Droid MPH: no income data",
+    "Droid PLNK: no income data"
+  ],
   "disputes": [],
   "overlaps": [],
+  "inconsistencies": [
+    "BB rainbow income: 1200/s on List of Droids, 5760/s on its page (using list)",
+    "ID10 default income: 4/s on List of Droids, 5/s on its page (using list)",
+    "ID10 gold income: 8/s on List of Droids, 10/s on its page (using list)",
+    "ID10 diamond income: 16/s on List of Droids, 20/s on its page (using list)",
+    "ID10 rainbow income: 32/s on List of Droids, 40/s on its page (using list)",
+    "ID10 beskar income: 48/s on List of Droids, 60/s on its page (using list)",
+    "ID10 galactic income: 96/s on List of Droids, 120/s on its page (using list)",
+    "Mouse kyber income: 64/s on List of Droids, 70/s on its page (using list)",
+    "N-UL default income: 1080/s on List of Droids, 720/s on its page (using list)",
+    "ROLL-R galactic income: 744/s on List of Droids, 774/s on its page (using list)",
+    "SCRP-R diamond income: 2880/s on List of Droids, 720/s on its page (using list)",
+    "SCRP-R galactic income: 37440/s on List of Droids, 9360/s on its page (using list)",
+    "Trak-R beskar income: 11220/s on List of Droids, 11200/s on its page (using list)"
+  ],
   "problems": [],
-  "builtAt": "2026-11-11T22:22:28.676Z"
+  "builtAt": "2026-11-11T22:59:33.839Z"
 }

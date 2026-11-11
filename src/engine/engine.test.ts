@@ -47,6 +47,14 @@ describe('game data', () => {
     expect(defs.get('gonk')!.income.gold).toBe(8)
     expect(defs.get('riv-3t')!.fusionOf).toEqual(['ric', 'ig', 'kx'])
   })
+  it('reads Iconics from their wiki pages', () => {
+    for (const id of ['dj-r-3x', 'mister-bones', 'ig-11-marshal', 'chopper', 'd-o', 'wg-22', 'cb-23', 'scourge-prime']) {
+      expect(defs.get(id), id).toMatchObject({ rarity: 'iconic', iconicShare: 0.15 })
+    }
+    expect(defs.get('r2-d2')!.iconicShare).toBe(0.25)
+    expect(defs.get('chopper')!.class).toBe('astromech')
+    expect(defs.get('mph')).toMatchObject({ rarity: 'epic', class: 'astromech' })
+  })
 })
 
 describe('requirements', () => {

@@ -19,7 +19,7 @@ const trim = (n: number) =>
   (Math.abs(n) >= 100 ? n.toFixed(0) : Math.abs(n) >= 10 ? n.toFixed(1) : n.toFixed(2)).replace(/(\.\d*?)0+$/, '$1').replace(/\.$/, '')
 
 export function formatDuration(seconds: number): string {
-  if (!Number.isFinite(seconds)) return 'never'
+  if (!Number.isFinite(seconds)) return '—' // no income yet
   if (seconds <= 0) return 'now'
   const s = Math.round(seconds)
   const d = Math.floor(s / 86400)

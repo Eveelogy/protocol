@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "builtAt": "2026-11-11T22:22:28.676Z",
+ "builtAt": "2026-11-11T22:59:33.839Z",
  "gameVersion": "1.38.5",
  "sources": [
   {
@@ -59,8 +59,11 @@
     "rainbow": 598,
     "beskar": 478,
     "galactic": 897,
-    "stellar": 1074
+    "stellar": 1074,
+    "default": 59
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -88,8 +91,11 @@
     "rainbow": 931,
     "beskar": 745,
     "galactic": 1397,
-    "stellar": 1677
+    "stellar": 1677,
+    "default": 93
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -117,8 +123,11 @@
     "rainbow": 10303,
     "beskar": 8242,
     "galactic": 15455,
-    "stellar": 18546
+    "stellar": 18546,
+    "default": 1030
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -146,8 +155,11 @@
     "rainbow": 1037,
     "beskar": 829,
     "galactic": 1555,
-    "stellar": 1866
+    "stellar": 1866,
+    "default": 103
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -169,13 +181,14 @@
     "kyber": 60720,
     "scourge": 49680
    },
+   "companion": "Max Health Increase",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "arg",
     "arg",
     "b2-heavy"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -196,6 +209,8 @@
     "kyber": 1100000,
     "scourge": 900000
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "bdx-explorer",
     "r7",
@@ -229,8 +244,11 @@
     "rainbow": 1317,
     "beskar": 1063,
     "galactic": 1976,
-    "stellar": 2372
+    "stellar": 2372,
+    "default": 131
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -258,8 +276,11 @@
     "rainbow": 387,
     "beskar": 310,
     "galactic": 581,
-    "stellar": 697
+    "stellar": 697,
+    "default": 38
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -287,10 +308,12 @@
     "rainbow": 10830,
     "beskar": 4452,
     "galactic": 13086,
-    "stellar": 19494
+    "stellar": 19494,
+    "default": 1083
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -317,8 +340,11 @@
     "rainbow": 1458,
     "beskar": 1166,
     "galactic": 2187,
-    "stellar": 2624
+    "stellar": 2624,
+    "default": 145
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -346,10 +372,12 @@
     "rainbow": 8740,
     "beskar": 6979,
     "galactic": 13086,
-    "stellar": 15703
+    "stellar": 15703,
+    "default": 872
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -376,10 +404,12 @@
     "rainbow": 7671,
     "beskar": 6136,
     "galactic": 11476,
-    "stellar": 13807
+    "stellar": 13807,
+    "default": 767
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -406,10 +436,12 @@
     "rainbow": 23185,
     "beskar": 23185,
     "galactic": 34777,
-    "stellar": 41733
+    "stellar": 41733,
+    "default": 2318
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -436,8 +468,11 @@
     "rainbow": 703,
     "beskar": 565,
     "galactic": 923,
-    "stellar": 1266
+    "stellar": 1266,
+    "default": 70
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -465,21 +500,25 @@
     "rainbow": 2932,
     "beskar": 2346,
     "galactic": 4398,
-    "stellar": 5278
+    "stellar": 5278,
+    "default": 293
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "bb-8",
    "name": "BB-8",
    "rarity": "iconic",
    "class": "astromech",
-   "iconicShare": 0.15
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "2x Upgrade Chips",
+   "released": "v1.06 (6/5/2026)"
   },
   {
    "id": "bb9",
@@ -503,10 +542,12 @@
     "rainbow": 23115,
     "beskar": 18492,
     "galactic": 34672,
-    "stellar": 41607
+    "stellar": 41607,
+    "default": 2280
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -533,8 +574,11 @@
     "rainbow": 563,
     "beskar": 450,
     "galactic": 844,
-    "stellar": 1013
+    "stellar": 1013,
+    "default": 56
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -560,6 +604,8 @@
     "gold": 625,
     "galactic": 2814
    },
+   "companion": "Max Health Increase",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "b1-battle",
     "bdx-explorer",
@@ -571,12 +617,14 @@
    ]
   },
   {
-   "income": {},
    "id": "c-3po",
    "name": "C-3PO",
    "rarity": "iconic",
    "class": "protocol",
-   "iconicShare": 0.25
+   "income": {},
+   "iconicShare": 0.25,
+   "companion": "2x Droid Sell Value",
+   "released": "v1.21 (11/7/2026)"
   },
   {
    "id": "cb",
@@ -600,20 +648,35 @@
     "rainbow": 352,
     "beskar": 282,
     "galactic": 528,
-    "stellar": 634
+    "stellar": 634,
+    "default": 35
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "cb-23",
    "name": "CB-23",
    "rarity": "iconic",
    "class": "astromech",
-   "iconicShare": 0.15
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "Secret Astromech Mission",
+   "released": "v1.17 (27/6/2026)"
+  },
+  {
+   "id": "chopper",
+   "name": "Chopper",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "+50% Crit Chance & Damage",
+   "released": "v1.24 (1/8/2026)"
   },
   {
    "id": "cyclens",
@@ -639,6 +702,8 @@
     "galactic": 78300,
     "stellar": 93960
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.19.2  (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -667,13 +732,35 @@
     "rainbow": 22413,
     "beskar": 16137,
     "galactic": 33619,
-    "stellar": 40343
+    "stellar": 40343,
+    "default": 2241
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
+  },
+  {
+   "id": "d-o",
+   "name": "D-O",
+   "rarity": "iconic",
+   "class": "worker",
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "Half Fusion Time",
+   "released": "v1.28 (29/8/2026)"
+  },
+  {
+   "id": "dj-r-3x",
+   "name": "DJ R-3X",
+   "rarity": "iconic",
+   "class": "worker",
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "2x World Crates Rewards & 2x World Mission Points",
+   "released": "v1.17 (13/6/2026)"
   },
   {
    "id": "drft-r",
@@ -699,6 +786,8 @@
     "galactic": 93000,
     "stellar": 111600
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.27 (22/8/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -727,19 +816,24 @@
     "rainbow": 352,
     "beskar": 282,
     "galactic": 528,
-    "stellar": 634
+    "stellar": 634,
+    "default": 35
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "ecg",
    "name": "ECG",
-   "rarity": "common",
-   "class": "worker",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {},
+   "companion": "Pickaxe Level",
+   "released": "v1.34 (10/10/2026)",
    "incomplete": true
   },
   {
@@ -749,7 +843,9 @@
    "class": "worker",
    "income": {
     "default": 70
-   }
+   },
+   "companion": "Crafting Speed",
+   "released": "v1.34 (10/10/2026)"
   },
   {
    "id": "egl",
@@ -758,7 +854,9 @@
    "class": "worker",
    "income": {
     "default": 300
-   }
+   },
+   "companion": "Crafting Speed",
+   "released": "v1.34 (10/10/2026)"
   },
   {
    "id": "fus-3",
@@ -779,13 +877,14 @@
    "craftSeconds": {
     "beskar": 28380
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "b-u4d",
     "b-u4d",
     "r7"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -812,8 +911,11 @@
     "rainbow": 370,
     "beskar": 296,
     "galactic": 555,
-    "stellar": 666
+    "stellar": 666,
+    "default": 37
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -841,8 +943,11 @@
     "rainbow": 2406,
     "beskar": 1924,
     "galactic": 3609,
-    "stellar": 4330
+    "stellar": 4330,
+    "default": 240
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -870,8 +975,11 @@
     "rainbow": 11883,
     "beskar": 9506,
     "galactic": 17824,
-    "stellar": 21389
+    "stellar": 21389,
+    "default": 1188
    },
+   "companion": "Crafting Speed",
+   "released": "v1.11 (23/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -899,10 +1007,12 @@
     "rainbow": 5038,
     "beskar": 4047,
     "galactic": 7557,
-    "stellar": 9069
+    "stellar": 9069,
+    "default": 503
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -929,8 +1039,11 @@
     "rainbow": 1388,
     "beskar": 1110,
     "galactic": 2082,
-    "stellar": 2498
+    "stellar": 2498,
+    "default": 138
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -958,8 +1071,11 @@
     "rainbow": 370,
     "beskar": 296,
     "galactic": 555,
-    "stellar": 666
+    "stellar": 666,
+    "default": 37
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -989,11 +1105,23 @@
     "galactic": 93000,
     "stellar": 111600
    },
+   "companion": "Max Health",
+   "released": "v1.19.2 (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
     "scourge"
    ]
+  },
+  {
+   "id": "ig-11-marshal",
+   "name": "IG-11 Marshal",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "Blueprint Shield",
+   "released": "v1.11 (23/5/2026)"
   },
   {
    "id": "imperial-probe",
@@ -1017,19 +1145,24 @@
     "rainbow": 405,
     "beskar": 324,
     "galactic": 607,
-    "stellar": 729
+    "stellar": 729,
+    "default": 40
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "jo9-4mn",
    "name": "JO9-4MN",
-   "rarity": "common",
+   "rarity": "legendary",
    "class": "worker",
+   "income": {},
+   "companion": "Crafting Speed",
+   "released": "v1.34 (10/10/2026)",
    "incomplete": true
   },
   {
@@ -1039,7 +1172,9 @@
    "class": "worker",
    "income": {
     "default": 450
-   }
+   },
+   "companion": "Crafting Speed",
+   "released": "v1.34 (10/10/2026)"
   },
   {
    "id": "kx",
@@ -1065,6 +1200,8 @@
     "galactic": 107700,
     "stellar": 129240
    },
+   "companion": "Max Health",
+   "released": "v1.19.2 (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -1093,8 +1230,11 @@
     "rainbow": 4512,
     "beskar": 3609,
     "galactic": 6768,
-    "stellar": 8131
+    "stellar": 8131,
+    "default": 451
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1124,6 +1264,8 @@
     "galactic": 100350,
     "stellar": 120420
    },
+   "companion": "Crafting Speed",
+   "released": "v1.19.2  (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -1152,10 +1294,12 @@
     "rainbow": 8197,
     "beskar": 6558,
     "galactic": 12296,
-    "stellar": 14755
+    "stellar": 14755,
+    "default": 819
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1184,6 +1328,8 @@
     "galactic": 107700,
     "stellar": 129240
    },
+   "companion": "Crafting Speed",
+   "released": "v1.19.2  (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -1203,6 +1349,8 @@
     "galactic": 0,
     "stellar": 0
    },
+   "companion": "Credit Multiplier",
+   "released": "v1.30 (12/9/2026)",
    "protocolBonus": {
     "default": 0.12,
     "gold": 0.24,
@@ -1234,6 +1382,8 @@
    "craftSeconds": {
     "rainbow": 60800
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "a-lt",
     "a-lt",
@@ -1261,6 +1411,8 @@
     "kyber": 1045000,
     "scourge": 855000
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "id10",
     "r5",
@@ -1284,7 +1436,7 @@
     "beskar": 29660,
     "galactic": 74640,
     "stellar": 186600,
-    "default": 1245,
+    "default": 1240,
     "kyber": 205260,
     "scourge": 167940
    },
@@ -1294,13 +1446,25 @@
     "rainbow": 22132,
     "beskar": 17705,
     "galactic": 33198,
-    "stellar": 39837
+    "stellar": 39837,
+    "default": 2213
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
+  },
+  {
+   "id": "mister-bones",
+   "name": "Mister Bones",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "2x Damage & Credits from eliminating NPC's",
+   "released": "v1.19 (28/6/2026)"
   },
   {
    "id": "mo-trak",
@@ -1326,6 +1490,8 @@
     "galactic": 107700,
     "stellar": 129240
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.19.2 (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -1354,10 +1520,12 @@
     "rainbow": 26625,
     "beskar": 21300,
     "galactic": 39937,
-    "stellar": 47925
+    "stellar": 47925,
+    "default": 2662
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1385,18 +1553,23 @@
     "beskar": 268,
     "galactic": 502,
     "stellar": 603,
-    "kyber": 603
+    "kyber": 603,
+    "default": 33
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "mph",
    "name": "MPH",
-   "rarity": "common",
-   "class": "worker",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {},
+   "companion": "Pickaxe Level",
+   "released": "v1.34 (10/10/2026)",
    "incomplete": true
   },
   {
@@ -1415,6 +1588,8 @@
     "kyber": 63360,
     "scourge": 51840
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "gunrunner",
     "bb",
@@ -1447,8 +1622,11 @@
     "rainbow": 615,
     "beskar": 492,
     "galactic": 923,
-    "stellar": 1108
+    "stellar": 1108,
+    "default": 61
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1470,13 +1648,14 @@
     "kyber": 63360,
     "scourge": 51840
    },
+   "companion": "Max Health Increase",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "r2",
     "r2",
     "b2-super"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1503,8 +1682,11 @@
     "rainbow": 6430,
     "beskar": 5715,
     "galactic": 10716,
-    "stellar": 12860
+    "stellar": 12860,
+    "default": 714
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1532,10 +1714,12 @@
     "rainbow": 26625,
     "beskar": 26625,
     "galactic": 39937,
-    "stellar": 47925
+    "stellar": 47925,
+    "default": 2662
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1562,10 +1746,12 @@
     "rainbow": 3459,
     "beskar": 2767,
     "galactic": 5188,
-    "stellar": 6226
+    "stellar": 6226,
+    "default": 345
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1586,13 +1772,17 @@
     "kyber": 264000,
     "scourge": 216000
    },
+   "craftSeconds": {
+    "beskar": 28380
+   },
+   "companion": "Max Health Increase",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "cb",
     "gunrunner",
     "b2-rp"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1619,19 +1809,24 @@
     "rainbow": 335,
     "beskar": 268,
     "galactic": 502,
-    "stellar": 603
+    "stellar": 603,
+    "default": 33
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "plnk",
    "name": "PLNK",
-   "rarity": "common",
+   "rarity": "legendary",
    "class": "worker",
+   "income": {},
+   "companion": "Crafting Speed",
+   "released": "v1.34 (10/10/2026)",
    "incomplete": true
   },
   {
@@ -1646,7 +1841,7 @@
     "beskar": 23330,
     "galactic": 58320,
     "stellar": 158400,
-    "default": 970,
+    "default": 972,
     "kyber": 174240,
     "scourge": 142560
    },
@@ -1656,10 +1851,12 @@
     "rainbow": 17358,
     "beskar": 13886,
     "galactic": 26037,
-    "stellar": 31245
+    "stellar": 31245,
+    "default": 1735
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1677,6 +1874,8 @@
     "galactic": 0,
     "stellar": 0
    },
+   "companion": "Credit Multiplier",
+   "released": "v1.30 (12/9/2026)",
    "protocolBonus": {
     "default": 0.16,
     "gold": 0.32,
@@ -1705,13 +1904,14 @@
     "kyber": 264000,
     "scourge": 216000
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "groundmech",
     "groundmech",
     "bb9"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1738,21 +1938,25 @@
     "rainbow": 6618,
     "beskar": 5294,
     "galactic": 9927,
-    "stellar": 11912
+    "stellar": 11912,
+    "default": 661
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
   },
   {
-   "income": {},
    "id": "r2-d2",
    "name": "R2-D2",
    "rarity": "iconic",
    "class": "astromech",
-   "iconicShare": 0.25
+   "income": {},
+   "iconicShare": 0.25,
+   "companion": "Double Astromech Mission Rewards",
+   "released": "v1.19 (28/6/2026)"
   },
   {
    "id": "r3",
@@ -1776,8 +1980,11 @@
     "rainbow": 352,
     "beskar": 282,
     "galactic": 528,
-    "stellar": 634
+    "stellar": 634,
+    "default": 35
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1805,8 +2012,11 @@
     "rainbow": 1177,
     "beskar": 942,
     "galactic": 1766,
-    "stellar": 2119
+    "stellar": 2119,
+    "default": 117
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1834,8 +2044,11 @@
     "rainbow": 352,
     "beskar": 282,
     "galactic": 528,
-    "stellar": 634
+    "stellar": 634,
+    "default": 35
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1863,10 +2076,12 @@
     "rainbow": 5565,
     "beskar": 4452,
     "galactic": 8347,
-    "stellar": 10017
+    "stellar": 10017,
+    "default": 556
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1893,10 +2108,12 @@
     "rainbow": 26625,
     "beskar": 21300,
     "galactic": 35943,
-    "stellar": 47925
+    "stellar": 47925,
+    "default": 2662
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -1923,8 +2140,11 @@
     "rainbow": 370,
     "beskar": 296,
     "galactic": 555,
-    "stellar": 666
+    "stellar": 666,
+    "default": 37
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1952,8 +2172,11 @@
     "rainbow": 1247,
     "beskar": 998,
     "galactic": 1871,
-    "stellar": 2272
+    "stellar": 2272,
+    "default": 124
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -1983,8 +2206,9 @@
     "galactic": 85650,
     "stellar": 102780
    },
+   "companion": "Crafting Speed",
+   "released": "v1.19.2  (28/6/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2013,6 +2237,8 @@
     "galactic": 93000,
     "stellar": 111600
    },
+   "companion": "Crafting Speed",
+   "released": "v1.19.2  (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -2035,6 +2261,8 @@
     "kyber": 1155000,
     "scourge": 945000
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "ric",
     "ig",
@@ -2062,13 +2290,14 @@
     "kyber": 247500,
     "scourge": 202500
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "pit",
     "b1-battle",
     "bb9"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2095,8 +2324,11 @@
     "rainbow": 844,
     "beskar": 675,
     "galactic": 1266,
-    "stellar": 1519
+    "stellar": 1519,
+    "default": 84
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -2116,6 +2348,8 @@
     "galactic": 0,
     "stellar": 0
    },
+   "companion": "Credit Multiplier",
+   "released": "v1.30 (12/9/2026)",
    "protocolBonus": {
     "default": 0.08,
     "gold": 0.16,
@@ -2129,12 +2363,14 @@
    }
   },
   {
-   "income": {},
    "id": "scourge-prime",
    "name": "Scourge Prime",
    "rarity": "iconic",
    "class": "protocol",
-   "iconicShare": 0.15
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "Hive Mind Bonus",
+   "released": "v1.37 (31/10/2026)"
   },
   {
    "id": "scrp-r",
@@ -2152,13 +2388,14 @@
     "kyber": 63360,
     "scourge": 51840
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "gonk",
     "groundmech",
     "r6"
    ],
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2185,8 +2422,11 @@
     "rainbow": 9250,
     "beskar": 7400,
     "galactic": 13875,
-    "stellar": 16650
+    "stellar": 16650,
+    "default": 925
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -2214,8 +2454,11 @@
     "rainbow": 1107,
     "beskar": 885,
     "galactic": 1660,
-    "stellar": 1993
+    "stellar": 1993,
+    "default": 110
    },
+   "companion": "Crafting Speed",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
@@ -2245,8 +2488,9 @@
     "galactic": 78300,
     "stellar": 93960
    },
+   "companion": "Crafting Speed",
+   "released": "v1.19.2  (28/6/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2270,6 +2514,8 @@
    "craftSeconds": {
     "stellar": 134280
    },
+   "companion": "Max Health",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "b1-heavy",
     "b1-heavy",
@@ -2303,10 +2549,12 @@
     "rainbow": 9777,
     "beskar": 7821,
     "galactic": 14665,
-    "stellar": 17598
+    "stellar": 17598,
+    "default": 977
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2324,6 +2572,8 @@
     "galactic": 0,
     "stellar": 0
    },
+   "companion": "Credit Multiplier",
+   "released": "v1.30 (12/9/2026)",
    "protocolBonus": {
     "default": 0.2,
     "gold": 0.4,
@@ -2348,7 +2598,7 @@
     "beskar": 11220,
     "galactic": 17160,
     "stellar": 26400,
-    "default": 330,
+    "default": 360,
     "kyber": 29040,
     "scourge": 23760
    },
@@ -2358,10 +2608,12 @@
     "rainbow": 6090,
     "beskar": 4873,
     "galactic": 9137,
-    "stellar": 10964
+    "stellar": 10964,
+    "default": 609
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2390,6 +2642,8 @@
     "galactic": 100350,
     "stellar": 120420
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.19.2 (28/6/2026)",
    "derivedIncome": [
     "default",
     "kyber",
@@ -2420,8 +2674,9 @@
     "galactic": 5978,
     "stellar": 7173
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
-    "default",
     "kyber",
     "scourge"
    ]
@@ -2448,12 +2703,25 @@
     "rainbow": 773,
     "beskar": 619,
     "galactic": 1160,
-    "stellar": 1392
+    "stellar": 1392,
+    "default": 77
    },
+   "companion": "Max Health Increase",
+   "released": "v1.0 (1/5/2026)",
    "derivedIncome": [
     "kyber",
     "scourge"
    ]
+  },
+  {
+   "id": "wg-22",
+   "name": "WG-22",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {},
+   "iconicShare": 0.15,
+   "companion": "2x Flawless Chance",
+   "released": "v1.34 (10/10/2026)"
   },
   {
    "id": "whl-ex",
@@ -2472,8 +2740,12 @@
     "scourge": 2070
    },
    "craftSeconds": {
-    "rainbow": 1250
+    "rainbow": 1250,
+    "diamond": 938,
+    "galactic": 2189
    },
+   "companion": "Crafting Speed",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "mouse",
     "mouse",
@@ -2500,6 +2772,8 @@
     "kyber": 1100000,
     "scourge": 900000
    },
+   "companion": "Max Health",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "gonk",
     "kx",
@@ -2527,6 +2801,8 @@
     "kyber": 2530,
     "scourge": 2070
    },
+   "companion": "Pickaxe Level",
+   "released": "v1.27 (22/8/2026)",
    "fusionOf": [
     "id10",
     "id10",
@@ -8076,5 +8352,25 @@
   }
  },
  "disputes": [],
- "warnings": []
+ "warnings": [
+  "Droid ECG: no income data",
+  "Droid JO9-4MN: no income data",
+  "Droid MPH: no income data",
+  "Droid PLNK: no income data"
+ ],
+ "inconsistencies": [
+  "BB rainbow income: 1200/s on List of Droids, 5760/s on its page (using list)",
+  "ID10 default income: 4/s on List of Droids, 5/s on its page (using list)",
+  "ID10 gold income: 8/s on List of Droids, 10/s on its page (using list)",
+  "ID10 diamond income: 16/s on List of Droids, 20/s on its page (using list)",
+  "ID10 rainbow income: 32/s on List of Droids, 40/s on its page (using list)",
+  "ID10 beskar income: 48/s on List of Droids, 60/s on its page (using list)",
+  "ID10 galactic income: 96/s on List of Droids, 120/s on its page (using list)",
+  "Mouse kyber income: 64/s on List of Droids, 70/s on its page (using list)",
+  "N-UL default income: 1080/s on List of Droids, 720/s on its page (using list)",
+  "ROLL-R galactic income: 744/s on List of Droids, 774/s on its page (using list)",
+  "SCRP-R diamond income: 2880/s on List of Droids, 720/s on its page (using list)",
+  "SCRP-R galactic income: 37440/s on List of Droids, 9360/s on its page (using list)",
+  "Trak-R beskar income: 11220/s on List of Droids, 11200/s on its page (using list)"
+ ]
 }

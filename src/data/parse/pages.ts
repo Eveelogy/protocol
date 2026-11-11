@@ -158,6 +158,50 @@ function captionTier(caption: string, heading: string): Tier | undefined {
   return undefined
 }
 
+// ---------------------------------------------------------------- Individual droid pages
+
+export interface ParsedDroidPage {
+  name: string
+  rarity?: Rarity
+  class?: DroidClass
+  companion?: string
+  released?: string
+  iconicShare?: number
+  income: Partial<Record<Tier, number>>
+  craftSeconds: Partial<Record<Tier, number>>
+}
+
+/** Reads the infobox, the "generates N% of total base income" line, and the per-tier stats tabber. */
+export function parseDroidPage(title: string, text: string): ParsedDroidPage {
+  const field = (k: string) => text.match(new RegExp(`\\{\\{Droid Infobox Official[\\s\\S]*?\\|\\s*${k}\\s*=\\s*([^|}\\n]*)`, 'i'))?.[1]?.trim()
+  const rawRarity = field('rarity')?.toLowerCase()
+  const rawClass = field('class')?.toLowerCase()
+  const share = text.match(/generates\s*'*\s*(\d+(?:\.\d+)?)\s*%\s*'*\s*of the players total base income/i)
+  const out: ParsedDroidPage = {
+    name: title,
+    rarity: (['common', 'rare', 'epic', 'legendary', 'mythic', 'iconic'] as const).find((r) => r === rawRarity),
+    class: (['worker', 'astromech', 'battle', 'protocol'] as const).find((c) => c === rawClass),
+    companion: field('companion_ability'),
+    released: field('released'),
+    iconicShare: share ? Number(share[1]) / 100 : undefined,
+    income: {},
+    craftSeconds: {},
+  }
+  for (const table of parseTables(text)) {
+    const tier = tierFromVariant(table.caption)
+    if (!tier) continue
+    const iIncome = table.headers.findIndex((h) => /^Income$/i.test(h))
+    const iCraft = table.headers.findIndex((h) => /Crafting Time/i.test(h))
+    const row = table.rows[0]
+    if (!row || iIncome < 0) continue
+    const inc = parseAmount(row[iIncome] ?? '')
+    if (!Number.isNaN(inc)) out.income[tier] = inc
+    const craft = iCraft >= 0 ? parseDuration(row[iCraft] ?? '') : Number.NaN
+    if (!Number.isNaN(craft)) out.craftSeconds[tier] = craft
+  }
+  return out
+}
+
 // ---------------------------------------------------------------- Fusion
 
 export interface ParsedFusion {

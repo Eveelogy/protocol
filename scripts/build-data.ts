@@ -28,7 +28,10 @@ function detectGameVersion(): string {
   return versions.sort(cmp).at(-1) ?? 'unknown'
 }
 
-const { data, report } = buildGameData(pages, sup, { gameVersion: detectGameVersion(), builtAt: new Date().toISOString() })
+const droidPages: RawPage[] = existsSync('data/raw/Droid_pages.json')
+  ? readJson<{ pages: { title: string; revision: number; wikitext: string }[] }>('data/raw/Droid_pages.json').pages
+  : []
+const { data, report } = buildGameData(pages, sup, { gameVersion: detectGameVersion(), builtAt: new Date().toISOString(), droidPages })
 
 // Sanity gate: never replace good data with an obviously broken build.
 const problems: string[] = []
@@ -55,5 +58,5 @@ if (existsSync(out)) {
 writeFileSync(out, JSON.stringify(data, null, 1) + '\n')
 console.log(
   `Built ${data.droids.length} droids, ${data.rebirths.length} rebirth steps, ${data.nova.length} nova upgrades; ` +
-    `${report.warnings.length} warnings, ${report.disputes.length} disputes, ${report.overlaps.length} overlaps. Game v${data.gameVersion}`,
+    `${report.warnings.length} warnings, ${report.disputes.length} disputes, ${report.overlaps.length} overlaps, ${report.inconsistencies.length} wiki inconsistencies. Game v${data.gameVersion}`,
 )

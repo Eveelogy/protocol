@@ -269,6 +269,18 @@ export function SettingsView() {
           <li>
             {data.disputes.length} disputed values · {data.warnings.length} build warnings
           </li>
+          {data.inconsistencies.length > 0 && (
+            <li>
+              <details>
+                <summary className="cursor-pointer">{data.inconsistencies.length} places where wiki pages disagree</summary>
+                <ul className="mt-1 list-disc pl-5 text-xs text-dim">
+                  {data.inconsistencies.map((x) => (
+                    <li key={x}>{x}</li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          )}
           <li className="text-xs text-dim">
             Game data from the Star Wars Droid Tycoon Fandom wiki (CC BY-SA), plus hand-written supplements. Protocol is a fan project and is not affiliated with the game's
             makers.

@@ -9,7 +9,7 @@ import {
   TIERS,
   slugify,
 } from '../domain/types.ts'
-import { parseDroidList, parseFusions, parseNovaShop, parseRebirthUnlocks, parseRebirths } from './parse/pages.ts'
+import { parseDroidList, parseDroidPage, parseFusions, parseNovaShop, parseRebirthUnlocks, parseRebirths } from './parse/pages.ts'
 
 export const WIKI_PAGES = ['Rebirths', 'List_of_Droids', 'Droid_Fusion', 'Nova_Shop'] as const
 export type WikiPage = (typeof WIKI_PAGES)[number]
@@ -32,6 +32,8 @@ export interface BuildReport {
   disputes: Dispute[]
   /** Supplement values the wiki now also provides — candidates for deletion. */
   overlaps: string[]
+  /** Wiki pages that disagree with each other (List of Droids vs a droid's own page). Informational only. */
+  inconsistencies: string[]
 }
 
 export const WIKI_BASE = 'https://star-wars-droid-tycoon.fandom.com'
@@ -39,9 +41,10 @@ export const WIKI_BASE = 'https://star-wars-droid-tycoon.fandom.com'
 export function buildGameData(
   pages: Partial<Record<WikiPage, RawPage>>,
   sup: Supplements,
-  opts: { gameVersion: string; builtAt: string },
+  opts: { gameVersion: string; builtAt: string; droidPages?: RawPage[] },
 ): { data: GameData; report: BuildReport } {
   const warnings: string[] = []
+  const inconsistencies: string[] = []
   const disputes: Dispute[] = []
   const overlaps: string[] = []
   const need = (p: WikiPage) => {
@@ -70,6 +73,35 @@ export function buildGameData(
     if (row.class && d.class !== row.class && row.class !== 'worker') d.class = row.class
     d.income[row.tier] = row.income
     if (row.craftSeconds !== undefined) d.craftSeconds![row.tier] = row.craftSeconds
+  }
+
+  // --- individual droid pages: authoritative for rarity/class/iconic share, fill income gaps
+  for (const page of opts.droidPages ?? []) {
+    const p = parseDroidPage(page.title, page.wikitext)
+    const id = slugify(p.name)
+    let d = droids.get(id)
+    if (!d) {
+      if (!p.rarity || !p.class) {
+        warnings.push(`Droid page ${p.name}: no rarity/class in infobox, skipped`)
+        continue
+      }
+      d = { id, name: p.name, rarity: p.rarity, class: p.class, income: {}, craftSeconds: {} }
+      droids.set(id, d)
+    } else {
+      if (p.rarity && p.rarity !== d.rarity) inconsistencies.push(`${d.name}: rarity ${d.rarity} on List of Droids, ${p.rarity} on its page (using page)`)
+      if (p.class && p.class !== d.class) inconsistencies.push(`${d.name}: class ${d.class} on List of Droids, ${p.class} on its page (using page)`)
+      if (p.rarity) d.rarity = p.rarity
+      if (p.class) d.class = p.class
+    }
+    if (p.iconicShare !== undefined) d.iconicShare = p.iconicShare
+    if (p.companion) d.companion = p.companion
+    if (p.released) d.released = p.released
+    for (const [tier, v] of Object.entries(p.income) as [Tier, number][]) {
+      const listed = d.income[tier]
+      if (listed === undefined) d.income[tier] = v
+      else if (listed !== v) inconsistencies.push(`${d.name} ${tier} income: ${listed}/s on List of Droids, ${v}/s on its page (using list)`)
+    }
+    for (const [tier, v] of Object.entries(p.craftSeconds) as [Tier, number][]) d.craftSeconds![tier] ??= v
   }
 
   // --- fusion recipes
@@ -176,8 +208,9 @@ export function buildGameData(
     resetRules: stripComments(sup.resetRules) as unknown as ResetRules,
     disputes,
     warnings,
+    inconsistencies,
   }
-  return { data, report: { warnings, disputes, overlaps } }
+  return { data, report: { warnings, disputes, overlaps, inconsistencies } }
 }
 
 const round = (n: number) => Math.round(n * 100) / 100

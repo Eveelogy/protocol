@@ -47,6 +47,48 @@ for (const page of [...WIKI_PAGES, ...EXTRA_PAGES]) {
   }
   await sleep(1500)
 }
+
+// Every droid's own page (found via the pages that use the droid infobox), fetched 50 per request.
+async function getJson(url: string): Promise<any> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      return await res.json()
+    } catch (e) {
+      if (attempt >= 2) throw e
+      await sleep(5000 * (attempt + 1))
+    }
+  }
+}
+try {
+  const list = await getJson(
+    `${WIKI_BASE}/api.php?action=query&list=embeddedin&eititle=Template:Droid_Infobox_Official&einamespace=0&eilimit=500&format=json&formatversion=2`,
+  )
+  const titles: string[] = list.query.embeddedin.map((p: { title: string }) => p.title)
+  const pages: { title: string; revision: number; wikitext: string }[] = []
+  for (let i = 0; i < titles.length; i += 50) {
+    await sleep(1500)
+    const batch = titles.slice(i, i + 50).map(encodeURIComponent).join('|')
+    const j = await getJson(`${WIKI_BASE}/api.php?action=query&prop=revisions&rvprop=content|ids&rvslots=main&titles=${batch}&format=json&formatversion=2`)
+    for (const p of j.query.pages) if (p.revisions?.[0]) pages.push({ title: p.title, revision: p.revisions[0].revid, wikitext: p.revisions[0].slots.main.content })
+  }
+  if (pages.length < titles.length * 0.9) throw new Error(`only got ${pages.length}/${titles.length} droid pages`)
+  pages.sort((a, b) => a.title.localeCompare(b.title))
+  const file = `${RAW}/Droid_pages.json`
+  const prev = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : null
+  const sig = (ps: { title: string; revision: number }[]) => ps.map((p) => `${p.title}@${p.revision}`).join(',')
+  if (prev && sig(prev.pages) === sig(pages)) console.log(`= ${pages.length} droid pages unchanged`)
+  else {
+    writeFileSync(file, JSON.stringify({ fetchedAt: new Date().toISOString(), pages }, null, 1))
+    console.log(`+ ${pages.length} droid pages updated`)
+  }
+  ok++
+} catch (e) {
+  failed.push(`droid pages: ${(e as Error).message}`)
+  console.error(`! droid pages failed: ${(e as Error).message}`)
+}
+
 // Track consecutive nights with any failure so CI can open an issue after 3 in a row.
 const statusFile = `${RAW}/_pull-status.json`
 const prevFailures = existsSync(statusFile) ? (JSON.parse(readFileSync(statusFile, 'utf8')).consecutiveFailures ?? 0) : 0
