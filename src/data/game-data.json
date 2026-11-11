@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "builtAt": "2026-11-11T22:59:33.839Z",
+ "builtAt": "2026-11-11T23:02:35.479Z",
  "gameVersion": "1.38.5",
  "sources": [
   {
@@ -34,6 +34,14 @@
    "license": "CC BY-SA 3.0",
    "revision": 2049,
    "fetchedAt": "2026-11-11T22:19:26.212Z"
+  },
+  {
+   "id": "wiki:Super_Rebirth",
+   "title": "Super Rebirth",
+   "url": "https://star-wars-droid-tycoon.fandom.com/wiki/Super_Rebirth",
+   "license": "CC BY-SA 3.0",
+   "revision": 2056,
+   "fetchedAt": "2026-11-11T23:02:26.467Z"
   }
  ],
  "droids": [
@@ -7645,6 +7653,153 @@
    "level": 40,
    "creditMultiplier": 4,
    "slots": {}
+  }
+ ],
+ "superRebirth": [
+  {
+   "level": 12,
+   "crystals": 11,
+   "creditMultiplier": 0.22
+  },
+  {
+   "level": 13,
+   "crystals": 16,
+   "creditMultiplier": 0.32
+  },
+  {
+   "level": 14,
+   "crystals": 22,
+   "creditMultiplier": 0.44
+  },
+  {
+   "level": 15,
+   "crystals": 29,
+   "creditMultiplier": 0.58
+  },
+  {
+   "level": 16,
+   "crystals": 37,
+   "creditMultiplier": 0.74
+  },
+  {
+   "level": 17,
+   "crystals": 46,
+   "creditMultiplier": 0.92
+  },
+  {
+   "level": 18,
+   "crystals": 56,
+   "creditMultiplier": 1.12
+  },
+  {
+   "level": 19,
+   "crystals": 67,
+   "creditMultiplier": 1.34
+  },
+  {
+   "level": 20,
+   "crystals": 79,
+   "creditMultiplier": 1.58
+  },
+  {
+   "level": 21,
+   "crystals": 92,
+   "creditMultiplier": 1.84
+  },
+  {
+   "level": 22,
+   "crystals": 106,
+   "creditMultiplier": 2.12
+  },
+  {
+   "level": 23,
+   "crystals": 121,
+   "creditMultiplier": 2.42
+  },
+  {
+   "level": 24,
+   "crystals": 137,
+   "creditMultiplier": 2.74
+  },
+  {
+   "level": 25,
+   "crystals": 154,
+   "creditMultiplier": 3.08
+  },
+  {
+   "level": 26,
+   "crystals": 172,
+   "creditMultiplier": 3.44
+  },
+  {
+   "level": 27,
+   "crystals": 191,
+   "creditMultiplier": 3.82
+  },
+  {
+   "level": 28,
+   "crystals": 211,
+   "creditMultiplier": 4.22
+  },
+  {
+   "level": 29,
+   "crystals": 232,
+   "creditMultiplier": 4.64
+  },
+  {
+   "level": 30,
+   "crystals": 254,
+   "creditMultiplier": 5.08
+  },
+  {
+   "level": 31,
+   "crystals": 277,
+   "creditMultiplier": 5.54
+  },
+  {
+   "level": 32,
+   "crystals": 301,
+   "creditMultiplier": 6.02
+  },
+  {
+   "level": 33,
+   "crystals": 326,
+   "creditMultiplier": 6.52
+  },
+  {
+   "level": 34,
+   "crystals": 352,
+   "creditMultiplier": 7.04
+  },
+  {
+   "level": 35,
+   "crystals": 379,
+   "creditMultiplier": 7.58
+  },
+  {
+   "level": 36,
+   "crystals": 407,
+   "creditMultiplier": 8.14
+  },
+  {
+   "level": 37,
+   "crystals": 436,
+   "creditMultiplier": 8.72
+  },
+  {
+   "level": 38,
+   "crystals": 466,
+   "creditMultiplier": 9.32
+  },
+  {
+   "level": 39,
+   "crystals": 497,
+   "creditMultiplier": 9.94
+  },
+  {
+   "level": 40,
+   "crystals": 529,
+   "creditMultiplier": 10.58
   }
  ],
  "nova": [

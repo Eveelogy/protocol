@@ -23,6 +23,7 @@ export function formatDuration(seconds: number): string {
   if (seconds <= 0) return 'now'
   const s = Math.round(seconds)
   const d = Math.floor(s / 86400)
+  if (d >= 365) return `${(d / 365).toFixed(d >= 3650 ? 0 : 1)}y`
   const h = Math.floor((s % 86400) / 3600)
   const m = Math.floor((s % 3600) / 60)
   if (d) return `${d}d ${h}h`

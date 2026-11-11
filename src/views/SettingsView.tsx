@@ -5,6 +5,7 @@ import { formatAmount } from '../engine/format.ts'
 import { computeIncome } from '../engine/income.ts'
 import { slotCounts } from '../engine/slots.ts'
 import { AmountInput, Stepper } from '../ui/common.tsx'
+import { DataIssuesBadge } from '../ui/DataIssues.tsx'
 import { data, defs, useStore } from '../store/store.ts'
 
 export const Section = ({ title, children, hint }: { title: string; children: React.ReactNode; hint?: string }) => (
@@ -250,6 +251,7 @@ export function SettingsView() {
         </div>
       </Section>
       <Section title="Game data">
+        <DataIssuesBadge />
         <ul className="space-y-1 text-sm">
           <li>
             Data built <span className="num">{new Date(data.builtAt).toLocaleString()}</span> · game <span className="num">v{data.gameVersion}</span>

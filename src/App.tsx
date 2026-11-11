@@ -4,12 +4,15 @@ import { BaseView } from './views/BaseView.tsx'
 import { CollectionView } from './views/CollectionView.tsx'
 import { RebirthView } from './views/RebirthView.tsx'
 import { SettingsView } from './views/SettingsView.tsx'
+import { ToolsView } from './views/ToolsView.tsx'
+import { DataIssuesBadge } from './ui/DataIssues.tsx'
 import { Setup } from './views/Setup.tsx'
 
 const TABS = [
   { id: 'rebirth', label: 'Rebirths', icon: '⟳' },
   { id: 'base', label: 'Base', icon: '▦' },
   { id: 'droids', label: 'Droids', icon: '◎' },
+  { id: 'tools', label: 'Tools', icon: '⏱' },
   { id: 'settings', label: 'Settings', icon: '⚙' },
 ] as const
 type TabId = (typeof TABS)[number]['id']
@@ -80,6 +83,8 @@ export default function App() {
           <BaseView />
         ) : tab === 'droids' ? (
           <CollectionView />
+        ) : tab === 'tools' ? (
+          <ToolsView />
         ) : (
           <SettingsView />
         )}
@@ -87,7 +92,7 @@ export default function App() {
 
       {save.setupDone && (
         <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 pb-[env(safe-area-inset-bottom)] backdrop-blur">
-          <div className="mx-auto grid max-w-3xl grid-cols-4">
+          <div className="mx-auto grid max-w-3xl grid-cols-5">
             {TABS.map((t) => (
               <button
                 key={t.id}
@@ -95,7 +100,10 @@ export default function App() {
                 aria-current={tab === t.id ? 'page' : undefined}
                 className={`flex flex-col items-center py-2 text-xs ${tab === t.id ? 'readout text-accent' : 'text-dim'}`}
               >
-                <span className="text-lg leading-none">{t.icon}</span>
+                <span className="relative text-lg leading-none">
+                  {t.icon}
+                  {t.id === 'settings' && <DataIssuesBadge dot />}
+                </span>
                 {t.label}
               </button>
             ))}

@@ -9,9 +9,9 @@ import {
   TIERS,
   slugify,
 } from '../domain/types.ts'
-import { parseDroidList, parseDroidPage, parseFusions, parseNovaShop, parseRebirthUnlocks, parseRebirths } from './parse/pages.ts'
+import { parseDroidList, parseDroidPage, parseFusions, parseNovaShop, parseRebirthUnlocks, parseRebirths, parseSuperRebirth } from './parse/pages.ts'
 
-export const WIKI_PAGES = ['Rebirths', 'List_of_Droids', 'Droid_Fusion', 'Nova_Shop'] as const
+export const WIKI_PAGES = ['Rebirths', 'List_of_Droids', 'Droid_Fusion', 'Nova_Shop', 'Super_Rebirth'] as const
 export type WikiPage = (typeof WIKI_PAGES)[number]
 
 export interface RawPage {
@@ -58,6 +58,8 @@ export function buildGameData(
   const list = parseDroidList(need('List_of_Droids'))
   const fusions = parseFusions(need('Droid_Fusion'))
   const nova = parseNovaShop(need('Nova_Shop'))
+  const srb = pages.Super_Rebirth ? parseSuperRebirth(pages.Super_Rebirth.wikitext) : { data: [], warnings: ['Super Rebirth page missing'] }
+  warnings.push(...srb.warnings)
   warnings.push(...rebirths.warnings, ...unlocks.warnings, ...list.warnings, ...fusions.warnings, ...nova.warnings)
 
   // --- droids from the wiki list
@@ -203,6 +205,7 @@ export function buildGameData(
     droids: [...droids.values()].sort((a, b) => a.name.localeCompare(b.name)),
     rebirths: rebirths.data,
     unlocks: unlocks.data,
+    superRebirth: srb.data,
     nova: nova.data,
     constants: stripComments(constants) as unknown as GameConstants,
     resetRules: stripComments(sup.resetRules) as unknown as ResetRules,

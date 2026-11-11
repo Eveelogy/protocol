@@ -86,6 +86,12 @@ export interface RebirthUnlock {
   slots: Partial<Record<Area | 'lounge', number>> // slots added at this level
 }
 
+export interface SuperRebirthPayout {
+  level: number // rebirth level you super rebirth at
+  crystals: number
+  creditMultiplier: number // permanent, e.g. 0.22 for +22%
+}
+
 export interface NovaUpgradeDef {
   id: string
   name: string
@@ -133,6 +139,7 @@ export interface GameData {
   droids: DroidDef[]
   rebirths: RebirthStep[]
   unlocks: RebirthUnlock[]
+  superRebirth: SuperRebirthPayout[]
   nova: NovaUpgradeDef[]
   constants: GameConstants
   resetRules: ResetRules

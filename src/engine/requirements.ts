@@ -125,7 +125,7 @@ export function coverageOptions(req: RequirementDroid, save: Save, data: GameDat
   if (target > 0 && req.tier !== 'scourge' && def?.rarity !== 'iconic') {
     const fromTier = TIERS[target - 1]
     const have = save.droids.filter((o) => o.droidId === req.droidId && o.tier === fromTier).length
-    if (have > 0) out.push({ kind: 'fuseTier', have: Math.min(have, 3), fromTier })
+    if (have >= 2) out.push({ kind: 'fuseTier', have: Math.min(have, 3), fromTier })
   }
 
   // Fusion-exclusive droids that contain this droid

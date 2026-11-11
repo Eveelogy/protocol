@@ -34,6 +34,9 @@ export function applySuperRebirth(save: Save, defs: DefIndex, now = Date.now()):
   p.credits = 0
   p.creditsUpdatedAt = now
   p.superRebirthsTracked += 1
+  p.chips = 0
+  p.chipsCollectedAt = now
+  p.runStartedAt = now
   // Multiplier changes (rebirth bonuses lost, crystal bonus gained); the UI asks the player to re-enter it.
   p.calibration = []
   s.history.push({ at: now, kind: 'superRebirth', path: p.path, from, to: 0 })

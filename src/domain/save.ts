@@ -63,6 +63,11 @@ export interface Profile {
   calibration: CalibrationSample[]
   credits: number
   creditsUpdatedAt: number
+  /** Upgrade chips in hand, and when the chip stations were last emptied. */
+  chips: number
+  chipsCollectedAt: number
+  /** When the current super-rebirth run started (null = unknown). */
+  runStartedAt: number | null
   /** Nova Shop upgrade levels by upgrade id. */
   nova: Record<string, number>
   craftSpeedPct: number
@@ -100,6 +105,9 @@ export const newSave = (): Save => ({
     calibration: [],
     credits: 0,
     creditsUpdatedAt: 0,
+    chips: 0,
+    chipsCollectedAt: 0,
+    runStartedAt: null,
     nova: {},
     craftSpeedPct: 0,
     hyperdrive: false,

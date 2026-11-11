@@ -6,6 +6,7 @@ import {
   type Rarity,
   type RebirthStep,
   type RebirthUnlock,
+  type SuperRebirthPayout,
   type Tier,
   slugify,
 } from '../../domain/types.ts'
@@ -227,6 +228,26 @@ export function parseFusions(text: string): ParseResult<ParsedFusion[]> {
     }
   }
   return { data: out, warnings }
+}
+
+// ---------------------------------------------------------------- Super Rebirth
+
+export function parseSuperRebirth(text: string): ParseResult<SuperRebirthPayout[]> {
+  const table = parseTables(text).find((t) => t.headers.some((h) => /Nova Crystals/i.test(h)))
+  if (!table) return { data: [], warnings: ['Super Rebirth: payout table not found'] }
+  const col = (re: RegExp) => table.headers.findIndex((h) => re.test(h))
+  const iL = col(/Rebirth Level/i)
+  const iC = col(/Nova Crystals/i)
+  const iM = col(/Credit Mult/i)
+  const data: SuperRebirthPayout[] = []
+  for (const row of table.rows) {
+    const level = Number(stripMarkup(row[iL] ?? ''))
+    const crystals = parseAmount(row[iC] ?? '')
+    const mult = stripMarkup(row[iM] ?? '').match(/([0-9.]+)s*%/)
+    if (Number.isInteger(level) && !Number.isNaN(crystals)) data.push({ level, crystals, creditMultiplier: mult ? Number(mult[1]) / 100 : 0 })
+  }
+  const warnings = data.length < 29 ? [`Super Rebirth: only ${data.length}/29 payout levels`] : []
+  return { data, warnings }
 }
 
 // ---------------------------------------------------------------- Nova Shop
