@@ -124,7 +124,9 @@ function TierStep({ o, dir }: { o: OwnedDroid; dir: 1 | -1 }) {
 }
 
 function CopiesSheet({ droidId, onClose }: { droidId: string; onClose: () => void }) {
-  const copies = useStore((s) => s.save.droids.filter((o) => o.droidId === droidId))
+  // Select the stable array and filter here: a selector that returns a new array each time loops forever.
+  const droids = useStore((s) => s.save.droids)
+  const copies = useMemo(() => droids.filter((o) => o.droidId === droidId), [droids, droidId])
   const update = useStore((s) => s.update)
   const [tier, setTier] = useState<Tier>('default')
   const def = defs.get(droidId)!
