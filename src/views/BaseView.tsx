@@ -5,7 +5,7 @@ import { formatAmount } from '../engine/format.ts'
 import { computeIncome } from '../engine/income.ts'
 import { bestLayout, isSingle, locKey, moveDroid } from '../engine/layout.ts'
 import { slotCounts } from '../engine/slots.ts'
-import { DroidName, DroidPicker, Sheet, Stat, TierChip, TierPicker } from '../ui/common.tsx'
+import { DroidName, DroidPicker, OwnedTier, Sheet, Stat, TierChip, TierPicker, isIconic } from '../ui/common.tsx'
 import { data, defs, useStore } from '../store/store.ts'
 
 type Target = { loc: Location; occupant?: OwnedDroid }
@@ -63,7 +63,7 @@ export function BaseView() {
         <>
           <DroidName id={occupant.droidId} flawless={occupant.flawless} />
           <div className="mt-1 flex items-center justify-between gap-1">
-            <TierChip tier={occupant.tier} kyber={occupant.kyber} />
+            <OwnedTier droidId={occupant.droidId} tier={occupant.tier} kyber={occupant.kyber} />
             {incomeByUid.has(occupant.uid) && <span className="num text-xs text-dim">{formatAmount(incomeByUid.get(occupant.uid)!)}/s</span>}
           </div>
         </>
@@ -220,6 +220,7 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
   const live = useStore((s) => (target.occupant ? s.save.droids.find((x) => x.uid === target.occupant!.uid) : undefined))
   const [pick, setPick] = useState<string | null>(null)
   const [tier, setTier] = useState<Tier>('default')
+  const ownedIconic = useStore((s) => (pick && isIconic(pick) ? s.save.droids.find((o) => o.droidId === pick) : undefined))
 
   if (live) {
     const def = defs.get(live.droidId)
@@ -242,20 +243,31 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
     return (
       <Sheet title={def?.name ?? live.droidId} onClose={onClose}>
         <div className="space-y-4 text-sm">
-          <div className="flex items-center gap-2">
-            <button className="btn px-3" onClick={() => step(-1)} aria-label="Lower tier">
-              −
-            </button>
-            <TierChip tier={live.tier} kyber={live.kyber} />
-            <button className="btn px-3" onClick={() => step(1)} aria-label="Raise tier">
-              +
-            </button>
-            <label className="ml-auto inline-flex items-center gap-1">
-              <input type="checkbox" checked={!!live.flawless} onChange={(e) => set({ flawless: e.target.checked })} /> Flawless ★
-            </label>
-          </div>
-          <TierPicker value={live.tier} onChange={(t) => set({ tier: t }, `${def?.name} → ${t}`)} />
-          {live.tier === 'kyber' && (
+          {isIconic(live.droidId) ? (
+            <div className="flex items-center gap-2">
+              <OwnedTier droidId={live.droidId} tier={live.tier} />
+              <span className="text-dim">
+                Iconics have no tiers. Earns {Math.round((def?.iconicShare ?? 0) * 100)}% of your base income when it's in an earning slot.
+              </span>
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center gap-2">
+                <button className="btn px-3" onClick={() => step(-1)} aria-label="Lower tier">
+                  −
+                </button>
+                <TierChip tier={live.tier} kyber={live.kyber} />
+                <button className="btn px-3" onClick={() => step(1)} aria-label="Raise tier">
+                  +
+                </button>
+                <label className="ml-auto inline-flex items-center gap-1">
+                  <input type="checkbox" checked={!!live.flawless} onChange={(e) => set({ flawless: e.target.checked })} /> Flawless ★
+                </label>
+              </div>
+              <TierPicker value={live.tier} onChange={(t) => set({ tier: t }, `${def?.name} → ${t}`)} />
+            </>
+          )}
+          {live.tier === 'kyber' && !isIconic(live.droidId) && (
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-dim">Kyber:</span>
               {(['inactive', 'green', 'blue', 'purple'] as KyberColor[]).map((k) => (
@@ -301,9 +313,27 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
           onPick={setPick}
           filterClass={target.loc.kind === 'protocol' ? 'protocol' : target.loc.kind === 'slot' ? target.loc.area : undefined}
         />
+      ) : isIconic(pick) && ownedIconic ? (
+        <div className="space-y-4 text-sm">
+          <p className="text-dim">You can only own one {defs.get(pick)?.name}, and yours is already in {ownedIconic.location.kind}. Move it here instead?</p>
+          <div className="flex gap-2">
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                update((s) => moveDroid(s, ownedIconic.uid, target.loc), `Moved ${defs.get(pick)?.name}`)
+                onClose()
+              }}
+            >
+              Move it here
+            </button>
+            <button className="btn" onClick={() => setPick(null)}>
+              Back
+            </button>
+          </div>
+        </div>
       ) : (
         <div className="space-y-4">
-          <TierPicker value={tier} onChange={setTier} />
+          {isIconic(pick) ? <p className="text-sm text-dim">Iconics have no tiers.</p> : <TierPicker value={tier} onChange={setTier} />}
           <div className="flex gap-2">
             <button
               className="btn btn-primary"
@@ -311,7 +341,7 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
                 const loc = target.loc
                 update((s) => {
                   if (isSingle(loc)) for (const o of s.droids) if (locKey(o.location) === locKey(loc)) o.location = { kind: 'storage' }
-                  s.droids.push({ uid: uid(), droidId: pick, tier, location: loc })
+                  s.droids.push({ uid: uid(), droidId: pick, tier: isIconic(pick) ? 'default' : tier, location: loc })
                 }, `Added ${defs.get(pick)?.name}`)
                 onClose()
               }}

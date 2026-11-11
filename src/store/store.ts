@@ -4,6 +4,7 @@ import { create } from 'zustand'
 import gameData from '../data/game-data.json'
 import { type Save, newSave } from '../domain/save.ts'
 import type { GameData } from '../domain/types.ts'
+import { normalizeSave } from '../engine/normalize.ts'
 import { indexDefs } from '../engine/requirements.ts'
 
 export const data = gameData as unknown as GameData
@@ -64,7 +65,7 @@ export const useStore = create<State>((set, get) => ({
   update(fn, label) {
     const prev = get().save
     const draft = structuredClone(prev)
-    const next = fn(draft) ?? draft
+    const next = normalizeSave(fn(draft) ?? draft, defs)
     set({ save: next, undoStack: [...get().undoStack.slice(-49), { save: prev, label: label ?? 'edit' }] })
     persist(next)
     if (label) get().toast(label, true)
@@ -93,5 +94,5 @@ export const useStore = create<State>((set, get) => ({
 /** Fills in fields added after a save was written. */
 function migrate(s: Save): Save {
   const base = newSave()
-  return { ...base, ...s, profile: { ...base.profile, ...s.profile, overrides: { ...s.profile?.overrides }, ui: { ...base.profile.ui, ...s.profile?.ui } } }
+  return normalizeSave({ ...base, ...s, profile: { ...base.profile, ...s.profile, overrides: { ...s.profile?.overrides }, ui: { ...base.profile.ui, ...s.profile?.ui } } }, defs)
 }

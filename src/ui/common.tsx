@@ -1,11 +1,20 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
 import { type DroidClass, type Tier, CLASSES, TIER_LABEL, TIERS } from '../domain/types.ts'
 import { formatAmount, parseAmountInput } from '../engine/format.ts'
-import { data, defs } from '../store/store.ts'
+import { data, defs, useStore } from '../store/store.ts'
 
 export function TierChip({ tier, kyber }: { tier: Tier; kyber?: string }) {
   const label = tier === 'kyber' && kyber && kyber !== 'inactive' ? `Kyber · ${kyber}` : TIER_LABEL[tier]
   return <span className={`tier tier-${tier}`}>{label}</span>
+}
+
+/** Iconic droids have no tiers and you can own only one of each. */
+export const isIconic = (droidId: string) => defs.get(droidId)?.rarity === 'iconic'
+
+/** Tier chip for an owned droid; Iconics show an "Iconic" badge instead of a tier. */
+export function OwnedTier({ droidId, tier, kyber }: { droidId: string; tier: Tier; kyber?: string }) {
+  if (isIconic(droidId)) return <span className="tier tier-iconic">Iconic</span>
+  return <TierChip tier={tier} kyber={kyber} />
 }
 
 const CLASS_GLYPH: Record<DroidClass, string> = { worker: '⚙', astromech: '◉', battle: '⚔', protocol: '◈' }
@@ -114,13 +123,14 @@ export function TierPicker({ value, onChange, allowScourge = true }: { value: Ti
   )
 }
 
-export function DroidPicker({ onPick, filterClass }: { onPick: (id: string) => void; filterClass?: DroidClass }) {
+export function DroidPicker({ onPick, filterClass, noIconics }: { onPick: (id: string) => void; filterClass?: DroidClass; noIconics?: boolean }) {
   const [q, setQ] = useState('')
   const [cls, setCls] = useState<DroidClass | 'all'>(filterClass ?? 'all')
+  const owned = useStore((s) => s.save.droids)
   const list = useMemo(() => {
     const s = q.trim().toLowerCase()
-    return data.droids.filter((d) => (cls === 'all' || d.class === cls) && (!s || d.name.toLowerCase().includes(s)))
-  }, [q, cls])
+    return data.droids.filter((d) => (cls === 'all' || d.class === cls) && (!s || d.name.toLowerCase().includes(s)) && !(noIconics && d.rarity === 'iconic'))
+  }, [q, cls, noIconics])
   return (
     <div className="space-y-2">
       <div className="flex gap-2">
@@ -139,7 +149,10 @@ export function DroidPicker({ onPick, filterClass }: { onPick: (id: string) => v
           <li key={d.id}>
             <button className={`flex w-full items-center justify-between border-l-4 px-2 py-2 text-left hover:bg-panel-2 rarity-${d.rarity}`} onClick={() => onPick(d.id)}>
               <DroidName id={d.id} />
-              <span className="text-xs text-dim">{d.rarity}</span>
+              <span className="text-xs text-dim">
+                {d.rarity}
+                {d.rarity === 'iconic' && owned.some((o) => o.droidId === d.id) && <span className="text-accent"> · owned</span>}
+              </span>
             </button>
           </li>
         ))}

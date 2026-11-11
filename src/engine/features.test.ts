@@ -5,6 +5,7 @@ import type { GameData, Tier } from '../domain/types.ts'
 import { cb23Entry, cb23ReadyIn, cb23Stats, suggestedMissionMinutes } from './cb23.ts'
 import { chipEta, chipStatus, stationRate } from './chips.ts'
 import { applyFusion, fusionSuggestions } from './fusion.ts'
+import { normalizeSave } from './normalize.ts'
 import { indexDefs } from './requirements.ts'
 import { scourgeLoss, scourgeWhatIf, scourgeWindow } from './scourge.ts'
 import { recommendStop, superRebirthOptions } from './superPlan.ts'
@@ -95,6 +96,23 @@ describe('scourge', () => {
     expect(pts[0].extra).toBe(0)
     expect(pts[2].income).toBeGreaterThan(pts[1].income)
     expect(scourgeLoss(s, data, defs).count).toBe(1)
+  })
+})
+
+describe('iconic rules', () => {
+  it('resets Iconic tiers and keeps only one copy, preferring the placed one', () => {
+    const s = saveWith([own('cb-23', 'gold', { kind: 'lounge' }), own('cb-23', 'default', slot(0)), own('gonk', 'gold'), own('gonk', 'gold')])
+    s.blueprints = [{ uid: 'b', droidId: 'chopper', tier: 'gold' }]
+    const out = normalizeSave(s, defs)
+    const cbs = out.droids.filter((o) => o.droidId === 'cb-23')
+    expect(cbs).toHaveLength(1)
+    expect(cbs[0]).toMatchObject({ tier: 'default', location: { kind: 'slot' } })
+    expect(out.droids.filter((o) => o.droidId === 'gonk')).toHaveLength(2)
+    expect(out.blueprints).toHaveLength(0)
+  })
+  it('leaves a clean save untouched', () => {
+    const s = saveWith([own('cb-23', 'default'), own('gonk', 'gold')])
+    expect(normalizeSave(s, defs)).toBe(s)
   })
 })
 

@@ -210,7 +210,7 @@ function AddBlueprint({ onClose }: { onClose: () => void }) {
   return (
     <Sheet title={pick ? `Blueprint: ${defs.get(pick)?.name}` : 'Add blueprint'} onClose={onClose}>
       {!pick ? (
-        <DroidPicker onPick={setPick} />
+        <DroidPicker onPick={setPick} noIconics />
       ) : (
         <div className="space-y-4">
           <TierPicker value={tier} onChange={setTier} allowScourge={false} />

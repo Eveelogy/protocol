@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { type Location, type OwnedDroid, uid } from '../domain/save.ts'
 import { CLASSES, type DroidClass, type Tier, TIERS, tierIndex } from '../domain/types.ts'
 import { neededQueue } from '../engine/plan.ts'
-import { DroidName, Sheet, TierChip, TierPicker } from '../ui/common.tsx'
+import { DroidName, OwnedTier, Sheet, TierChip, TierPicker } from '../ui/common.tsx'
 import { data, defs, useStore } from '../store/store.ts'
 import { formatDuration } from '../engine/format.ts'
 
@@ -68,7 +68,7 @@ export function CollectionView() {
                         {copies.length > 1 && <span className="num text-xs text-dim">×{copies.length}</span>}
                       </div>
                       <div className="mt-1 flex flex-wrap items-center gap-1 text-xs text-dim">
-                        {top ? <TierChip tier={top.tier} kyber={top.kyber} /> : <span>not owned</span>}
+                        {top ? <OwnedTier droidId={top.droidId} tier={top.tier} kyber={top.kyber} /> : <span>not owned</span>}
                         {top && <span>· {locLabel(top.location)}</span>}
                         {need && (
                           <span className="text-warn">
@@ -77,7 +77,7 @@ export function CollectionView() {
                         )}
                       </div>
                     </button>
-                    {top ? (
+                    {top && d.rarity === 'iconic' ? null : top ? (
                       <div className="flex shrink-0 gap-1">
                         <TierStep o={top} dir={-1} />
                         <TierStep o={top} dir={1} />
@@ -130,6 +130,9 @@ function CopiesSheet({ droidId, onClose }: { droidId: string; onClose: () => voi
   const update = useStore((s) => s.update)
   const [tier, setTier] = useState<Tier>('default')
   const def = defs.get(droidId)!
+  const iconic = def.rarity === 'iconic'
+  const add = (location: Location, where: string) =>
+    update((s) => void s.droids.push({ uid: uid(), droidId, tier: iconic ? 'default' : tier, location }), `Added ${def.name} to ${where}`)
   const fusionUses = data.droids.filter((d) => d.fusionOf?.includes(droidId))
   return (
     <Sheet title={def.name} onClose={onClose}>
@@ -143,7 +146,7 @@ function CopiesSheet({ droidId, onClose }: { droidId: string; onClose: () => voi
           {copies.map((o) => (
             <li key={o.uid} className="flex items-center justify-between py-1.5">
               <span className="inline-flex items-center gap-2">
-                <TierChip tier={o.tier} kyber={o.kyber} /> {o.flawless && '★'} <span className="text-dim">{locLabel(o.location)}</span>
+                <OwnedTier droidId={o.droidId} tier={o.tier} kyber={o.kyber} /> {o.flawless && '★'} <span className="text-dim">{locLabel(o.location)}</span>
               </span>
               <button className="btn text-bad" onClick={() => update((s) => ({ ...s, droids: s.droids.filter((x) => x.uid !== o.uid) }), `Removed ${def.name}`)}>
                 Remove
@@ -152,19 +155,23 @@ function CopiesSheet({ droidId, onClose }: { droidId: string; onClose: () => voi
           ))}
           {!copies.length && <li className="py-1.5 text-dim">You don't own this droid.</li>}
         </ul>
-        <div className="space-y-2">
-          <div className="heading text-xs text-dim">Add a copy</div>
-          <TierPicker value={tier} onChange={setTier} />
-          <div className="flex gap-2">
-            <button className="btn btn-primary" onClick={() => update((s) => void s.droids.push({ uid: uid(), droidId, tier, location: { kind: 'lounge' } }), `Added ${def.name} to Lounge`)}>
-              Add to Lounge
-            </button>
-            <button className="btn" onClick={() => update((s) => void s.droids.push({ uid: uid(), droidId, tier, location: { kind: 'storage' } }), `Added ${def.name} to storage`)}>
-              Add to storage
-            </button>
+        {iconic && copies.length > 0 ? (
+          <p className="text-xs text-dim">Iconics have no tiers and you can only own one. Use the Base tab to move it into a slot.</p>
+        ) : (
+          <div className="space-y-2">
+            <div className="heading text-xs text-dim">{iconic ? 'Add it' : 'Add a copy'}</div>
+            {iconic ? <p className="text-xs text-dim">Iconics have no tiers.</p> : <TierPicker value={tier} onChange={setTier} />}
+            <div className="flex gap-2">
+              <button className="btn btn-primary" onClick={() => add({ kind: 'lounge' }, 'Lounge')}>
+                Add to Lounge
+              </button>
+              <button className="btn" onClick={() => add({ kind: 'storage' }, 'storage')}>
+                Add to storage
+              </button>
+            </div>
+            <p className="text-xs text-dim">Use the Base tab to place droids in specific slots.</p>
           </div>
-          <p className="text-xs text-dim">Use the Base tab to place droids in specific slots.</p>
-        </div>
+        )}
       </div>
     </Sheet>
   )
