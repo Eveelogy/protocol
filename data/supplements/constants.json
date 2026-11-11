@@ -27,7 +27,8 @@
     { "id": "astromech-crafting", "area": "astromech", "kind": "crafting", "unlockAt": 18 },
     { "id": "battle-crafting", "area": "battle", "kind": "crafting", "unlockAt": 22 }
   ],
-  "initialSlots": { "_source": "UNVERIFIED guess: earning slots before rebirth 1. Correct from game; profile can override.", "worker": 3, "astromech": 0, "battle": 0 },
+  "initialSlots": { "_source": "Slots before rebirth 1 = in-game max (11 worker / 9 astromech / 11 battle, confirmed by user 2026-11-11) minus the wiki's rebirth unlocks (7 / 6 / 9, rebirths 1-22).", "worker": 4, "astromech": 3, "battle": 2 },
+  "maxSlots": { "_source": "In-game maximum earning slots, confirmed by user 2026-11-11. The build warns if wiki unlocks + initialSlots disagree.", "worker": 11, "astromech": 9, "battle": 11 },
   "requirementLocations": { "_source": "wiki: droids must be in base or lounge. Chip station assumed to count (unverified).", "list": ["slot", "protocol", "lounge", "chip"] },
   "lounge": { "_source": "droidtycoonhelper base-slots.json; patch notes v1.23/v1.35", "base": 5, "perRebirth": [17, 18, 19, 20], "novaUpgradeId": "lounge-slot" },
   "superRebirth": { "minRebirth": 12, "needsRarity": "legendary", "needsTier": "rainbow" },

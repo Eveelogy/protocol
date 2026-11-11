@@ -173,6 +173,10 @@ describe('progress', () => {
 })
 
 describe('slots', () => {
+  it('reaches the in-game maximum of 11 worker, 9 astromech and 11 battle slots', () => {
+    expect(slotCounts(data, saveWith([], { rebirth: 40 })).areas).toEqual({ worker: 11, astromech: 9, battle: 11 })
+    expect(slotCounts(data, saveWith([], { rebirth: 0 })).areas).toEqual(data.constants.initialSlots)
+  })
   it('derives protocol and lounge slots from rebirth and Nova', () => {
     const s = saveWith([], { rebirth: 18, nova: { 'lounge-slot': 3 } })
     const c = slotCounts(data, s)

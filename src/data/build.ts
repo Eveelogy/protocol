@@ -183,6 +183,14 @@ export function buildGameData(
     if (d.craftSeconds && !Object.keys(d.craftSeconds).length) delete d.craftSeconds
   }
 
+  // --- slot totals: starting slots + wiki unlocks should reach the in-game maximum
+  const max = sup.constants.maxSlots
+  if (max)
+    for (const area of ['worker', 'astromech', 'battle'] as const) {
+      const total = sup.constants.initialSlots[area] + unlocks.data.reduce((s, u) => s + (u.slots[area] ?? 0), 0)
+      if (total !== max[area]) warnings.push(`Slots: ${area} reaches ${total} at rebirth 40 but the game max is ${max[area]} — check initialSlots or the wiki unlock table`)
+    }
+
   // --- referential checks
   for (const s of rebirths.data)
     for (const r of s.droids)

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "builtAt": "2026-11-11T23:02:35.479Z",
+ "builtAt": "2026-11-11T23:35:26.254Z",
  "gameVersion": "1.38.5",
  "sources": [
   {
@@ -8426,9 +8426,14 @@
    }
   ],
   "initialSlots": {
-   "worker": 3,
-   "astromech": 0,
-   "battle": 0
+   "worker": 4,
+   "astromech": 3,
+   "battle": 2
+  },
+  "maxSlots": {
+   "worker": 11,
+   "astromech": 9,
+   "battle": 11
   },
   "requirementLocations": {
    "list": [

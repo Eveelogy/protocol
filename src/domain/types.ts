@@ -118,6 +118,7 @@ export interface GameConstants {
   chipRateBase: number
   protocolSlots: { id: string; area: Area; kind: 'credits' | 'crafting'; unlockAt: number }[]
   initialSlots: Record<Area, number>
+  maxSlots: Record<Area, number>
   requirementLocations: { list: LocationKind[] }
   lounge: { base: number; perRebirth: number[]; novaUpgradeId: string }
   superRebirth: { minRebirth: number; needsRarity: Rarity; needsTier: Tier }
