@@ -1,0 +1,87 @@
+name: Nightly game data
+
+on:
+  schedule:
+    - cron: '17 6 * * *' # daily, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: game-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+
+      - name: Pull wiki pages
+        id: pull
+        run: node --experimental-strip-types scripts/pull-wiki.ts
+        continue-on-error: true
+
+      - name: Build game data
+        id: build
+        run: node --experimental-strip-types scripts/build-data.ts
+        continue-on-error: true
+
+      - name: Test
+        run: npx vitest run
+
+      - name: Decide what to do
+        id: decide
+        run: |
+          node -e '
+            const r = require("./data/build-report.json");
+            const s = require("./data/raw/_pull-status.json");
+            const needsReview = r.disputes.length + r.overlaps.length + (r.problems?.length ?? 0) > 0;
+            console.log("needs_review=" + needsReview);
+            console.log("failures=" + s.consecutiveFailures);
+          ' >> "$GITHUB_OUTPUT"
+          git status --porcelain
+
+      - name: Open an issue after 3 failed pulls in a row
+        if: steps.decide.outputs.failures >= 3
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Wiki data pull has failed ${{ steps.decide.outputs.failures }} nights in a row"
+          if ! gh issue list --label data --state open --search "Wiki data pull has failed" | grep -q .; then
+            gh label create data --color 0e8a16 --force
+            gh issue create --label data --title "$title" --body "$(cat data/raw/_pull-status.json)"
+          fi
+
+      - name: Commit clean update straight to main
+        if: steps.decide.outputs.needs_review == 'false'
+        run: |
+          git config user.name "protocol-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data src/data/game-data.json
+          git diff --cached --quiet || git commit -m "data: nightly wiki update" && git push
+
+      - name: Open a PR when something needs a human
+        if: steps.decide.outputs.needs_review == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "protocol-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="data/review-$(date -u +%Y%m%d)"
+          git switch -c "$branch"
+          git add data src/data/game-data.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data: wiki update needs review"
+          git push -u origin "$branch" --force
+          gh label create data --color 0e8a16 --force
+          body=$(node -e 'const r=require("./data/build-report.json");console.log(["## Needs review","### Disputes",...r.disputes.map(d=>"- "+d.key+": "+d.values.map(v=>v.source+"="+JSON.stringify(v.value)).join(" vs ")),"### Supplements the wiki now covers",...r.overlaps.map(o=>"- "+o),"### Problems",...(r.problems??[]).map(p=>"- "+p)].join("\n"))')
+          gh pr create --label data --title "Game data update needs review" --body "$body" || true

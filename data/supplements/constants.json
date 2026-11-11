@@ -1,0 +1,36 @@
+{
+  "_comment": "Hand-maintained values the wiki does not have. Each block notes its source. Edit freely; the nightly build merges this over wiki data.",
+  "classMatchBonus": 1.1,
+  "hiveMind": {
+    "_source": "community datamine (single source, unverified) via droidtycoonhelper / dubtrackr, v1.36.2",
+    "perOtherScourge": 0.1045,
+    "primeEffectiveMembers": 5,
+    "countsLocations": ["slot", "protocol", "chip"]
+  },
+  "kyberMultiplier": { "_source": "droidtycoonhelper + droid-advisor agree", "green": 3, "blue": 3.25, "purple": 3.6 },
+  "inactiveKyberOfStellar": 1.1,
+  "scourgeOfStellar": 0.9,
+  "chipCosts": {
+    "_source": "droidtycoonhelper droids.json + dubtrackr chip station guide (v1.38). Steps: default→gold, gold→diamond, … stellar→kyber",
+    "common": [10, 25, 40, 80, 120, 180, 240],
+    "rare": [30, 60, 100, 250, 400, 750, 1000],
+    "epic": [120, 180, 240, 2000, 5000, 8000, 12000],
+    "legendary": [400, 1200, 2500, 6000, 16000, 24000, 30000],
+    "mythic": [4000, 8000, 14000, 30000, 60000, 90000, 110000]
+  },
+  "chipRateBase": 2,
+  "protocolSlots": [
+    { "id": "worker-credits", "area": "worker", "kind": "credits", "unlockAt": 2 },
+    { "id": "astromech-credits", "area": "astromech", "kind": "credits", "unlockAt": 6 },
+    { "id": "battle-credits", "area": "battle", "kind": "credits", "unlockAt": 10 },
+    { "id": "worker-crafting", "area": "worker", "kind": "crafting", "unlockAt": 14 },
+    { "id": "astromech-crafting", "area": "astromech", "kind": "crafting", "unlockAt": 18 },
+    { "id": "battle-crafting", "area": "battle", "kind": "crafting", "unlockAt": 22 }
+  ],
+  "initialSlots": { "_source": "UNVERIFIED guess: earning slots before rebirth 1. Correct from game; profile can override.", "worker": 3, "astromech": 0, "battle": 0 },
+  "requirementLocations": { "_source": "wiki: droids must be in base or lounge. Chip station assumed to count (unverified).", "list": ["slot", "protocol", "lounge", "chip"] },
+  "lounge": { "_source": "droidtycoonhelper base-slots.json; patch notes v1.23/v1.35", "base": 5, "perRebirth": [17, 18, 19, 20], "novaUpgradeId": "lounge-slot" },
+  "superRebirth": { "minRebirth": 12, "needsRarity": "legendary", "needsTier": "rainbow" },
+  "scourgeFriday": { "weekdayUtc": 5, "startHourUtc": 3, "hours": 24 },
+  "cb23": { "defaultMissionMinutes": 20, "communityCrystalRate": 0.1, "hyperdriveMultiplier": 3 }
+}

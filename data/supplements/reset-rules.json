@@ -1,0 +1,12 @@
+{
+  "_comment": "What each rebirth type keeps or wipes. Confirmed in game by the user on 2026-11-11 where marked.",
+  "rebirth": {
+    "keep": ["droids", "lounge", "blueprints", "chips", "nova", "iconics", "companions", "traits"],
+    "wipe": ["credits"]
+  },
+  "superRebirth": {
+    "keep": ["nova", "novaUpgrades", "chipStationUnlocks", "iconicUnlocks", "iconicTraits", "flawlessUnlocks", "droidex", "lifetimeRebirths"],
+    "wipe": ["droids", "credits", "chips", "blueprints", "crafting", "kyberActivation", "companions", "lounge", "nonIconicTraits", "chipStationContents"],
+    "iconicReclaimCost": 1000000
+  }
+}
