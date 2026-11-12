@@ -1,0 +1,6285 @@
+{
+ "id": "tycoontools",
+ "title": "tycoon-tools.com",
+ "url": "https://tycoon-tools.com/droid-tycoon/",
+ "fetchedAt": "2026-11-12T00:19:23.956Z",
+ "droids": [
+  {
+   "id": "mouse",
+   "name": "MOUSE",
+   "rarity": "common",
+   "class": "worker",
+   "income": {
+    "default": 2,
+    "gold": 4,
+    "diamond": 8,
+    "rainbow": 16,
+    "beskar": 24,
+    "galactic": 48,
+    "stellar": 64,
+    "kyber": 70
+   }
+  },
+  {
+   "id": "pit",
+   "name": "PIT",
+   "rarity": "common",
+   "class": "worker",
+   "income": {
+    "default": 2,
+    "gold": 4,
+    "diamond": 8,
+    "rainbow": 16,
+    "beskar": 24,
+    "galactic": 48,
+    "stellar": 64,
+    "kyber": 70
+   }
+  },
+  {
+   "id": "gonk",
+   "name": "GONK",
+   "rarity": "common",
+   "class": "worker",
+   "income": {
+    "default": 4,
+    "gold": 8,
+    "diamond": 16,
+    "rainbow": 32,
+    "beskar": 48,
+    "galactic": 96,
+    "stellar": 128,
+    "kyber": 140
+   }
+  },
+  {
+   "id": "cb",
+   "name": "CB",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 3,
+    "gold": 6,
+    "diamond": 12,
+    "rainbow": 24,
+    "beskar": 36,
+    "galactic": 72,
+    "stellar": 96,
+    "kyber": 105
+   }
+  },
+  {
+   "id": "r3",
+   "name": "R3",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 3,
+    "gold": 6,
+    "diamond": 12,
+    "rainbow": 24,
+    "beskar": 36,
+    "galactic": 72,
+    "stellar": 96,
+    "kyber": 105
+   }
+  },
+  {
+   "id": "r5",
+   "name": "R5",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 3,
+    "gold": 6,
+    "diamond": 12,
+    "rainbow": 24,
+    "beskar": 36,
+    "galactic": 72,
+    "stellar": 96,
+    "kyber": 105
+   }
+  },
+  {
+   "id": "r8",
+   "name": "R8",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 4,
+    "gold": 8,
+    "diamond": 16,
+    "rainbow": 32,
+    "beskar": 48,
+    "galactic": 96,
+    "stellar": 128,
+    "kyber": 140
+   }
+  },
+  {
+   "id": "imperial-probe",
+   "name": "IMPERIAL PROBE",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 6,
+    "gold": 12,
+    "diamond": 24,
+    "rainbow": 48,
+    "beskar": 72,
+    "galactic": 144,
+    "stellar": 192,
+    "kyber": 211
+   }
+  },
+  {
+   "id": "b1-battle",
+   "name": "B1 BATTLE",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 5,
+    "gold": 10,
+    "diamond": 20,
+    "rainbow": 40,
+    "beskar": 60,
+    "galactic": 120,
+    "stellar": 160,
+    "kyber": 176
+   }
+  },
+  {
+   "id": "drk-1-probe",
+   "name": "DRK-1 PROBE",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 3,
+    "gold": 6,
+    "diamond": 12,
+    "rainbow": 24,
+    "beskar": 36,
+    "galactic": 72,
+    "stellar": 96,
+    "kyber": 105
+   }
+  },
+  {
+   "id": "id10",
+   "name": "ID10",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 4,
+    "gold": 8,
+    "diamond": 16,
+    "rainbow": 32,
+    "beskar": 48,
+    "galactic": 96,
+    "stellar": 128,
+    "kyber": 140
+   }
+  },
+  {
+   "id": "bdx-explorer",
+   "name": "BDX EXPLORER",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 15,
+    "gold": 30,
+    "diamond": 60,
+    "rainbow": 120,
+    "beskar": 180,
+    "galactic": 360,
+    "stellar": 480,
+    "kyber": 528
+   }
+  },
+  {
+   "id": "arg",
+   "name": "ARG",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 42,
+    "gold": 84,
+    "diamond": 168,
+    "rainbow": 336,
+    "beskar": 504,
+    "galactic": 1000,
+    "stellar": 1340,
+    "kyber": 1480
+   }
+  },
+  {
+   "id": "senate-hovercam",
+   "name": "SENATE HOVERCAM",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 46,
+    "gold": 92,
+    "diamond": 184,
+    "rainbow": 368,
+    "beskar": 552,
+    "galactic": 1100,
+    "stellar": 1470,
+    "kyber": 1610
+   }
+  },
+  {
+   "id": "b-u4d",
+   "name": "B-U4D",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 58,
+    "gold": 116,
+    "diamond": 232,
+    "rainbow": 464,
+    "beskar": 696,
+    "galactic": 1390,
+    "stellar": 1860,
+    "kyber": 2040
+   }
+  },
+  {
+   "id": "bal-core",
+   "name": "BAL-CORE",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 23,
+    "gold": 46,
+    "diamond": 92,
+    "rainbow": 184,
+    "beskar": 276,
+    "galactic": 552,
+    "stellar": 736,
+    "kyber": 809
+   }
+  },
+  {
+   "id": "roll-r",
+   "name": "ROLL-R",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 31,
+    "gold": 62,
+    "diamond": 124,
+    "rainbow": 248,
+    "beskar": 372,
+    "galactic": 744,
+    "stellar": 992,
+    "kyber": 1090
+   }
+  },
+  {
+   "id": "2bb",
+   "name": "2BB",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 17,
+    "gold": 34,
+    "diamond": 68,
+    "rainbow": 136,
+    "beskar": 204,
+    "galactic": 408,
+    "stellar": 544,
+    "kyber": 598
+   }
+  },
+  {
+   "id": "a-lt",
+   "name": "A-LT",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 36,
+    "gold": 72,
+    "diamond": 144,
+    "rainbow": 288,
+    "beskar": 432,
+    "galactic": 864,
+    "stellar": 1150,
+    "kyber": 1260
+   }
+  },
+  {
+   "id": "r4",
+   "name": "R4",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 50,
+    "gold": 100,
+    "diamond": 200,
+    "rainbow": 400,
+    "beskar": 600,
+    "galactic": 1200,
+    "stellar": 1600,
+    "kyber": 1760
+   }
+  },
+  {
+   "id": "r9",
+   "name": "R9",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 54,
+    "gold": 108,
+    "diamond": 216,
+    "rainbow": 432,
+    "beskar": 648,
+    "galactic": 1290,
+    "stellar": 1730,
+    "kyber": 1900
+   }
+  },
+  {
+   "id": "b1-security",
+   "name": "B1 SECURITY",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 66,
+    "gold": 132,
+    "diamond": 264,
+    "rainbow": 528,
+    "beskar": 792,
+    "galactic": 1580,
+    "stellar": 2110,
+    "kyber": 2320
+   }
+  },
+  {
+   "id": "nav-ex",
+   "name": "NAV-EX",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 18,
+    "gold": 36,
+    "diamond": 72,
+    "rainbow": 144,
+    "beskar": 216,
+    "galactic": 432,
+    "stellar": 576,
+    "kyber": 633
+   }
+  },
+  {
+   "id": "vect-arm",
+   "name": "VECT-ARM",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 27,
+    "gold": 54,
+    "diamond": 108,
+    "rainbow": 216,
+    "beskar": 324,
+    "galactic": 648,
+    "stellar": 864,
+    "kyber": 950
+   }
+  },
+  {
+   "id": "hov-r",
+   "name": "HOV-R",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 62,
+    "gold": 124,
+    "diamond": 248,
+    "rainbow": 496,
+    "beskar": 744,
+    "galactic": 1480,
+    "stellar": 1980,
+    "kyber": 2180
+   }
+  },
+  {
+   "id": "groundmech",
+   "name": "GROUNDMECH",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 120,
+    "gold": 240,
+    "diamond": 480,
+    "rainbow": 960,
+    "beskar": 4080,
+    "galactic": 6240,
+    "stellar": 9600,
+    "kyber": 10560
+   }
+  },
+  {
+   "id": "lo",
+   "name": "LO",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 240,
+    "gold": 480,
+    "diamond": 960,
+    "rainbow": 1920,
+    "beskar": 8160,
+    "galactic": 12480,
+    "stellar": 19200,
+    "kyber": 21120
+   }
+  },
+  {
+   "id": "amp-walker",
+   "name": "AMP WALKER",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 570,
+    "gold": 1140,
+    "diamond": 2280,
+    "rainbow": 4560,
+    "beskar": 19380,
+    "galactic": 29640,
+    "stellar": 45600,
+    "kyber": 50160
+   }
+  },
+  {
+   "id": "sen-tri",
+   "name": "SEN-TRI",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 510,
+    "gold": 1020,
+    "diamond": 2040,
+    "rainbow": 4080,
+    "beskar": 17340,
+    "galactic": 26520,
+    "stellar": 40800,
+    "kyber": 44880
+   }
+  },
+  {
+   "id": "opti-pod",
+   "name": "OPTI-POD",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 390,
+    "gold": 780,
+    "diamond": 1560,
+    "rainbow": 3120,
+    "beskar": 13260,
+    "galactic": 20280,
+    "stellar": 31200,
+    "kyber": 34320
+   }
+  },
+  {
+   "id": "gunrunner",
+   "name": "GUNRUNNER",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 660,
+    "gold": 1320,
+    "diamond": 2640,
+    "rainbow": 5280,
+    "beskar": 22440,
+    "galactic": 34320,
+    "stellar": 52800,
+    "kyber": 58080
+   }
+  },
+  {
+   "id": "bb",
+   "name": "BB",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 150,
+    "gold": 300,
+    "diamond": 600,
+    "rainbow": 1200,
+    "beskar": 5100,
+    "galactic": 7800,
+    "stellar": 12000,
+    "kyber": 13200
+   }
+  },
+  {
+   "id": "r2",
+   "name": "R2",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 480,
+    "gold": 960,
+    "diamond": 1920,
+    "rainbow": 3840,
+    "beskar": 16320,
+    "galactic": 24960,
+    "stellar": 38400,
+    "kyber": 42240
+   }
+  },
+  {
+   "id": "r6",
+   "name": "R6",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 300,
+    "gold": 600,
+    "diamond": 1200,
+    "rainbow": 2400,
+    "beskar": 10200,
+    "galactic": 15600,
+    "stellar": 24000,
+    "kyber": 26400
+   }
+  },
+  {
+   "id": "trak-r",
+   "name": "TRAK-R",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 330,
+    "gold": 660,
+    "diamond": 1320,
+    "rainbow": 2640,
+    "beskar": 11220,
+    "galactic": 17160,
+    "stellar": 26400,
+    "kyber": 29040
+   }
+  },
+  {
+   "id": "orb-walker",
+   "name": "ORB-WALKER",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 180,
+    "gold": 360,
+    "diamond": 720,
+    "rainbow": 1440,
+    "beskar": 6120,
+    "galactic": 9360,
+    "stellar": 14400,
+    "kyber": 15840
+   }
+  },
+  {
+   "id": "util-tec",
+   "name": "UTIL-TEC",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 210,
+    "gold": 420,
+    "diamond": 840,
+    "rainbow": 1680,
+    "beskar": 7140,
+    "galactic": 10920,
+    "stellar": 16800,
+    "kyber": 18480
+   }
+  },
+  {
+   "id": "b1-heavy",
+   "name": "B1 HEAVY",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 600,
+    "gold": 1200,
+    "diamond": 2400,
+    "rainbow": 4800,
+    "beskar": 20400,
+    "galactic": 31200,
+    "stellar": 48000,
+    "kyber": 52800
+   }
+  },
+  {
+   "id": "b2-super",
+   "name": "B2 SUPER",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 420,
+    "gold": 840,
+    "diamond": 1680,
+    "rainbow": 3360,
+    "beskar": 14280,
+    "galactic": 21840,
+    "stellar": 33600,
+    "kyber": 36960
+   }
+  },
+  {
+   "id": "b2-heavy",
+   "name": "B2 HEAVY",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 360,
+    "gold": 720,
+    "diamond": 1440,
+    "rainbow": 2880,
+    "beskar": 12240,
+    "galactic": 18720,
+    "stellar": 28800,
+    "kyber": 31680
+   }
+  },
+  {
+   "id": "strike-orb",
+   "name": "STRIKE-ORB",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 540,
+    "gold": 1080,
+    "diamond": 2160,
+    "rainbow": 4320,
+    "beskar": 18360,
+    "galactic": 28080,
+    "stellar": 43200,
+    "kyber": 47520
+   }
+  },
+  {
+   "id": "haul-r",
+   "name": "HAUL-R",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 270,
+    "gold": 540,
+    "diamond": 1080,
+    "rainbow": 2160,
+    "beskar": 9180,
+    "galactic": 14040,
+    "stellar": 21600,
+    "kyber": 23760
+   }
+  },
+  {
+   "id": "lng-shot",
+   "name": "LNG-SHOT",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 450,
+    "gold": 900,
+    "diamond": 1800,
+    "rainbow": 3600,
+    "beskar": 15300,
+    "galactic": 23400,
+    "stellar": 36000,
+    "kyber": 39600
+   }
+  },
+  {
+   "id": "proto-roller",
+   "name": "PROTO-ROLLER",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 972,
+    "gold": 1940,
+    "diamond": 3890,
+    "rainbow": 7780,
+    "beskar": 23330,
+    "galactic": 58320,
+    "stellar": 145800,
+    "kyber": 160380
+   }
+  },
+  {
+   "id": "mecha-droid",
+   "name": "MECHA-DROID",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 1240,
+    "gold": 2490,
+    "diamond": 4970,
+    "rainbow": 9950,
+    "beskar": 29860,
+    "galactic": 74640,
+    "stellar": 186600,
+    "kyber": 204600
+   }
+  },
+  {
+   "id": "mono-wlkr",
+   "name": "MONO-WLKR",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 1500,
+    "gold": 3000,
+    "diamond": 6000,
+    "rainbow": 12000,
+    "beskar": 36000,
+    "galactic": 90000,
+    "stellar": 225000,
+    "kyber": 247500
+   }
+  },
+  {
+   "id": "bb9",
+   "name": "BB9",
+   "rarity": "legendary",
+   "class": "astromech",
+   "income": {
+    "default": 1300,
+    "gold": 2600,
+    "diamond": 5200,
+    "rainbow": 10400,
+    "beskar": 31200,
+    "galactic": 78000,
+    "stellar": 195000,
+    "kyber": 214500
+   }
+  },
+  {
+   "id": "r7",
+   "name": "R7",
+   "rarity": "legendary",
+   "class": "astromech",
+   "income": {
+    "default": 1500,
+    "gold": 3000,
+    "diamond": 6000,
+    "rainbow": 12000,
+    "beskar": 36000,
+    "galactic": 90000,
+    "stellar": 225000,
+    "kyber": 247500
+   }
+  },
+  {
+   "id": "b2-rp",
+   "name": "B2-RP",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 1300,
+    "gold": 2600,
+    "diamond": 5210,
+    "rainbow": 10430,
+    "beskar": 31300,
+    "galactic": 78240,
+    "stellar": 195600,
+    "kyber": 215160
+   }
+  },
+  {
+   "id": "cyclo-grav",
+   "name": "CYCLO-GRAV",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 1260,
+    "gold": 2520,
+    "diamond": 5040,
+    "rainbow": 10080,
+    "beskar": 30240,
+    "galactic": 75600,
+    "stellar": 189000,
+    "kyber": 207900
+   }
+  },
+  {
+   "id": "opti-strk",
+   "name": "OPTI-STRK",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 1500,
+    "gold": 3000,
+    "diamond": 6000,
+    "rainbow": 12000,
+    "beskar": 36000,
+    "galactic": 90000,
+    "stellar": 225000,
+    "kyber": 247500
+   }
+  },
+  {
+   "id": "snow-mouse",
+   "name": "SNOW MOUSE",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 4400,
+    "gold": 8800,
+    "diamond": 17600,
+    "rainbow": 35200,
+    "beskar": 70400,
+    "galactic": 193600,
+    "stellar": 550000,
+    "kyber": 605000
+   }
+  },
+  {
+   "id": "ric",
+   "name": "RIC",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 5100,
+    "gold": 10200,
+    "diamond": 20400,
+    "rainbow": 40800,
+    "beskar": 81600,
+    "galactic": 224400,
+    "stellar": 637500,
+    "kyber": 701250
+   }
+  },
+  {
+   "id": "loadlifter",
+   "name": "LOADLIFTER",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 7200,
+    "gold": 14400,
+    "diamond": 28800,
+    "rainbow": 57600,
+    "beskar": 115200,
+    "galactic": 316800,
+    "stellar": 900000,
+    "kyber": 990000
+   }
+  },
+  {
+   "id": "lep",
+   "name": "LEP",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 6500,
+    "gold": 13000,
+    "diamond": 26000,
+    "rainbow": 52000,
+    "beskar": 104000,
+    "galactic": 286000,
+    "stellar": 812500,
+    "kyber": 893760
+   }
+  },
+  {
+   "id": "ric-1200",
+   "name": "RIC-1200",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 5800,
+    "gold": 11600,
+    "diamond": 23200,
+    "rainbow": 46400,
+    "beskar": 92800,
+    "galactic": 255200,
+    "stellar": 725000,
+    "kyber": 797500
+   }
+  },
+  {
+   "id": "drft-r",
+   "name": "DRFT-R",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 5800,
+    "gold": 11600,
+    "diamond": 23200,
+    "rainbow": 46400,
+    "beskar": 92800,
+    "galactic": 255200,
+    "stellar": 725000,
+    "kyber": 797500
+   }
+  },
+  {
+   "id": "cyclens",
+   "name": "CYCLENS",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 4400,
+    "gold": 8800,
+    "diamond": 17600,
+    "rainbow": 35200,
+    "beskar": 70400,
+    "galactic": 193600,
+    "stellar": 550000,
+    "kyber": 605000
+   }
+  },
+  {
+   "id": "mo-trak",
+   "name": "MO-TRAK",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 7200,
+    "gold": 14400,
+    "diamond": 28800,
+    "rainbow": 57600,
+    "beskar": 115200,
+    "galactic": 316800,
+    "stellar": 900000,
+    "kyber": 990000
+   }
+  },
+  {
+   "id": "tri-tek",
+   "name": "TRI-TEK",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 6500,
+    "gold": 13000,
+    "diamond": 26000,
+    "rainbow": 52000,
+    "beskar": 104000,
+    "galactic": 286000,
+    "stellar": 812500,
+    "kyber": 893750
+   }
+  },
+  {
+   "id": "ig",
+   "name": "IG",
+   "rarity": "mythic",
+   "class": "battle",
+   "income": {
+    "default": 5800,
+    "gold": 11600,
+    "diamond": 23200,
+    "rainbow": 46400,
+    "beskar": 92800,
+    "galactic": 255200,
+    "stellar": 725000,
+    "kyber": 797500
+   }
+  },
+  {
+   "id": "kx",
+   "name": "KX",
+   "rarity": "mythic",
+   "class": "battle",
+   "income": {
+    "default": 7200,
+    "gold": 14400,
+    "diamond": 28800,
+    "rainbow": 57600,
+    "beskar": 115200,
+    "galactic": 316800,
+    "stellar": 900000,
+    "kyber": 990000
+   }
+  },
+  {
+   "id": "bb-8",
+   "name": "BB-8",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {}
+  },
+  {
+   "id": "mister-bones",
+   "name": "MISTER BONES",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {}
+  },
+  {
+   "id": "ig-11-marshal",
+   "name": "IG-11 MARSHAL",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {}
+  },
+  {
+   "id": "dj-r3x",
+   "name": "DJ-R3X",
+   "rarity": "iconic",
+   "class": "worker",
+   "income": {}
+  },
+  {
+   "id": "cb-23",
+   "name": "CB-23",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {}
+  },
+  {
+   "id": "r2-d2",
+   "name": "R2-D2",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {}
+  },
+  {
+   "id": "c-3p0",
+   "name": "C-3P0",
+   "rarity": "iconic",
+   "class": "protocol",
+   "income": {}
+  },
+  {
+   "id": "chopper",
+   "name": "CHOPPER",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {}
+  },
+  {
+   "id": "d-0",
+   "name": "D-0",
+   "rarity": "iconic",
+   "class": "worker",
+   "income": {}
+  },
+  {
+   "id": "wg-22",
+   "name": "WG-22",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {}
+  },
+  {
+   "id": "whl-ex",
+   "name": "WHL-EX",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 72,
+    "gold": 144,
+    "diamond": 288,
+    "rainbow": 576,
+    "beskar": 864,
+    "galactic": 1730,
+    "stellar": 2300,
+    "kyber": 2530
+   }
+  },
+  {
+   "id": "zro-tec",
+   "name": "ZRO-TEC",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 72,
+    "gold": 144,
+    "diamond": 288,
+    "rainbow": 576,
+    "beskar": 864,
+    "galactic": 1720,
+    "stellar": 2300,
+    "kyber": 2530
+   }
+  },
+  {
+   "id": "btl-r",
+   "name": "BTL-R",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 72,
+    "gold": 144,
+    "diamond": 288,
+    "rainbow": 576,
+    "beskar": 864,
+    "galactic": 1720,
+    "stellar": 2300,
+    "kyber": 2530
+   }
+  },
+  {
+   "id": "n-ul",
+   "name": "N-UL",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 1080,
+    "gold": 2160,
+    "diamond": 4320,
+    "rainbow": 8640,
+    "beskar": 36720,
+    "galactic": 56160,
+    "stellar": 86400,
+    "kyber": 95040
+   }
+  },
+  {
+   "id": "scrp-r",
+   "name": "SCRP-R",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 1080,
+    "gold": 2160,
+    "diamond": 4320,
+    "rainbow": 8640,
+    "beskar": 36720,
+    "galactic": 56160,
+    "stellar": 86400,
+    "kyber": 95040
+   }
+  },
+  {
+   "id": "arm-core",
+   "name": "ARM-CORE",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 1030,
+    "gold": 2070,
+    "diamond": 4140,
+    "rainbow": 8280,
+    "beskar": 35190,
+    "galactic": 53820,
+    "stellar": 82800,
+    "kyber": 91080
+   }
+  },
+  {
+   "id": "opt-ar",
+   "name": "OPT-AR",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 1080,
+    "gold": 2160,
+    "diamond": 4320,
+    "rainbow": 8640,
+    "beskar": 36720,
+    "galactic": 56160,
+    "stellar": 86400,
+    "kyber": 95040
+   }
+  },
+  {
+   "id": "ro-tor",
+   "name": "RO-TOR",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 2250,
+    "gold": 4500,
+    "diamond": 9000,
+    "rainbow": 18000,
+    "beskar": 54000,
+    "galactic": 135000,
+    "stellar": 337500,
+    "kyber": 371250
+   }
+  },
+  {
+   "id": "fus-3",
+   "name": "FUS-3",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 2400,
+    "gold": 4800,
+    "diamond": 9600,
+    "rainbow": 19200,
+    "beskar": 57600,
+    "galactic": 144000,
+    "stellar": 360000,
+    "kyber": 396000
+   }
+  },
+  {
+   "id": "qik-bit",
+   "name": "QIK-BIT",
+   "rarity": "legendary",
+   "class": "astromech",
+   "income": {
+    "default": 2400,
+    "gold": 4800,
+    "diamond": 9600,
+    "rainbow": 19200,
+    "beskar": 57600,
+    "galactic": 144000,
+    "stellar": 360000,
+    "kyber": 396000
+   }
+  },
+  {
+   "id": "orb-xl",
+   "name": "ORB-XL",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 2400,
+    "gold": 4800,
+    "diamond": 9600,
+    "rainbow": 19200,
+    "beskar": 57600,
+    "galactic": 144000,
+    "stellar": 360000,
+    "kyber": 396000
+   }
+  },
+  {
+   "id": "riv-3t",
+   "name": "RIV-3T",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 12600,
+    "gold": 25200,
+    "diamond": 50400,
+    "rainbow": 100800,
+    "beskar": 201600,
+    "galactic": 554400,
+    "stellar": 1570000,
+    "kyber": 1730000
+   }
+  },
+  {
+   "id": "lug-g",
+   "name": "LUG-G",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 11400,
+    "gold": 22800,
+    "diamond": 45600,
+    "rainbow": 91200,
+    "beskar": 182400,
+    "galactic": 501600,
+    "stellar": 1430000,
+    "kyber": 1570000
+   }
+  },
+  {
+   "id": "low-mo",
+   "name": "LOW-MO",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 12600,
+    "gold": 25200,
+    "diamond": 50400,
+    "rainbow": 100800,
+    "beskar": 201600,
+    "galactic": 554400,
+    "stellar": 1570000,
+    "kyber": 1600000
+   }
+  },
+  {
+   "id": "axi-pod",
+   "name": "AXI-POD",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 12000,
+    "gold": 24000,
+    "diamond": 48000,
+    "rainbow": 96000,
+    "beskar": 192000,
+    "galactic": 528000,
+    "stellar": 1500000,
+    "kyber": 1650000
+   }
+  },
+  {
+   "id": "srv-o",
+   "name": "SRV-O",
+   "rarity": "mythic",
+   "class": "battle",
+   "income": {
+    "default": 11400,
+    "gold": 22800,
+    "diamond": 45600,
+    "rainbow": 91200,
+    "beskar": 182400,
+    "galactic": 501600,
+    "stellar": 1430000,
+    "kyber": 1570000
+   }
+  },
+  {
+   "id": "x-onk",
+   "name": "X-ONK",
+   "rarity": "mythic",
+   "class": "battle",
+   "income": {
+    "default": 12000,
+    "gold": 24000,
+    "diamond": 48000,
+    "rainbow": 96000,
+    "beskar": 192000,
+    "galactic": 528000,
+    "stellar": 1500000,
+    "kyber": 1650000
+   }
+  },
+  {
+   "id": "sa-5",
+   "name": "SA-5",
+   "rarity": "rare",
+   "class": "protocol",
+   "income": {
+    "default": 14,
+    "gold": 28,
+    "diamond": 56,
+    "rainbow": 112,
+    "beskar": 168,
+    "galactic": 336,
+    "stellar": 448,
+    "kyber": 490
+   }
+  },
+  {
+   "id": "lom",
+   "name": "LOM",
+   "rarity": "epic",
+   "class": "protocol",
+   "income": {
+    "default": 105,
+    "gold": 210,
+    "diamond": 420,
+    "rainbow": 840,
+    "beskar": 3570,
+    "galactic": 5460,
+    "stellar": 8400,
+    "kyber": 9240
+   }
+  },
+  {
+   "id": "pz",
+   "name": "PZ",
+   "rarity": "legendary",
+   "class": "protocol",
+   "income": {
+    "default": 900,
+    "gold": 1800,
+    "diamond": 3600,
+    "rainbow": 7200,
+    "beskar": 21600,
+    "galactic": 54000,
+    "stellar": 135000,
+    "kyber": 148500
+   }
+  },
+  {
+   "id": "tda",
+   "name": "TDA",
+   "rarity": "mythic",
+   "class": "protocol",
+   "income": {
+    "default": 4000,
+    "gold": 8000,
+    "diamond": 16000,
+    "rainbow": 32000,
+    "beskar": 64000,
+    "galactic": 176000,
+    "stellar": 500000,
+    "kyber": 550000
+   }
+  },
+  {
+   "id": "eg-58",
+   "name": "EG-58",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 70,
+    "gold": 140,
+    "diamond": 280,
+    "rainbow": 560,
+    "beskar": 840,
+    "galactic": 1680,
+    "stellar": 2240,
+    "kyber": 2460
+   }
+  },
+  {
+   "id": "egl",
+   "name": "EGL",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 300,
+    "gold": 600,
+    "diamond": 1200,
+    "rainbow": 2400,
+    "beskar": 10200,
+    "galactic": 15600,
+    "stellar": 24000,
+    "kyber": 26400
+   }
+  },
+  {
+   "id": "kt",
+   "name": "KT",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 450,
+    "gold": 900,
+    "diamond": 1800,
+    "rainbow": 3600,
+    "beskar": 15300,
+    "galactic": 23400,
+    "stellar": 36000,
+    "kyber": 39600
+   }
+  },
+  {
+   "id": "mph",
+   "name": "MPH",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 690,
+    "gold": 1380,
+    "diamond": 2760,
+    "rainbow": 5520,
+    "beskar": 23460,
+    "galactic": 35880,
+    "stellar": 55200,
+    "kyber": 60720
+   }
+  },
+  {
+   "id": "j09-4mn",
+   "name": "J09-4MN",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 1300,
+    "gold": 2600,
+    "diamond": 5200,
+    "rainbow": 10400,
+    "beskar": 31200,
+    "galactic": 78000,
+    "stellar": 195000,
+    "kyber": 214500
+   }
+  },
+  {
+   "id": "plnk",
+   "name": "PLNK",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 1400,
+    "gold": 2800,
+    "diamond": 5600,
+    "rainbow": 11200,
+    "beskar": 33600,
+    "galactic": 84000,
+    "stellar": 210000,
+    "kyber": 231000
+   }
+  },
+  {
+   "id": "ecg",
+   "name": "ECG",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 6200,
+    "gold": 12400,
+    "diamond": 24800,
+    "rainbow": 49600,
+    "beskar": 99200,
+    "galactic": 272800,
+    "stellar": 775000,
+    "kyber": 852500
+   }
+  }
+ ],
+ "rebirths": [
+  {
+   "path": 1,
+   "from": 0,
+   "credits": 10000,
+   "droids": [
+    {
+     "droidId": "cb",
+     "tier": "default"
+    },
+    {
+     "droidId": "pit",
+     "tier": "default"
+    },
+    {
+     "droidId": "drk-1-probe",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 1,
+   "credits": 150000,
+   "droids": [
+    {
+     "droidId": "bdx-explorer",
+     "tier": "default"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "default"
+    },
+    {
+     "droidId": "bal-core",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 2,
+   "credits": 975000,
+   "droids": [
+    {
+     "droidId": "a-lt",
+     "tier": "default"
+    },
+    {
+     "droidId": "b-u4d",
+     "tier": "default"
+    },
+    {
+     "droidId": "r9",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 3,
+   "credits": 2950000,
+   "droids": [
+    {
+     "droidId": "arg",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "gold"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 4,
+   "credits": 5350000,
+   "droids": [
+    {
+     "droidId": "b-u4d",
+     "tier": "gold"
+    },
+    {
+     "droidId": "hov-r",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r9",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 5,
+   "credits": 9850000,
+   "droids": [
+    {
+     "droidId": "a-lt",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "arg",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 6,
+   "credits": 14500000,
+   "droids": [
+    {
+     "droidId": "b-u4d",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "bb",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 7,
+   "credits": 36000000,
+   "droids": [
+    {
+     "droidId": "hov-r",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "lo",
+     "tier": "gold"
+    },
+    {
+     "droidId": "util-tec",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 8,
+   "credits": 89000000,
+   "droids": [
+    {
+     "droidId": "trak-r",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r6",
+     "tier": "gold"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 9,
+   "credits": 220000000,
+   "droids": [
+    {
+     "droidId": "strike-orb",
+     "tier": "gold"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "lo",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 10,
+   "credits": 550000000,
+   "droids": [
+    {
+     "droidId": "amp-walker",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b1-heavy",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 11,
+   "credits": 1360000000,
+   "droids": [
+    {
+     "droidId": "proto-roller",
+     "tier": "gold"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "default"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 12,
+   "credits": 3400000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "default"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "default"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 13,
+   "credits": 8449999999.999999,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "default"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "gold"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 14,
+   "credits": 21000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "gold"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r7",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 15,
+   "credits": 52000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "gold"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 16,
+   "credits": 130000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 17,
+   "credits": 325000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r7",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 18,
+   "credits": 810000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 19,
+   "credits": 2000000000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 20,
+   "credits": 3000000000000,
+   "droids": [
+    {
+     "droidId": "bb",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "orb-walker",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 21,
+   "credits": 4500000000000,
+   "droids": [
+    {
+     "droidId": "amp-walker",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b1-heavy",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 22,
+   "credits": 6000000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "r7",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 23,
+   "credits": 9000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 24,
+   "credits": 13500000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ig",
+     "tier": "default"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 25,
+   "credits": 21000000000000,
+   "droids": [
+    {
+     "droidId": "cyclens",
+     "tier": "gold"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 26,
+   "credits": 32000000000000,
+   "droids": [
+    {
+     "droidId": "kx",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 27,
+   "credits": 45000000000000,
+   "droids": [
+    {
+     "droidId": "proto-roller",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 28,
+   "credits": 68000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ig",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 29,
+   "credits": 100000000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 30,
+   "credits": 150000000000000,
+   "droids": [
+    {
+     "droidId": "sen-tri",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "kx",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 31,
+   "credits": 230000000000000,
+   "droids": [
+    {
+     "droidId": "orb-walker",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "opti-pod",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ric",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 32,
+   "credits": 345000000000000,
+   "droids": [
+    {
+     "droidId": "b1-heavy",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 33,
+   "credits": 520000000000000,
+   "droids": [
+    {
+     "droidId": "groundmech",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "bb",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 34,
+   "credits": 778000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ig",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "stellar"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 35,
+   "credits": 1190000000000000,
+   "droids": [
+    {
+     "droidId": "bdx-explorer",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "a-lt",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 36,
+   "credits": 2500000000000000,
+   "droids": [
+    {
+     "droidId": "b1-heavy",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "bb",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 37,
+   "credits": 4500000000000000,
+   "droids": [
+    {
+     "droidId": "r2",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r6",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 38,
+   "credits": 8000000000000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "ig",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 1,
+   "from": 39,
+   "credits": 15000000000000000,
+   "droids": [
+    {
+     "droidId": "snow-mouse",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 0,
+   "credits": 10000,
+   "droids": [
+    {
+     "droidId": "id10",
+     "tier": "default"
+    },
+    {
+     "droidId": "mouse",
+     "tier": "default"
+    },
+    {
+     "droidId": "gonk",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 1,
+   "credits": 150000,
+   "droids": [
+    {
+     "droidId": "roll-r",
+     "tier": "default"
+    },
+    {
+     "droidId": "senate-hovercam",
+     "tier": "default"
+    },
+    {
+     "droidId": "nav-ex",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 2,
+   "credits": 975000,
+   "droids": [
+    {
+     "droidId": "r4",
+     "tier": "default"
+    },
+    {
+     "droidId": "vect-arm",
+     "tier": "default"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 3,
+   "credits": 2950000,
+   "droids": [
+    {
+     "droidId": "2bb",
+     "tier": "gold"
+    },
+    {
+     "droidId": "bal-core",
+     "tier": "gold"
+    },
+    {
+     "droidId": "orb-walker",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 4,
+   "credits": 5350000,
+   "droids": [
+    {
+     "droidId": "r4",
+     "tier": "gold"
+    },
+    {
+     "droidId": "vect-arm",
+     "tier": "gold"
+    },
+    {
+     "droidId": "nav-ex",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 5,
+   "credits": 9850000,
+   "droids": [
+    {
+     "droidId": "gunrunner",
+     "tier": "default"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "bal-core",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 6,
+   "credits": 14500000,
+   "droids": [
+    {
+     "droidId": "roll-r",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r2",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 7,
+   "credits": 36000000,
+   "droids": [
+    {
+     "droidId": "r4",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "gold"
+    },
+    {
+     "droidId": "gunrunner",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 8,
+   "credits": 89000000,
+   "droids": [
+    {
+     "droidId": "nav-ex",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "gold"
+    },
+    {
+     "droidId": "amp-walker",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 9,
+   "credits": 220000000,
+   "droids": [
+    {
+     "droidId": "vect-arm",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "r2",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 10,
+   "credits": 550000000,
+   "droids": [
+    {
+     "droidId": "bal-core",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-heavy",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 11,
+   "credits": 1360000000,
+   "droids": [
+    {
+     "droidId": "orb-walker",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "r2",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 12,
+   "credits": 3400000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "default"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 13,
+   "credits": 8449999999.999999,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "default"
+    },
+    {
+     "droidId": "r7",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 14,
+   "credits": 21000000000,
+   "droids": [
+    {
+     "droidId": "strike-orb",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 15,
+   "credits": 52000000000,
+   "droids": [
+    {
+     "droidId": "amp-walker",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 16,
+   "credits": 130000000000,
+   "droids": [
+    {
+     "droidId": "opti-pod",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r7",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 17,
+   "credits": 325000000000,
+   "droids": [
+    {
+     "droidId": "util-tec",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 18,
+   "credits": 810000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r7",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 19,
+   "credits": 2000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 20,
+   "credits": 3000000000000,
+   "droids": [
+    {
+     "droidId": "lo",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "r6",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 21,
+   "credits": 4500000000000,
+   "droids": [
+    {
+     "droidId": "sen-tri",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 22,
+   "credits": 6000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 23,
+   "credits": 9000000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 24,
+   "credits": 13500000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "gold"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 25,
+   "credits": 21000000000000,
+   "droids": [
+    {
+     "droidId": "kx",
+     "tier": "gold"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "ig",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 26,
+   "credits": 32000000000000,
+   "droids": [
+    {
+     "droidId": "lep",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 27,
+   "credits": 45000000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 28,
+   "credits": 68000000000000,
+   "droids": [
+    {
+     "droidId": "cyclo-grav",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "r7",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ric",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 29,
+   "credits": 100000000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "kx",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 30,
+   "credits": 150000000000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 31,
+   "credits": 230000000000000,
+   "droids": [
+    {
+     "droidId": "gunrunner",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "b1-heavy",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "lep",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 32,
+   "credits": 345000000000000,
+   "droids": [
+    {
+     "droidId": "r2",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "kx",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 33,
+   "credits": 520000000000000,
+   "droids": [
+    {
+     "droidId": "r6",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "lo",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ric",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 34,
+   "credits": 778000000000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "stellar"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 35,
+   "credits": 1190000000000000,
+   "droids": [
+    {
+     "droidId": "b1-security",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r4",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r9",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 36,
+   "credits": 2500000000000000,
+   "droids": [
+    {
+     "droidId": "lo",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "orb-walker",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 37,
+   "credits": 4500000000000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "b2-heavy",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 38,
+   "credits": 8000000000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "kx",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 2,
+   "from": 39,
+   "credits": 15000000000000000,
+   "droids": [
+    {
+     "droidId": "ric",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "lep",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 0,
+   "credits": 10000,
+   "droids": [
+    {
+     "droidId": "mouse",
+     "tier": "default"
+    },
+    {
+     "droidId": "pit",
+     "tier": "default"
+    },
+    {
+     "droidId": "gonk",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 1,
+   "credits": 150000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "default"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "default"
+    },
+    {
+     "droidId": "senate-hovercam",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 2,
+   "credits": 975000,
+   "droids": [
+    {
+     "droidId": "r8",
+     "tier": "default"
+    },
+    {
+     "droidId": "r5",
+     "tier": "default"
+    },
+    {
+     "droidId": "r4",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 3,
+   "credits": 2950000,
+   "droids": [
+    {
+     "droidId": "b1-battle",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 4,
+   "credits": 5350000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "gold"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "gold"
+    },
+    {
+     "droidId": "senate-hovercam",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 5,
+   "credits": 9850000,
+   "droids": [
+    {
+     "droidId": "r5",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r4",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 6,
+   "credits": 14500000,
+   "droids": [
+    {
+     "droidId": "r8",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b1-battle",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r9",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 7,
+   "credits": 36000000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 8,
+   "credits": 89000000,
+   "droids": [
+    {
+     "droidId": "r5",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "r4",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 9,
+   "credits": 220000000,
+   "droids": [
+    {
+     "droidId": "senate-hovercam",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "default"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 10,
+   "credits": 550000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "default"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "default"
+    },
+    {
+     "droidId": "util-tec",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 11,
+   "credits": 1360000000,
+   "droids": [
+    {
+     "droidId": "bal-core",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "gold"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 12,
+   "credits": 3400000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "default"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 13,
+   "credits": 8449999999.999999,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "default"
+    },
+    {
+     "droidId": "r7",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 14,
+   "credits": 21000000000,
+   "droids": [
+    {
+     "droidId": "strike-orb",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 15,
+   "credits": 52000000000,
+   "droids": [
+    {
+     "droidId": "amp-walker",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 16,
+   "credits": 130000000000,
+   "droids": [
+    {
+     "droidId": "opti-pod",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r7",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 17,
+   "credits": 325000000000,
+   "droids": [
+    {
+     "droidId": "util-tec",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 18,
+   "credits": 810000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r7",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 19,
+   "credits": 2000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 20,
+   "credits": 3000000000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "opti-pod",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "r2",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 21,
+   "credits": 4500000000000,
+   "droids": [
+    {
+     "droidId": "gunrunner",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "lng-shot",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 22,
+   "credits": 6000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 23,
+   "credits": 9000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ric",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 24,
+   "credits": 13500000000000,
+   "droids": [
+    {
+     "droidId": "proto-roller",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "default"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 25,
+   "credits": 21000000000000,
+   "droids": [
+    {
+     "droidId": "lep",
+     "tier": "gold"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 26,
+   "credits": 32000000000000,
+   "droids": [
+    {
+     "droidId": "ric-1200",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "ig",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 27,
+   "credits": 45000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ric",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 28,
+   "credits": 68000000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ig",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 29,
+   "credits": 100000000000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "lep",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 30,
+   "credits": 150000000000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 31,
+   "credits": 230000000000000,
+   "droids": [
+    {
+     "droidId": "groundmech",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "bb",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 32,
+   "credits": 345000000000000,
+   "droids": [
+    {
+     "droidId": "trak-r",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "mono-wlkr",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 33,
+   "credits": 520000000000000,
+   "droids": [
+    {
+     "droidId": "orb-walker",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "lep",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 34,
+   "credits": 778000000000000,
+   "droids": [
+    {
+     "droidId": "proto-roller",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "kx",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ric",
+     "tier": "stellar"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 35,
+   "credits": 1190000000000000,
+   "droids": [
+    {
+     "droidId": "arg",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "senate-hovercam",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "b-u4d",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 36,
+   "credits": 2500000000000000,
+   "droids": [
+    {
+     "droidId": "strike-orb",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "amp-walker",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "util-tec",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 37,
+   "credits": 4500000000000000,
+   "droids": [
+    {
+     "droidId": "haul-r",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "lng-shot",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 38,
+   "credits": 8000000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 3,
+   "from": 39,
+   "credits": 15000000000000000,
+   "droids": [
+    {
+     "droidId": "mo-trak",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "ig",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 0,
+   "credits": 10000,
+   "droids": [
+    {
+     "droidId": "id10",
+     "tier": "default"
+    },
+    {
+     "droidId": "pit",
+     "tier": "default"
+    },
+    {
+     "droidId": "drk-1-probe",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 1,
+   "credits": 150000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "default"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "default"
+    },
+    {
+     "droidId": "senate-hovercam",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 2,
+   "credits": 975000,
+   "droids": [
+    {
+     "droidId": "r5",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r8",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r4",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 3,
+   "credits": 2950000,
+   "droids": [
+    {
+     "droidId": "b1-battle",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 4,
+   "credits": 5350000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "gold"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "gold"
+    },
+    {
+     "droidId": "senate-hovercam",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 5,
+   "credits": 9850000,
+   "droids": [
+    {
+     "droidId": "r5",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r4",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 6,
+   "credits": 14500000,
+   "droids": [
+    {
+     "droidId": "r8",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b1-battle",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r9",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 7,
+   "credits": 36000000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 8,
+   "credits": 89000000,
+   "droids": [
+    {
+     "droidId": "r5",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "r4",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 9,
+   "credits": 220000000,
+   "droids": [
+    {
+     "droidId": "senate-hovercam",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "default"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 10,
+   "credits": 550000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "default"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "default"
+    },
+    {
+     "droidId": "util-tec",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 11,
+   "credits": 1360000000,
+   "droids": [
+    {
+     "droidId": "bal-core",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "gold"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 12,
+   "credits": 3400000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "default"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 13,
+   "credits": 8449999999.999999,
+   "droids": [
+    {
+     "droidId": "bal-core",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 14,
+   "credits": 21000000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 15,
+   "credits": 52000000000,
+   "droids": [
+    {
+     "droidId": "util-tec",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "default"
+    },
+    {
+     "droidId": "r7",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 16,
+   "credits": 130000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "default"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "gold"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 17,
+   "credits": 325000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "gold"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r7",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 18,
+   "credits": 810000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r7",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 19,
+   "credits": 2000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 20,
+   "credits": 3000000000000,
+   "droids": [
+    {
+     "droidId": "amp-walker",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 21,
+   "credits": 4500000000000,
+   "droids": [
+    {
+     "droidId": "gunrunner",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 22,
+   "credits": 6000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 23,
+   "credits": 9000000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 24,
+   "credits": 13500000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "default"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 25,
+   "credits": 21000000000000,
+   "droids": [
+    {
+     "droidId": "cyclens",
+     "tier": "gold"
+    },
+    {
+     "droidId": "lep",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 26,
+   "credits": 32000000000000,
+   "droids": [
+    {
+     "droidId": "ric-1200",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 27,
+   "credits": 45000000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ig",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "kx",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 28,
+   "credits": 68000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "r7",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 29,
+   "credits": 100000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ig",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 30,
+   "credits": 150000000000000,
+   "droids": [
+    {
+     "droidId": "trak-r",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 31,
+   "credits": 230000000000000,
+   "droids": [
+    {
+     "droidId": "r2",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "r6",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ig",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 32,
+   "credits": 345000000000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 33,
+   "credits": 520000000000000,
+   "droids": [
+    {
+     "droidId": "strike-orb",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "amp-walker",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 34,
+   "credits": 778000000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "lep",
+     "tier": "stellar"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 35,
+   "credits": 1190000000000000,
+   "droids": [
+    {
+     "droidId": "nav-ex",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "bal-core",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "vect-arm",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 36,
+   "credits": 2500000000000000,
+   "droids": [
+    {
+     "droidId": "sen-tri",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "opti-pod",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "gunrunner",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 37,
+   "credits": 4500000000000000,
+   "droids": [
+    {
+     "droidId": "b1-heavy",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r7",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 38,
+   "credits": 8000000000000000,
+   "droids": [
+    {
+     "droidId": "proto-roller",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "from": 39,
+   "credits": 15000000000000000,
+   "droids": [
+    {
+     "droidId": "drft-r",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "kx",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 0,
+   "credits": 10000,
+   "droids": [
+    {
+     "droidId": "id10",
+     "tier": "default"
+    },
+    {
+     "droidId": "mouse",
+     "tier": "default"
+    },
+    {
+     "droidId": "gonk",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 1,
+   "credits": 150000,
+   "droids": [
+    {
+     "droidId": "imperial-probe",
+     "tier": "gold"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "default"
+    },
+    {
+     "droidId": "roll-r",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 2,
+   "credits": 975000,
+   "droids": [
+    {
+     "droidId": "r4",
+     "tier": "default"
+    },
+    {
+     "droidId": "vect-arm",
+     "tier": "default"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 3,
+   "credits": 2950000,
+   "droids": [
+    {
+     "droidId": "b1-battle",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 4,
+   "credits": 5350000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "gold"
+    },
+    {
+     "droidId": "bal-core",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r4",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 5,
+   "credits": 9850000,
+   "droids": [
+    {
+     "droidId": "2bb",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "bdx-explorer",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "gunrunner",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 6,
+   "credits": 14500000,
+   "droids": [
+    {
+     "droidId": "r5",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "roll-r",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r2",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 7,
+   "credits": 36000000,
+   "droids": [
+    {
+     "droidId": "r8",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b1-battle",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 8,
+   "credits": 89000000,
+   "droids": [
+    {
+     "droidId": "nav-ex",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "gold"
+    },
+    {
+     "droidId": "amp-walker",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 9,
+   "credits": 220000000,
+   "droids": [
+    {
+     "droidId": "imperial-probe",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "default"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 10,
+   "credits": 550000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "default"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "default"
+    },
+    {
+     "droidId": "util-tec",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 11,
+   "credits": 1360000000,
+   "droids": [
+    {
+     "droidId": "bal-core",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "gold"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 12,
+   "credits": 3400000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b2-heavy",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r2",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 13,
+   "credits": 8449999999.999999,
+   "droids": [
+    {
+     "droidId": "groundmech",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "util-tec",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 14,
+   "credits": 21000000000,
+   "droids": [
+    {
+     "droidId": "b2-heavy",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 15,
+   "credits": 52000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "default"
+    },
+    {
+     "droidId": "r7",
+     "tier": "gold"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 16,
+   "credits": 130000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "default"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "gold"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 17,
+   "credits": 325000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r7",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 18,
+   "credits": 810000000000,
+   "droids": [
+    {
+     "droidId": "opti-strk",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 19,
+   "credits": 2000000000000,
+   "droids": [
+    {
+     "droidId": "b2-rp",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "r7",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 20,
+   "credits": 3000000000000,
+   "droids": [
+    {
+     "droidId": "lo",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 21,
+   "credits": 4500000000000,
+   "droids": [
+    {
+     "droidId": "sen-tri",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "r6",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "gunrunner",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 22,
+   "credits": 6000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 23,
+   "credits": 9000000000000,
+   "droids": [
+    {
+     "droidId": "mono-wlkr",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 24,
+   "credits": 13500000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ric",
+     "tier": "default"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 25,
+   "credits": 21000000000000,
+   "droids": [
+    {
+     "droidId": "cyclens",
+     "tier": "gold"
+    },
+    {
+     "droidId": "lep",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 26,
+   "credits": 32000000000000,
+   "droids": [
+    {
+     "droidId": "ric-1200",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "ig",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 27,
+   "credits": 45000000000000,
+   "droids": [
+    {
+     "droidId": "bb9",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ric",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 28,
+   "credits": 68000000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ig",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 29,
+   "credits": 100000000000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "lep",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 30,
+   "credits": 150000000000000,
+   "droids": [
+    {
+     "droidId": "amp-walker",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 31,
+   "credits": 230000000000000,
+   "droids": [
+    {
+     "droidId": "lo",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 32,
+   "credits": 345000000000000,
+   "droids": [
+    {
+     "droidId": "util-tec",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "r7",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 33,
+   "credits": 520000000000000,
+   "droids": [
+    {
+     "droidId": "haul-r",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "lng-shot",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ig",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 34,
+   "credits": 778000000000000,
+   "droids": [
+    {
+     "droidId": "mecha-droid",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "mo-trak",
+     "tier": "stellar"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 35,
+   "credits": 1190000000000000,
+   "droids": [
+    {
+     "droidId": "mouse",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "roll-r",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "hov-r",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 36,
+   "credits": 2500000000000000,
+   "droids": [
+    {
+     "droidId": "bb",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r2",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r6",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 37,
+   "credits": 4500000000000000,
+   "droids": [
+    {
+     "droidId": "lo",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 38,
+   "credits": 8000000000000000,
+   "droids": [
+    {
+     "droidId": "cyclo-grav",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "opti-strk",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "ric",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 5,
+   "from": 39,
+   "credits": 15000000000000000,
+   "droids": [
+    {
+     "droidId": "loadlifter",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "lep",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "ric-1200",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 0,
+   "credits": 10000,
+   "droids": [
+    {
+     "droidId": "gonk",
+     "tier": "default"
+    },
+    {
+     "droidId": "mouse",
+     "tier": "default"
+    },
+    {
+     "droidId": "id10",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 1,
+   "credits": 150000,
+   "droids": [
+    {
+     "droidId": "pit",
+     "tier": "default"
+    },
+    {
+     "droidId": "eg-58",
+     "tier": "default"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 2,
+   "credits": 975000,
+   "droids": [
+    {
+     "droidId": "r3",
+     "tier": "default"
+    },
+    {
+     "droidId": "r4",
+     "tier": "default"
+    },
+    {
+     "droidId": "roll-r",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 3,
+   "credits": 2950000,
+   "droids": [
+    {
+     "droidId": "eg-58",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r9",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b1-security",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 4,
+   "credits": 5350000,
+   "droids": [
+    {
+     "droidId": "gonk",
+     "tier": "gold"
+    },
+    {
+     "droidId": "r5",
+     "tier": "gold"
+    },
+    {
+     "droidId": "vect-arm",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 5,
+   "credits": 9850000,
+   "droids": [
+    {
+     "droidId": "eg-58",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "2bb",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "egl",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 6,
+   "credits": 14500000,
+   "droids": [
+    {
+     "droidId": "r4",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r9",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "kt",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 7,
+   "credits": 36000000,
+   "droids": [
+    {
+     "droidId": "b1-security",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "nav-ex",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "mph",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 8,
+   "credits": 89000000,
+   "droids": [
+    {
+     "droidId": "gonk",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "egl",
+     "tier": "gold"
+    },
+    {
+     "droidId": "strike-orb",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 9,
+   "credits": 220000000,
+   "droids": [
+    {
+     "droidId": "groundmech",
+     "tier": "default"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "default"
+    },
+    {
+     "droidId": "amp-walker",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 10,
+   "credits": 550000000,
+   "droids": [
+    {
+     "droidId": "b2-super",
+     "tier": "default"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "default"
+    },
+    {
+     "droidId": "r2",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 11,
+   "credits": 1360000000,
+   "droids": [
+    {
+     "droidId": "gonk",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "gold"
+    },
+    {
+     "droidId": "trak-r",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 12,
+   "credits": 3400000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "gold"
+    },
+    {
+     "droidId": "mph",
+     "tier": "gold"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 13,
+   "credits": 8449999999.999999,
+   "droids": [
+    {
+     "droidId": "egl",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "gold"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 14,
+   "credits": 21000000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "mph",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "j09-4mn",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 15,
+   "credits": 52000000000,
+   "droids": [
+    {
+     "droidId": "plnk",
+     "tier": "default"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "default"
+    },
+    {
+     "droidId": "r7",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 16,
+   "credits": 130000000000,
+   "droids": [
+    {
+     "droidId": "egl",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "default"
+    },
+    {
+     "droidId": "j09-4mn",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 17,
+   "credits": 325000000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mph",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "plnk",
+     "tier": "gold"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 18,
+   "credits": 810000000000,
+   "droids": [
+    {
+     "droidId": "proto-roller",
+     "tier": "gold"
+    },
+    {
+     "droidId": "j09-4mn",
+     "tier": "diamond"
+    },
+    {
+     "droidId": "r7",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 19,
+   "credits": 2000000000000,
+   "droids": [
+    {
+     "droidId": "plnk",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "mecha-droid",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "rainbow"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 20,
+   "credits": 3000000000000,
+   "droids": [
+    {
+     "droidId": "gonk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "egl",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 21,
+   "credits": 4500000000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "groundmech",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "r2",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 22,
+   "credits": 6000000000000,
+   "droids": [
+    {
+     "droidId": "mph",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "j09-4mn",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 23,
+   "credits": 9000000000000,
+   "droids": [
+    {
+     "droidId": "plnk",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "proto-roller",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ecg",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 24,
+   "credits": 13500000000000,
+   "droids": [
+    {
+     "droidId": "r7",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ig",
+     "tier": "default"
+    },
+    {
+     "droidId": "loadlifter",
+     "tier": "default"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 25,
+   "credits": 21000000000000,
+   "droids": [
+    {
+     "droidId": "mo-trak",
+     "tier": "gold"
+    },
+    {
+     "droidId": "ecg",
+     "tier": "gold"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "diamond"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 26,
+   "credits": 32000000000000,
+   "droids": [
+    {
+     "droidId": "cyclens",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "rainbow"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 27,
+   "credits": 45000000000000,
+   "droids": [
+    {
+     "droidId": "egl",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "j09-4mn",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "bb9",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 28,
+   "credits": 68000000000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "plnk",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "ig",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 29,
+   "credits": 100000000000000,
+   "droids": [
+    {
+     "droidId": "mph",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "b2-rp",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 30,
+   "credits": 150000000000000,
+   "droids": [
+    {
+     "droidId": "eg-58",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "egl",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "beskar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 31,
+   "credits": 230000000000000,
+   "droids": [
+    {
+     "droidId": "trak-r",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "cyclens",
+     "tier": "beskar"
+    },
+    {
+     "droidId": "ecg",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 32,
+   "credits": 345000000000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "galactic"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 33,
+   "credits": 520000000000000,
+   "droids": [
+    {
+     "droidId": "mph",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "haul-r",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ig",
+     "tier": "galactic"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 34,
+   "credits": 778000000000000,
+   "droids": [
+    {
+     "droidId": "j09-4mn",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "plnk",
+     "tier": "stellar"
+    },
+    {
+     "droidId": "ecg",
+     "tier": "stellar"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 35,
+   "credits": 1190000000000000,
+   "droids": [
+    {
+     "droidId": "gonk",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "eg-58",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "roll-r",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 36,
+   "credits": 2500000000000000,
+   "droids": [
+    {
+     "droidId": "egl",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "r2",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "b2-super",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 37,
+   "credits": 4500000000000000,
+   "droids": [
+    {
+     "droidId": "kt",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "mph",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "snow-mouse",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 38,
+   "credits": 8000000000000000,
+   "droids": [
+    {
+     "droidId": "j09-4mn",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "cyclo-grav",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "tri-tek",
+     "tier": "kyber"
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "from": 39,
+   "credits": 15000000000000000,
+   "droids": [
+    {
+     "droidId": "plnk",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "ecg",
+     "tier": "kyber"
+    },
+    {
+     "droidId": "drft-r",
+     "tier": "kyber"
+    }
+   ]
+  }
+ ],
+ "slotUnlocks": [
+  {
+   "level": 1,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 2,
+   "areas": [
+    "astromech"
+   ]
+  },
+  {
+   "level": 3,
+   "areas": [
+    "battle"
+   ]
+  },
+  {
+   "level": 4,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 5,
+   "areas": [
+    "astromech"
+   ]
+  },
+  {
+   "level": 6,
+   "areas": [
+    "battle"
+   ]
+  },
+  {
+   "level": 7,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 8,
+   "areas": [
+    "astromech"
+   ]
+  },
+  {
+   "level": 9,
+   "areas": [
+    "battle"
+   ]
+  },
+  {
+   "level": 10,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 11,
+   "areas": [
+    "astromech"
+   ]
+  },
+  {
+   "level": 12,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 13,
+   "areas": [
+    "astromech"
+   ]
+  },
+  {
+   "level": 14,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 15,
+   "areas": [
+    "astromech"
+   ]
+  },
+  {
+   "level": 16,
+   "areas": [
+    "worker"
+   ]
+  },
+  {
+   "level": 17,
+   "areas": [
+    "lounge"
+   ]
+  },
+  {
+   "level": 18,
+   "areas": [
+    "lounge"
+   ]
+  },
+  {
+   "level": 19,
+   "areas": [
+    "lounge"
+   ]
+  },
+  {
+   "level": 20,
+   "areas": [
+    "lounge"
+   ]
+  },
+  {
+   "level": 21,
+   "areas": [
+    "battle"
+   ]
+  },
+  {
+   "level": 22,
+   "areas": []
+  },
+  {
+   "level": 23,
+   "areas": []
+  },
+  {
+   "level": 24,
+   "areas": []
+  },
+  {
+   "level": 25,
+   "areas": []
+  },
+  {
+   "level": 26,
+   "areas": []
+  },
+  {
+   "level": 27,
+   "areas": []
+  },
+  {
+   "level": 28,
+   "areas": []
+  },
+  {
+   "level": 29,
+   "areas": []
+  },
+  {
+   "level": 30,
+   "areas": []
+  },
+  {
+   "level": 31,
+   "areas": []
+  },
+  {
+   "level": 32,
+   "areas": []
+  },
+  {
+   "level": 33,
+   "areas": []
+  },
+  {
+   "level": 34,
+   "areas": []
+  },
+  {
+   "level": 35,
+   "areas": []
+  },
+  {
+   "level": 36,
+   "areas": []
+  },
+  {
+   "level": 37,
+   "areas": []
+  },
+  {
+   "level": 38,
+   "areas": []
+  },
+  {
+   "level": 39,
+   "areas": []
+  },
+  {
+   "level": 40,
+   "areas": []
+  }
+ ],
+ "warnings": []
+}

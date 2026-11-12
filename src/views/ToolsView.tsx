@@ -87,6 +87,7 @@ function ChipStations() {
           <div className="num readout font-semibold">{st.perMinute ? (st.fullIn === 0 ? 'full' : formatDuration(st.fullIn)) : '—'}</div>
         </div>
       </div>
+      <ChipModifiers multiplier={st.multiplier} doubled={st.doubled} />
       <ChipBalance stored={st.stored} />
       <p className="text-sm">
         Chip upgrades for the next 3 rebirths: <span className="num font-semibold">{formatAmount(need)}</span>
@@ -116,6 +117,40 @@ function ChipStations() {
         </details>
       )}
     </Section>
+  )
+}
+
+function ChipModifiers({ multiplier, doubled }: { multiplier: number; doubled: boolean }) {
+  const p = useStore((s) => s.save.profile)
+  const update = useStore((s) => s.update)
+  return (
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+      <label className="inline-flex items-center gap-1">
+        Chip-trait companions
+        <select value={p.chipTraitCompanions ?? 0} onChange={(e) => update((s) => void (s.profile.chipTraitCompanions = Number(e.target.value)))}>
+          {[0, 1, 2].map((n) => (
+            <option key={n} value={n}>
+              {n}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="inline-flex items-center gap-1">
+        Party size
+        <select value={p.partySize ?? 1} onChange={(e) => update((s) => void (s.profile.partySize = Number(e.target.value)))}>
+          {[1, 2, 3, 4, 5, 6].map((n) => (
+            <option key={n} value={n}>
+              {n}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="inline-flex items-center gap-1">
+        <input type="checkbox" checked={!!p.chipEvent} onChange={(e) => update((s) => void (s.profile.chipEvent = e.target.checked))} /> 2× chip event
+      </label>
+      <span className="num readout">×{multiplier.toFixed(2).replace(/\.?0+$/, '')}</span>
+      <span className="text-xs text-dim">{doubled ? 'incl. BB-8 ×2' : 'BB-8 as companion doubles this'}</span>
+    </div>
   )
 }
 

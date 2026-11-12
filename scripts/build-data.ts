@@ -1,6 +1,7 @@
 // Builds src/data/game-data.json from data/raw + data/supplements, and writes data/build-report.json.
 // Refuses to overwrite the last good dataset if the new one looks broken (exit code 3).
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import type { SourceData } from '../src/data/sources/extract.ts'
 import { WIKI_PAGES, buildGameData, type RawPage, type Supplements, type WikiPage } from '../src/data/build.ts'
 
 const readJson = <T>(p: string): T => JSON.parse(readFileSync(p, 'utf8')) as T
@@ -31,7 +32,13 @@ function detectGameVersion(): string {
 const droidPages: RawPage[] = existsSync('data/raw/Droid_pages.json')
   ? readJson<{ pages: { title: string; revision: number; wikitext: string }[] }>('data/raw/Droid_pages.json').pages
   : []
-const { data, report } = buildGameData(pages, sup, { gameVersion: detectGameVersion(), builtAt: new Date().toISOString(), droidPages })
+const sources: SourceData[] = existsSync('data/raw/sources')
+  ? readdirSync('data/raw/sources')
+      .filter((f) => f.endsWith('.json') && !f.startsWith('_'))
+      .sort()
+      .map((f) => readJson<SourceData>(`data/raw/sources/${f}`))
+  : []
+const { data, report } = buildGameData(pages, sup, { gameVersion: detectGameVersion(), builtAt: new Date().toISOString(), droidPages, sources })
 
 // Sanity gate: never replace good data with an obviously broken build.
 const problems: string[] = []

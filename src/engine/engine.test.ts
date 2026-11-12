@@ -173,12 +173,9 @@ describe('progress', () => {
 })
 
 describe('slots', () => {
-  it('starts with only worker slots and never exceeds the in-game maximum', () => {
-    expect(slotCounts(data, saveWith([], { rebirth: 0 })).areas).toEqual({ worker: 4, astromech: 0, battle: 0 })
-    const max = slotCounts(data, saveWith([], { rebirth: 40 })).areas
-    expect(max.worker).toBeLessThanOrEqual(11)
-    expect(max.astromech).toBeLessThanOrEqual(9)
-    expect(max.battle).toBeLessThanOrEqual(11)
+  it('reaches the in-game maximum of 11 worker, 9 astromech and 11 battle slots', () => {
+    expect(slotCounts(data, saveWith([], { rebirth: 0 })).areas).toEqual({ worker: 4, astromech: 3, battle: 2 })
+    expect(slotCounts(data, saveWith([], { rebirth: 40 })).areas).toEqual({ worker: 11, astromech: 9, battle: 11 })
   })
   it('applies your slot corrections from their rebirth onward, clamped to the max', () => {
     const fixes = [

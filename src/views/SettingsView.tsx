@@ -300,7 +300,7 @@ export function SettingsView() {
           {data.inconsistencies.length > 0 && (
             <li>
               <details>
-                <summary className="cursor-pointer">{data.inconsistencies.length} places where wiki pages disagree</summary>
+                <summary className="cursor-pointer">{data.inconsistencies.length} places where sources disagree</summary>
                 <ul className="mt-1 list-disc pl-5 text-xs text-dim">
                   {data.inconsistencies.map((x) => (
                     <li key={x}>{x}</li>
@@ -310,8 +310,23 @@ export function SettingsView() {
             </li>
           )}
           <li className="text-xs text-dim">
-            Game data from the Star Wars Droid Tycoon Fandom wiki (CC BY-SA), plus hand-written supplements. Protocol is a fan project and is not affiliated with the game's
-            makers.
+            Game data is compiled from the community: the{' '}
+            <a className="underline" href="https://star-wars-droid-tycoon.fandom.com/" target="_blank" rel="noreferrer">
+              Fandom wiki
+            </a>{' '}
+            (CC BY-SA),{' '}
+            {data.sources
+              .filter((s) => !s.id.startsWith('wiki:'))
+              .map((s, i, all) => (
+                <span key={s.id}>
+                  <a className="underline" href={s.url} target="_blank" rel="noreferrer">
+                    {s.title}
+                  </a>
+                  {i < all.length - 1 ? ', ' : ''}
+                </span>
+              ))}
+            , community charts, and hand-written fixes. Where they disagree, the majority wins and the disagreement is listed above. Thanks to everyone who maintains
+            them. Protocol is a fan project, not affiliated with the game's makers.
           </li>
         </ul>
       </Section>

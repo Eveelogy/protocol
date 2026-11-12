@@ -1,0 +1,632 @@
+{
+ "id": "droidex",
+ "title": "Droidex (droidex.web.app)",
+ "url": "https://droidex.web.app/",
+ "fetchedAt": "2026-11-12T00:19:23.956Z",
+ "droids": [
+  {
+   "id": "mouse",
+   "name": "MOUSE",
+   "rarity": "common",
+   "class": "worker",
+   "income": {
+    "default": 2
+   }
+  },
+  {
+   "id": "pit",
+   "name": "PIT",
+   "rarity": "common",
+   "class": "worker",
+   "income": {
+    "default": 2
+   }
+  },
+  {
+   "id": "gonk",
+   "name": "GONK",
+   "rarity": "common",
+   "class": "worker",
+   "income": {
+    "default": 4
+   }
+  },
+  {
+   "id": "cb",
+   "name": "CB",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 3
+   }
+  },
+  {
+   "id": "r3",
+   "name": "R3",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 3
+   }
+  },
+  {
+   "id": "r5",
+   "name": "R5",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 3
+   }
+  },
+  {
+   "id": "r8",
+   "name": "R8",
+   "rarity": "common",
+   "class": "astromech",
+   "income": {
+    "default": 4
+   }
+  },
+  {
+   "id": "imperial-probe",
+   "name": "IMPERIAL PROBE",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 6
+   }
+  },
+  {
+   "id": "b1-battle",
+   "name": "B1 BATTLE",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 5
+   }
+  },
+  {
+   "id": "drk-1-probe",
+   "name": "DRK-1 PROBE",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 3
+   }
+  },
+  {
+   "id": "id10",
+   "name": "ID10",
+   "rarity": "common",
+   "class": "battle",
+   "income": {
+    "default": 4
+   }
+  },
+  {
+   "id": "bdx-explorer",
+   "name": "BDX EXPLORER",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 15
+   }
+  },
+  {
+   "id": "arg",
+   "name": "ARG",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 42
+   }
+  },
+  {
+   "id": "senate-hovercam",
+   "name": "SENATE HOVERCAM",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 46
+   }
+  },
+  {
+   "id": "bu-4d",
+   "name": "BU-4D",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 58
+   }
+  },
+  {
+   "id": "bal-core",
+   "name": "BAL-CORE",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 23
+   }
+  },
+  {
+   "id": "roll-r",
+   "name": "ROLL-R",
+   "rarity": "rare",
+   "class": "worker",
+   "income": {
+    "default": 31
+   }
+  },
+  {
+   "id": "2bb",
+   "name": "2BB",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 17
+   }
+  },
+  {
+   "id": "a-lt",
+   "name": "A-LT",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 36
+   }
+  },
+  {
+   "id": "r4",
+   "name": "R4",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 50
+   }
+  },
+  {
+   "id": "r9",
+   "name": "R9",
+   "rarity": "rare",
+   "class": "astromech",
+   "income": {
+    "default": 54
+   }
+  },
+  {
+   "id": "b1-security",
+   "name": "B1 SECURITY",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 66
+   }
+  },
+  {
+   "id": "nav-ex",
+   "name": "NAV-EX",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 18
+   }
+  },
+  {
+   "id": "vect-arm",
+   "name": "VECT-ARM",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 27
+   }
+  },
+  {
+   "id": "hov-r",
+   "name": "HOV-R",
+   "rarity": "rare",
+   "class": "battle",
+   "income": {
+    "default": 62
+   }
+  },
+  {
+   "id": "groundmech",
+   "name": "GROUNDMECH",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 120
+   }
+  },
+  {
+   "id": "lo",
+   "name": "LO",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 240
+   }
+  },
+  {
+   "id": "amp-walker",
+   "name": "AMP WALKER",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 570
+   }
+  },
+  {
+   "id": "sen-tri",
+   "name": "SEN-TRI",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 510
+   }
+  },
+  {
+   "id": "opti-pod",
+   "name": "OPTI-POD",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 390
+   }
+  },
+  {
+   "id": "gunrunner",
+   "name": "GUNRUNNER",
+   "rarity": "epic",
+   "class": "worker",
+   "income": {
+    "default": 660
+   }
+  },
+  {
+   "id": "bb",
+   "name": "BB",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 150
+   }
+  },
+  {
+   "id": "r2",
+   "name": "R2",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 360
+   }
+  },
+  {
+   "id": "r6",
+   "name": "R6",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 300
+   }
+  },
+  {
+   "id": "trak-r",
+   "name": "TRAK-R",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 330
+   }
+  },
+  {
+   "id": "orb-walker",
+   "name": "ORB-WALKER",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 180
+   }
+  },
+  {
+   "id": "util-tec",
+   "name": "UTIL-TEC",
+   "rarity": "epic",
+   "class": "astromech",
+   "income": {
+    "default": 210
+   }
+  },
+  {
+   "id": "b1-heavy",
+   "name": "B1 HEAVY",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 630
+   }
+  },
+  {
+   "id": "b2-super",
+   "name": "B2 SUPER",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 420
+   }
+  },
+  {
+   "id": "b2-heavy",
+   "name": "B2 HEAVY",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 480
+   }
+  },
+  {
+   "id": "strike-orb",
+   "name": "STRIKE-ORB",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 540
+   }
+  },
+  {
+   "id": "haul-r",
+   "name": "HAUL-R",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 270
+   }
+  },
+  {
+   "id": "lng-shot",
+   "name": "LNG-SHOT",
+   "rarity": "epic",
+   "class": "battle",
+   "income": {
+    "default": 450
+   }
+  },
+  {
+   "id": "proto-roller",
+   "name": "PROTO-ROLLER",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 972
+   }
+  },
+  {
+   "id": "mecha-droid",
+   "name": "MECHA-DROID",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 1240
+   }
+  },
+  {
+   "id": "mono-wlkr",
+   "name": "MONO-WLKR",
+   "rarity": "legendary",
+   "class": "worker",
+   "income": {
+    "default": 1500
+   }
+  },
+  {
+   "id": "bb9",
+   "name": "BB9",
+   "rarity": "legendary",
+   "class": "astromech",
+   "income": {
+    "default": 1300
+   }
+  },
+  {
+   "id": "r7",
+   "name": "R7",
+   "rarity": "legendary",
+   "class": "astromech",
+   "income": {
+    "default": 1500
+   }
+  },
+  {
+   "id": "b2-rp",
+   "name": "B2-RP",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 1300
+   }
+  },
+  {
+   "id": "cyclo-grav",
+   "name": "CYCLO-GRAV",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 1260
+   }
+  },
+  {
+   "id": "opti-strk",
+   "name": "OPTI-STRK",
+   "rarity": "legendary",
+   "class": "battle",
+   "income": {
+    "default": 1500
+   }
+  },
+  {
+   "id": "snow-mouse",
+   "name": "SNOW MOUSE",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 4400
+   }
+  },
+  {
+   "id": "ric",
+   "name": "RIC",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 5100
+   }
+  },
+  {
+   "id": "loadlifter",
+   "name": "LOADLIFTER",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 7200
+   }
+  },
+  {
+   "id": "lep",
+   "name": "LEP",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 6500
+   }
+  },
+  {
+   "id": "ric-1200",
+   "name": "RIC-1200",
+   "rarity": "mythic",
+   "class": "worker",
+   "income": {
+    "default": 5800
+   }
+  },
+  {
+   "id": "drft-r",
+   "name": "DRFT-R",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 5800
+   }
+  },
+  {
+   "id": "cyclens",
+   "name": "CYCLENS",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 4400
+   }
+  },
+  {
+   "id": "mo-trak",
+   "name": "MO-TRAK",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 7200
+   }
+  },
+  {
+   "id": "tri-tek",
+   "name": "TRI-TEK",
+   "rarity": "mythic",
+   "class": "astromech",
+   "income": {
+    "default": 6500
+   }
+  },
+  {
+   "id": "ig",
+   "name": "IG",
+   "rarity": "mythic",
+   "class": "battle",
+   "income": {
+    "default": 5800
+   }
+  },
+  {
+   "id": "kx",
+   "name": "KX",
+   "rarity": "mythic",
+   "class": "battle",
+   "income": {
+    "default": 7200
+   }
+  },
+  {
+   "id": "dj-r-3x",
+   "name": "DJ R-3X",
+   "rarity": "iconic",
+   "class": "worker",
+   "income": {
+    "default": 0
+   }
+  },
+  {
+   "id": "bb8",
+   "name": "BB8",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {
+    "default": 0
+   }
+  },
+  {
+   "id": "cb-23",
+   "name": "CB-23",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {
+    "default": 0
+   }
+  },
+  {
+   "id": "r2-d2",
+   "name": "R2-D2",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {
+    "default": 0
+   }
+  },
+  {
+   "id": "c-3po",
+   "name": "C-3PO",
+   "rarity": "iconic",
+   "class": "astromech",
+   "income": {
+    "default": 0
+   }
+  },
+  {
+   "id": "mister-bones",
+   "name": "MISTER BONES",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {
+    "default": 0
+   }
+  },
+  {
+   "id": "ig-11-marshal",
+   "name": "IG-11_MARSHAL",
+   "rarity": "iconic",
+   "class": "battle",
+   "income": {
+    "default": 0
+   }
+  }
+ ],
+ "rebirths": [],
+ "slotUnlocks": [],
+ "warnings": []
+}

@@ -27,7 +27,12 @@
     { "id": "astromech-crafting", "area": "astromech", "kind": "crafting", "unlockAt": 18 },
     { "id": "battle-crafting", "area": "battle", "kind": "crafting", "unlockAt": 22 }
   ],
-  "initialSlots": { "_source": "Slots before rebirth 1. User 2026-11-11: no astromech/battle/protocol slots at start; 4 worker is likely but unconfirmed.", "worker": 4, "astromech": 0, "battle": 0 },
+  "initialSlots": {
+    "_source": "Slots available before rebirth 1. You don't start with astromech/battle slots (user, 2026-11-11), but the wiki, droid-tycoon.pages.dev and tycoon-tools all agree rebirths only add 7 worker / 6 astromech / 9 battle, while the game max is 11 / 9 / 11. The gap (4 / 3 / 2) is most likely bought with credits during the first run: the wiki says the shipyard and firing range must be bought before the rebirth station. Inferred, not confirmed.",
+    "worker": 4,
+    "astromech": 3,
+    "battle": 2
+  },
   "extraSlotUnlocks": {
     "_source": "Slot unlocks the wiki's (outdated) rebirth table is missing. Add { \"level\": <rebirth>, \"area\": \"worker|astromech|battle\" } once known. The wiki currently accounts for 7 worker, 6 astromech and 9 battle unlocks, so 3 astromech and 2 battle are still unplaced.",
     "list": []

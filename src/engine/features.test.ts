@@ -3,7 +3,7 @@ import gameData from '../data/game-data.json'
 import { type OwnedDroid, type Save, newSave } from '../domain/save.ts'
 import type { GameData, Tier } from '../domain/types.ts'
 import { cb23Entry, cb23ReadyIn, cb23Stats, suggestedMissionMinutes } from './cb23.ts'
-import { chipEta, chipStatus, stationRate } from './chips.ts'
+import { chipEta, chipMultiplier, chipStatus, stationRate } from './chips.ts'
 import { applyFusion, fusionSuggestions } from './fusion.ts'
 import { normalizeSave } from './normalize.ts'
 import { indexDefs } from './requirements.ts'
@@ -59,6 +59,25 @@ describe('chip stations', () => {
     expect(st.stored).toBe(4 * 60) // capped at 1 hour
     expect(st.fullIn).toBe(0)
     expect(chipEta(10 + 240 + 40, st)).toBeCloseTo(600)
+  })
+})
+
+describe('chip collection formula (community chart)', () => {
+  // Rows of the Reddit chart: 2 Kyber Mythic stations, 6h holding = 57,600 base chips.
+  const total = (o: Parameters<typeof chipMultiplier>[0]) => 57600 * chipMultiplier(o)
+  it('matches the no-event table', () => {
+    expect(total({ chipTraitCompanions: 0, partySize: 1, bb8: false, event: false })).toBeCloseTo(57600)
+    expect(total({ chipTraitCompanions: 0, partySize: 3, bb8: false, event: false })).toBeCloseTo(80640)
+    expect(total({ chipTraitCompanions: 1, partySize: 1, bb8: true, event: false })).toBeCloseTo(230400)
+    expect(total({ chipTraitCompanions: 2, partySize: 6, bb8: true, event: false })).toBeCloseTo(691200)
+  })
+  it('matches the event-as-currently-implemented table', () => {
+    expect(total({ chipTraitCompanions: 0, partySize: 1, bb8: false, event: true })).toBeCloseTo(115200)
+    expect(total({ chipTraitCompanions: 1, partySize: 1, bb8: false, event: true })).toBeCloseTo(172800)
+    expect(total({ chipTraitCompanions: 2, partySize: 6, bb8: true, event: true })).toBeCloseTo(921600)
+  })
+  it('a Kyber Mythic station makes 80/min and holds 28,800 in 6 hours', () => {
+    expect(stationRate({ droidId: 'ecg', tier: 'kyber' }, defs, data)).toBe(80)
   })
 })
 

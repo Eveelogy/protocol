@@ -30,6 +30,11 @@ jobs:
         run: node --experimental-strip-types scripts/pull-wiki.ts
         continue-on-error: true
 
+      - name: Pull fan-site data (droid-tycoon.pages.dev, tycoon-tools, Droidex)
+        id: sources
+        run: node --experimental-strip-types scripts/pull-sources.ts
+        continue-on-error: true
+
       - name: Build game data
         id: build
         run: node --experimental-strip-types scripts/build-data.ts
@@ -44,9 +49,11 @@ jobs:
           node -e '
             const r = require("./data/build-report.json");
             const s = require("./data/raw/_pull-status.json");
+            let f = { consecutiveFailures: 0 };
+            try { f = require("./data/raw/sources/_status.json"); } catch {}
             const needsReview = r.disputes.length + r.overlaps.length + (r.problems?.length ?? 0) > 0;
             console.log("needs_review=" + needsReview);
-            console.log("failures=" + s.consecutiveFailures);
+            console.log("failures=" + Math.max(s.consecutiveFailures, f.consecutiveFailures));
           ' >> "$GITHUB_OUTPUT"
           git status --porcelain
 
@@ -58,7 +65,7 @@ jobs:
           title="Wiki data pull has failed ${{ steps.decide.outputs.failures }} nights in a row"
           if ! gh issue list --label data --state open --search "Wiki data pull has failed" | grep -q .; then
             gh label create data --color 0e8a16 --force
-            gh issue create --label data --title "$title" --body "$(cat data/raw/_pull-status.json)"
+            gh issue create --label data --title "$title" --body "$(cat data/raw/_pull-status.json data/raw/sources/_status.json 2>/dev/null)"
           fi
 
       - name: Commit clean update straight to main

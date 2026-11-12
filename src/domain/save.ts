@@ -66,6 +66,10 @@ export interface Profile {
   /** Upgrade chips in hand, and when the chip stations were last emptied. */
   chips: number
   chipsCollectedAt: number
+  /** Chip collection modifiers: companions with a chip trait (0–2), party size (1–6), 2× chip event on. */
+  chipTraitCompanions: number
+  partySize: number
+  chipEvent: boolean
   /** When the current super-rebirth run started (null = unknown). */
   runStartedAt: number | null
   /** Nova Shop upgrade levels by upgrade id. */
@@ -109,6 +113,9 @@ export const newSave = (): Save => ({
     creditsUpdatedAt: 0,
     chips: 0,
     chipsCollectedAt: 0,
+    chipTraitCompanions: 0,
+    partySize: 1,
+    chipEvent: false,
     runStartedAt: null,
     nova: {},
     craftSpeedPct: 0,

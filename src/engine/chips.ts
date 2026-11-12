@@ -20,7 +20,12 @@ export function stationRate(o: Pick<OwnedDroid, 'droidId' | 'tier'>, defs: DefIn
 
 export interface ChipStatus {
   stations: number
+  /** Effective chips per minute after all multipliers. */
   perMinute: number
+  /** Raw station output per minute; storage caps apply to this. */
+  basePerMinute: number
+  /** Collection multiplier: companions, party, BB-8, event. */
+  multiplier: number
   doubled: boolean // BB-8 companion doubles collection
   capacityHours: number
   /** Chips waiting in the stations now (capped). */
@@ -34,17 +39,34 @@ export function chipStatus(save: Save, data: GameData, defs: DefIndex, now = Dat
   const p = save.profile
   const stations = slotCounts(data, save).chipStations
   const doubled = save.droids.some((o) => o.droidId === 'bb-8' && o.location.kind === 'companion')
-  let perMinute = 0
+  let basePerMinute = 0
   for (const o of save.droids) {
-    if (o.location.kind === 'chip' && o.location.station < stations) perMinute += stationRate(o, defs, data)
+    if (o.location.kind === 'chip' && o.location.station < stations) basePerMinute += stationRate(o, defs, data)
   }
-  if (doubled) perMinute *= 2
+  const multiplier = chipMultiplier({
+    chipTraitCompanions: p.chipTraitCompanions ?? 0,
+    partySize: p.partySize ?? 1,
+    bb8: doubled,
+    event: !!p.chipEvent,
+  })
   const capacityHours = 1 + 0.5 * (p.nova['upgrade-chip-capacity'] ?? 0)
   const capMinutes = capacityHours * 60
   const since = p.chipsCollectedAt ? Math.max(0, (now - p.chipsCollectedAt) / 60000) : 0
-  const stored = perMinute * Math.min(since, capMinutes)
-  const fullIn = perMinute > 0 ? Math.max(0, capMinutes - since) * 60 : Number.POSITIVE_INFINITY
-  return { stations, perMinute, doubled, capacityHours, stored, fullIn, balance: p.chips }
+  // Stations hold raw chips; the multipliers apply when you collect.
+  const stored = basePerMinute * Math.min(since, capMinutes) * multiplier
+  const fullIn = basePerMinute > 0 ? Math.max(0, capMinutes - since) * 60 : Number.POSITIVE_INFINITY
+  return { stations, perMinute: basePerMinute * multiplier, basePerMinute, multiplier, doubled, capacityHours, stored, fullIn, balance: p.chips }
+}
+
+/**
+ * Community-measured collection formula (Reddit chip station chart):
+ *   chips = base × (100% + 100% per chip-trait companion [+ 100% during the 2× event]) × (1 + 0.2 × (party − 1)) × 2 with BB-8
+ * The event is currently additive inside the first bracket, not a straight ×2.
+ */
+export function chipMultiplier(o: { chipTraitCompanions: number; partySize: number; bb8: boolean; event: boolean }): number {
+  const companions = 1 + Math.max(0, Math.min(2, o.chipTraitCompanions)) + (o.event ? 1 : 0)
+  const party = 1 + 0.2 * (Math.max(1, Math.min(6, o.partySize)) - 1)
+  return companions * party * (o.bb8 ? 2 : 1)
 }
 
 /** Seconds until you can afford `chips`, counting your balance plus what's stored. */

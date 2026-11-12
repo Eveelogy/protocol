@@ -9,6 +9,8 @@ import {
   TIERS,
   slugify,
 } from '../domain/types.ts'
+import { mergeSources } from './merge.ts'
+import type { SourceData } from './sources/extract.ts'
 import { parseDroidList, parseDroidPage, parseFusions, parseNovaShop, parseRebirthUnlocks, parseRebirths, parseSuperRebirth } from './parse/pages.ts'
 
 export const WIKI_PAGES = ['Rebirths', 'List_of_Droids', 'Droid_Fusion', 'Nova_Shop', 'Super_Rebirth'] as const
@@ -41,7 +43,7 @@ export const WIKI_BASE = 'https://star-wars-droid-tycoon.fandom.com'
 export function buildGameData(
   pages: Partial<Record<WikiPage, RawPage>>,
   sup: Supplements,
-  opts: { gameVersion: string; builtAt: string; droidPages?: RawPage[] },
+  opts: { gameVersion: string; builtAt: string; droidPages?: RawPage[]; sources?: SourceData[] },
 ): { data: GameData; report: BuildReport } {
   const warnings: string[] = []
   const inconsistencies: string[] = []
@@ -104,6 +106,16 @@ export function buildGameData(
       else if (listed !== v) inconsistencies.push(`${d.name} ${tier} income: ${listed}/s on List of Droids, ${v}/s on its page (using list)`)
     }
     for (const [tier, v] of Object.entries(p.craftSeconds) as [Tier, number][]) d.craftSeconds![tier] ??= v
+  }
+
+  // --- community fan sites: majority vote with the wiki, every disagreement reported
+  const siteSources = opts.sources ?? []
+  if (siteSources.length) {
+    const m = mergeSources(droids, rebirths.data, unlocks.data, siteSources)
+    inconsistencies.push(...m.inconsistencies)
+    if (m.added.length) warnings.push(`Added from fan sites (not on the wiki): ${m.added.join(', ')}`)
+    if (m.unmatched.length) warnings.push(`Only one site lists (not added): ${m.unmatched.join(', ')}`)
+    for (const s of siteSources) warnings.push(...s.warnings)
   }
 
   // --- fusion recipes
@@ -209,14 +221,17 @@ export function buildGameData(
     schema: 1,
     builtAt: opts.builtAt,
     gameVersion: opts.gameVersion,
-    sources: WIKI_PAGES.filter((p) => pages[p]).map((p) => ({
-      id: `wiki:${p}`,
-      title: pages[p]!.title,
-      url: `${WIKI_BASE}/wiki/${p}`,
-      license: 'CC BY-SA 3.0',
-      revision: pages[p]!.revision,
-      fetchedAt: pages[p]!.fetchedAt,
-    })),
+    sources: [
+      ...WIKI_PAGES.filter((p) => pages[p]).map((p): GameData['sources'][number] => ({
+        id: `wiki:${p}`,
+        title: pages[p]!.title,
+        url: `${WIKI_BASE}/wiki/${p}`,
+        license: 'CC BY-SA 3.0',
+        revision: pages[p]!.revision,
+        fetchedAt: pages[p]!.fetchedAt,
+      })),
+      ...siteSources.map((s): GameData['sources'][number] => ({ id: s.id, title: s.title, url: s.url, fetchedAt: s.fetchedAt })),
+    ],
     droids: [...droids.values()].sort((a, b) => a.name.localeCompare(b.name)),
     rebirths: rebirths.data,
     unlocks: unlocks.data,

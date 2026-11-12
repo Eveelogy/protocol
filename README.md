@@ -17,14 +17,20 @@ npm run build      # type-check + production build (dist/)
 
 ## Game data
 
-Game data comes from the [Star Wars Droid Tycoon Fandom wiki](https://star-wars-droid-tycoon.fandom.com/) (CC BY-SA) and is merged with hand-written supplements.
+Game data is compiled from the community sources players use, merged by majority vote:
+
+- [Star Wars Droid Tycoon Fandom wiki](https://star-wars-droid-tycoon.fandom.com/) (CC BY-SA): rebirths, droid list and every droid's own page, fusions, Nova Shop, super rebirth payouts
+- [droid-tycoon.pages.dev](https://droid-tycoon.pages.dev/), [tycoon-tools.com](https://tycoon-tools.com/) and [Droidex](https://droidex.web.app/): droid stats per tier, rebirth requirements, slot unlocks
+- community charts (e.g. the chip station formula) and hand-written supplements
+
+Where sources disagree the majority wins (ties go to the wiki), and every disagreement is listed in the app under Settings → Game data. The fan sites' JavaScript is **parsed, never executed** (`src/data/sources/literal.ts`), and only the extracted facts are stored.
 
 ```bash
-npm run data       # pull wiki pages → data/raw, then build src/data/game-data.json
-npm run data:build # rebuild from the raw pages already on disk
+npm run data       # pull everything, then build src/data/game-data.json
+npm run data:build # rebuild from what's already on disk
 ```
 
-- `data/raw/` — wiki page snapshots (wikitext + revision id).
+- `data/raw/` — wiki page snapshots (wikitext + revision id); `data/raw/sources/` — facts extracted from the fan sites.
 - `data/supplements/` — values the wiki lacks. **Edit these** to fill gaps:
   - `droids.json` — missing droids, Iconics, protocol droid bonuses, overrides.
   - `constants.json` — Hive Mind, chip costs, protocol slot unlocks, lounge, starting slots, etc.
