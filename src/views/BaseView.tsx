@@ -186,13 +186,36 @@ export function BaseView() {
       )}
       {plan && (
         <Sheet title="Best layout" onClose={() => setPlan(null)}>
-          <p className="mb-2 text-sm">
-            Income <span className="num">{formatAmount(plan.before)}/s</span> → <span className="num readout font-bold">{formatAmount(plan.after)}/s</span>
-            <span className="text-dim"> · {plan.movedCount} droid(s) move</span>
-          </p>
+          {plan.movedCount === 0 ? (
+            <p className="mb-4 text-sm">
+              Your layout is already the best Protocol can find (<span className="num">{formatAmount(plan.before)}/s</span>). Nothing to change.
+            </p>
+          ) : (
+            <>
+              <p className="mb-2 text-sm">
+                Income <span className="num">{formatAmount(plan.before)}/s</span> → <span className="num readout font-bold">{formatAmount(plan.after)}/s</span>
+                <span className="text-ok"> (+{((plan.after / plan.before - 1) * 100).toFixed(1)}%)</span>
+                <span className="text-dim"> · {plan.movedCount} droid(s) move</span>
+              </p>
+              <ul className="mb-3 max-h-48 space-y-0.5 overflow-y-auto text-xs">
+                {plan.droids.map((o, i) => {
+                  const was = save.droids[i]
+                  if (locKey(o.location) === locKey(was.location)) return null
+                  return (
+                    <li key={o.uid} className="flex flex-wrap items-center gap-1">
+                      <OwnedTier droidId={o.droidId} tier={o.tier} kyber={o.kyber} /> <DroidName id={o.droidId} />
+                      <span className="text-dim">
+                        {placeLabel(was.location)} → {placeLabel(o.location)}
+                      </span>
+                    </li>
+                  )
+                })}
+              </ul>
+            </>
+          )}
           <p className="mb-4 text-xs text-dim">
-            Highest earners go in matching slots. Droids your remaining rebirths need go to the Lounge. Protocol, chip station and companion
-            placements are left alone. Hive Mind is only estimated while choosing.
+            Scored with the full income model (class match, protocol bonuses, Hive Mind, Iconics) and never suggests less than you earn now. It won't put a droid
+            your remaining rebirths need into storage, and leaves chip stations and your companion alone.
           </p>
           <div className="flex gap-2">
             <button
@@ -242,6 +265,9 @@ function SlotFix({ area, count }: { area: Area; count: number }) {
     </span>
   )
 }
+
+const placeLabel = (l: Location) =>
+  l.kind === 'slot' ? `${AREA_LABEL[l.area]} ${l.index + 1}` : l.kind === 'protocol' ? `protocol (${l.slotId.replace('-', ' ')})` : l.kind === 'chip' ? `chip station ${l.station + 1}` : l.kind
 
 const highestIndex = (droids: OwnedDroid[], area: string) =>
   droids.reduce((m, o) => (o.location.kind === 'slot' && o.location.area === area ? Math.max(m, o.location.index) : m), -1)

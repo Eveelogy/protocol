@@ -42,11 +42,93 @@ export interface LayoutPlan {
 }
 
 /**
- * Greedy: fill earning slots with the highest-earning (droid, area) pairs, keep droids that
- * upcoming rebirths need in the Lounge, and leave protocol / chip / companion placements alone.
- * Hive Mind is applied when scoring the final layout but not while choosing (known simplification).
+ * Best layout = improve-only local search, scored with the full income model (class match,
+ * protocol area bonuses, Hive Mind, Iconic shares). It starts from your current layout and from a
+ * greedy guess, and keeps whichever ends higher, so it can never suggest a downgrade. It never
+ * leaves fewer upcoming rebirth requirements covered than you have now, and leaves chip station
+ * and companion placements alone.
  */
 export function bestLayout(save: Save, data: GameData, defs: DefIndex): LayoutPlan {
+  const score = (droids: OwnedDroid[]) => computeIncome({ ...save, droids }, data, defs, droids).total
+  const missing = (droids: OwnedDroid[]) => pathOverview({ ...save, droids }, data, defs).reduce((s, st) => s + st.missing, 0)
+  const baseMissing = missing(save.droids)
+  const counts = slotCounts(data, save)
+
+  const fromCurrent = improve(save.droids, counts, defs, score, missing, baseMissing)
+  const seed = greedySeed(save, data, defs).droids
+  const fromGreedy = missing(seed) <= baseMissing ? improve(seed, counts, defs, score, missing, baseMissing) : null
+  const best = fromGreedy && score(fromGreedy) > score(fromCurrent) * (1 + 1e-9) ? fromGreedy : fromCurrent
+
+  const before = computeIncome(save, data, defs).calibrated
+  const after = computeIncome({ ...save, droids: best }, data, defs, best).calibrated
+  const movedCount = best.filter((o, i) => locKey(o.location) !== locKey(save.droids[i].location)).length
+  // Rounding guard: only report a change if it actually helps.
+  if (after <= before * (1 + 1e-6)) return { droids: save.droids, before, after: before, movedCount: 0 }
+  return { droids: best, before, after, movedCount }
+}
+
+/** Positions the search may fill: unlocked earning slots and unlocked protocol slots. */
+function positions(counts: ReturnType<typeof slotCounts>): Location[] {
+  const out: Location[] = []
+  for (const area of AREAS) for (let i = 0; i < counts.areas[area]; i++) out.push({ kind: 'slot', area, index: i })
+  for (const id of counts.protocol) out.push({ kind: 'protocol', slotId: id })
+  return out
+}
+
+/**
+ * First-improvement hill climb over "put droid X into position P" (swapping with whoever is there).
+ * Droids keep their array order so results line up with the original save.
+ */
+function improve(
+  start: OwnedDroid[],
+  counts: ReturnType<typeof slotCounts>,
+  defs: DefIndex,
+  score: (d: OwnedDroid[]) => number,
+  missing: (d: OwnedDroid[]) => number,
+  maxMissing: number,
+): OwnedDroid[] {
+  let cur = start.map((o) => ({ ...o }))
+  let curScore = score(cur)
+  const pos = positions(counts)
+  const movable = (o: OwnedDroid) => ['slot', 'protocol', 'lounge', 'storage'].includes(o.location.kind)
+  const fits = (o: OwnedDroid, p: Location) => {
+    const cls = defs.get(o.droidId)?.class
+    return p.kind === 'protocol' ? cls === 'protocol' : cls !== 'protocol'
+  }
+  for (let round = 0; round < 300; round++) {
+    let improved = false
+    for (const p of pos) {
+      const key = locKey(p)
+      const occupantIdx = cur.findIndex((o) => locKey(o.location) === key)
+      for (let i = 0; i < cur.length; i++) {
+        const c = cur[i]
+        if (i === occupantIdx || !movable(c) || !fits(c, p)) continue
+        const next = cur.map((o) => ({ ...o }))
+        const from = c.location
+        next[i].location = p
+        if (occupantIdx >= 0) {
+          const occ = next[occupantIdx]
+          // A protocol droid can't go into an earning slot (and vice versa): park it in the Lounge instead.
+          occ.location = from.kind === 'slot' || from.kind === 'protocol' ? (fits(occ, from) ? from : { kind: 'lounge' }) : from
+        }
+        const s = score(next)
+        if (s <= curScore * (1 + 1e-9)) continue
+        const touchesStorage = from.kind === 'storage' || (occupantIdx >= 0 && next[occupantIdx].location.kind === 'storage')
+        if (touchesStorage && missing(next) > maxMissing) continue
+        if (next.filter((o) => o.location.kind === 'lounge').length > Math.max(counts.lounge, cur.filter((o) => o.location.kind === 'lounge').length)) continue
+        cur = next
+        curScore = s
+        improved = true
+        break
+      }
+    }
+    if (!improved) break
+  }
+  return cur
+}
+
+/** Greedy guess used as a second starting point: highest raw earners into matching slots. */
+function greedySeed(save: Save, data: GameData, defs: DefIndex): { droids: OwnedDroid[] } {
   const counts = slotCounts(data, save)
   const fixed = save.droids.filter((o) => ['protocol', 'chip', 'companion'].includes(o.location.kind))
   const pool = save.droids.filter((o) => !fixed.includes(o))
@@ -91,10 +173,7 @@ export function bestLayout(save: Save, data: GameData, defs: DefIndex): LayoutPl
     if (fixed.includes(o)) return o
     return { ...o, location: next.get(o.uid) ?? (o.location.kind === 'lounge' && lounge++ < counts.lounge ? o.location : { kind: 'storage' as const }) }
   })
-  const before = computeIncome(save, data, defs).calibrated
-  const after = computeIncome({ ...save, droids }, data, defs).calibrated
-  const movedCount = droids.filter((o, i) => locKey(o.location) !== locKey(save.droids[i].location)).length
-  return { droids, before, after, movedCount }
+  return { droids }
 }
 
 export const neededCountIn = (save: Save, data: GameData) => save.droids.filter((o) => countsForRequirements(o, data)).length

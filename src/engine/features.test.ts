@@ -5,6 +5,7 @@ import type { GameData, Tier } from '../domain/types.ts'
 import { cb23Entry, cb23ReadyIn, cb23Stats, suggestedMissionMinutes } from './cb23.ts'
 import { chipEta, chipMultiplier, chipStatus, stationRate } from './chips.ts'
 import { applyFusion, fusionSuggestions } from './fusion.ts'
+import { bestLayout } from './layout.ts'
 import { normalizeSave } from './normalize.ts'
 import { indexDefs } from './requirements.ts'
 import { scourgeLoss, scourgeWhatIf, scourgeWindow } from './scourge.ts'
@@ -115,6 +116,52 @@ describe('scourge', () => {
     expect(pts[0].extra).toBe(0)
     expect(pts[2].income).toBeGreaterThan(pts[1].income)
     expect(scourgeLoss(s, data, defs).count).toBe(1)
+  })
+})
+
+describe('best layout', () => {
+  const wslot = (i: number) => ({ kind: 'slot' as const, area: 'worker' as const, index: i })
+  it('never suggests a layout that earns less than the current one', () => {
+    // Protocol bonus + Hive Mind: the situations the old greedy guess got wrong.
+    const s = saveWith(
+      [
+        own('gonk', 'scourge', wslot(0)),
+        own('mouse', 'scourge', wslot(1)),
+        own('pit', 'scourge', wslot(2)),
+        own('sa-5', 'stellar', { kind: 'protocol', slotId: 'worker-credits' }),
+        own('b2-rp', 'rainbow', { kind: 'slot', area: 'battle', index: 0 }),
+        own('riv-3t', 'gold', { kind: 'lounge' }),
+      ],
+      { rebirth: 14, multiplier: 5 },
+    )
+    const plan = bestLayout(s, data, defs)
+    expect(plan.after).toBeGreaterThanOrEqual(plan.before)
+  })
+  it('moves a better droid out of storage into a slot', () => {
+    const s = saveWith([own('mouse', 'default', wslot(0)), own('riv-3t', 'gold', { kind: 'storage' })], { rebirth: 0 })
+    s.profile.overrides.slots = { worker: 1 }
+    const plan = bestLayout(s, data, defs)
+    expect(plan.after).toBeGreaterThan(plan.before)
+    expect(plan.droids.find((o) => o.droidId === 'riv-3t')!.location.kind).toBe('slot')
+  })
+  it('does not push a droid an upcoming rebirth needs into storage', () => {
+    // Path 1, rebirth 0→1 needs Default CB, Pit and DRK-1 Probe.
+    const slotA = (i: number) => ({ kind: 'slot' as const, area: 'astromech' as const, index: i })
+    const s = saveWith([own('cb', 'default', slotA(0)), own('r2', 'stellar', { kind: 'storage' })], { rebirth: 0, slotFixes: [] })
+    const plan = bestLayout(s, data, defs)
+    const cb = plan.droids.find((o) => o.droidId === 'cb')!
+    expect(['slot', 'lounge', 'protocol']).toContain(cb.location.kind)
+  })
+  it('reports no change when the layout is already the best it can find', () => {
+    const s = saveWith([own('riv-3t', 'gold', wslot(0))], { rebirth: 0 })
+    expect(bestLayout(s, data, defs).movedCount).toBe(0)
+  })
+  it('handles a full base quickly', () => {
+    const ids = data.droids.filter((d) => d.rarity !== 'iconic' && d.class !== 'protocol').slice(0, 45)
+    const droids = ids.map((d, i) => own(d.id, i % 3 ? 'gold' : 'rainbow', i < 31 ? (i < 11 ? wslot(i) : i < 20 ? { kind: 'slot', area: 'astromech', index: i - 11 } : { kind: 'slot', area: 'battle', index: i - 20 }) : { kind: 'lounge' }))
+    const t = performance.now()
+    bestLayout(saveWith(droids, { rebirth: 22 }), data, defs)
+    expect(performance.now() - t).toBeLessThan(4000)
   })
 })
 
