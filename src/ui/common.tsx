@@ -129,7 +129,8 @@ export function TierPicker({ value, onChange, allowScourge = true }: { value: Ti
         <button
           key={t}
           onClick={() => onChange(t)}
-          className={`rounded-md p-0.5 ${value === t ? 'ring-2 ring-accent' : 'opacity-70 hover:opacity-100'}`}
+          // inline-flex + leading-none so the ring hugs the chip evenly (no text line-height below it)
+          className={`inline-flex items-center justify-center rounded-lg p-[3px] leading-none ${value === t ? 'ring-2 ring-accent' : 'opacity-70 hover:opacity-100'}`}
           aria-pressed={value === t}
         >
           <TierChip tier={t} />
