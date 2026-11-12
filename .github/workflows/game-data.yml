@@ -1,9 +1,9 @@
-name: Nightly game data
+name: Update game data
 
 on:
   schedule:
-    - cron: '17 6 * * *' # daily, 06:17 UTC
-  workflow_dispatch:
+    - cron: '17 6 * * 6' # weekly, Saturday 06:17 UTC
+  workflow_dispatch: # "Run workflow" button on GitHub, linked from Settings in the app
 
 permissions:
   contents: write
@@ -57,13 +57,13 @@ jobs:
           ' >> "$GITHUB_OUTPUT"
           git status --porcelain
 
-      - name: Open an issue after 3 failed pulls in a row
-        if: steps.decide.outputs.failures >= 3
+      - name: Open an issue after 2 failed pulls in a row
+        if: steps.decide.outputs.failures >= 2
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          title="Wiki data pull has failed ${{ steps.decide.outputs.failures }} nights in a row"
-          if ! gh issue list --label data --state open --search "Wiki data pull has failed" | grep -q .; then
+          title="Game data pull has failed ${{ steps.decide.outputs.failures }} runs in a row"
+          if ! gh issue list --label data --state open --search "Game data pull has failed" | grep -q .; then
             gh label create data --color 0e8a16 --force
             gh issue create --label data --title "$title" --body "$(cat data/raw/_pull-status.json data/raw/sources/_status.json 2>/dev/null)"
           fi
@@ -74,7 +74,7 @@ jobs:
           git config user.name "protocol-data-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data src/data/game-data.json
-          git diff --cached --quiet || git commit -m "data: nightly wiki update" && git push
+          git diff --cached --quiet || git commit -m "data: game data update" && git push
 
       - name: Open a PR when something needs a human
         if: steps.decide.outputs.needs_review == 'true'

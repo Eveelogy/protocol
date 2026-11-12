@@ -39,8 +39,8 @@ npm run data:build # rebuild from what's already on disk
 
 The build refuses to replace the current data if the result looks broken (too few droids or rebirth steps).
 
-A nightly GitHub Action (`.github/workflows/game-data.yml`) pulls and rebuilds. Clean updates are committed to `main`; disputes or overlaps open a PR; three failed pulls in a row open an issue.
+A GitHub Action (`.github/workflows/game-data.yml`) pulls and rebuilds every Saturday, or on demand: Settings → "Update game data now" opens the workflow, then press **Run workflow**. Clean updates are committed to `main`; disputes or overlaps open a PR; two failed runs in a row open an issue.
 
 ## Deploy
 
-Static site: connect the repo to Cloudflare Pages with build command `npm run build` and output directory `dist`. Every push to `main` (including the nightly data commits) redeploys.
+Static site: connect the repo to Cloudflare Pages with build command `npm run build` and output directory `dist`. Every push to `main` (including the weekly data commits) redeploys.

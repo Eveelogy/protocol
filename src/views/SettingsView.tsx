@@ -4,7 +4,7 @@ import { formatAmount } from '../engine/format.ts'
 import { computeIncome } from '../engine/income.ts'
 import { slotCounts } from '../engine/slots.ts'
 import { AmountInput, Stepper } from '../ui/common.tsx'
-import { DataIssuesBadge } from '../ui/DataIssues.tsx'
+import { DataIssuesBadge, REPO } from '../ui/DataIssues.tsx'
 import { data, defs, useStore } from '../store/store.ts'
 
 export const Section = ({ title, children, hint }: { title: string; children: React.ReactNode; hint?: string }) => (
@@ -276,8 +276,14 @@ export function SettingsView() {
           </button>
         </div>
       </Section>
-      <Section title="Game data">
+      <Section title="Game data" hint="Refreshed automatically every Saturday. After a game update you can refresh it yourself.">
         <DataIssuesBadge />
+        <div className="flex flex-wrap items-center gap-2">
+          <a className="btn btn-primary" href={`https://github.com/${REPO}/actions/workflows/game-data.yml`} target="_blank" rel="noreferrer">
+            Update game data now ↗
+          </a>
+          <span className="text-xs text-dim">Opens GitHub: press "Run workflow". The site updates a few minutes after it finishes; reload to see the banner.</span>
+        </div>
         <ul className="space-y-1 text-sm">
           <li>
             Data built <span className="num">{new Date(data.builtAt).toLocaleString()}</span> · game <span className="num">v{data.gameVersion}</span>
