@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react'
 import { type Location, type OwnedDroid, uid } from '../domain/save.ts'
-import { CLASSES, type DroidClass, type Tier, TIERS, tierIndex } from '../domain/types.ts'
+import { CLASSES, type DroidClass, type KyberColor, type Tier, TIERS, tierIndex } from '../domain/types.ts'
 import { neededQueue } from '../engine/plan.ts'
-import { DroidName, OwnedTier, Sheet, TierChip, TierPicker } from '../ui/common.tsx'
+import { DroidName, KyberPicker, OwnedTier, Sheet, TierChip, TierPicker } from '../ui/common.tsx'
 import { data, defs, useStore } from '../store/store.ts'
 import { formatDuration } from '../engine/format.ts'
 
@@ -129,10 +129,13 @@ function CopiesSheet({ droidId, onClose }: { droidId: string; onClose: () => voi
   const copies = useMemo(() => droids.filter((o) => o.droidId === droidId), [droids, droidId])
   const update = useStore((s) => s.update)
   const [tier, setTier] = useState<Tier>('default')
+  const [kyber, setKyber] = useState<KyberColor>('inactive')
   const def = defs.get(droidId)!
   const iconic = def.rarity === 'iconic'
-  const add = (location: Location, where: string) =>
-    update((s) => void s.droids.push({ uid: uid(), droidId, tier: iconic ? 'default' : tier, location }), `Added ${def.name} to ${where}`)
+  const add = (location: Location, where: string) => {
+    const t = iconic ? 'default' : tier
+    update((s) => void s.droids.push({ uid: uid(), droidId, tier: t, ...(t === 'kyber' ? { kyber } : {}), location }), `Added ${def.name} to ${where}`)
+  }
   const fusionUses = data.droids.filter((d) => d.fusionOf?.includes(droidId))
   return (
     <Sheet title={def.name} onClose={onClose}>
@@ -161,6 +164,7 @@ function CopiesSheet({ droidId, onClose }: { droidId: string; onClose: () => voi
           <div className="space-y-2">
             <div className="heading text-xs text-dim">{iconic ? 'Add it' : 'Add a copy'}</div>
             {iconic ? <p className="text-xs text-dim">Iconics have no tiers.</p> : <TierPicker value={tier} onChange={setTier} />}
+            {!iconic && tier === 'kyber' && <KyberPicker value={kyber} onChange={setKyber} />}
             <div className="flex gap-2">
               <button className="btn btn-primary" onClick={() => add({ kind: 'lounge' }, 'Lounge')}>
                 Add to Lounge

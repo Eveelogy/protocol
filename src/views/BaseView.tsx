@@ -5,7 +5,7 @@ import { formatAmount } from '../engine/format.ts'
 import { computeIncome } from '../engine/income.ts'
 import { bestLayout, isSingle, locKey, moveDroid } from '../engine/layout.ts'
 import { slotCounts } from '../engine/slots.ts'
-import { DroidName, DroidPicker, OwnedTier, Sheet, Stat, TierChip, TierPicker, isIconic } from '../ui/common.tsx'
+import { DroidName, DroidPicker, KyberPicker, OwnedTier, Sheet, Stat, TierChip, TierPicker, isIconic } from '../ui/common.tsx'
 import { data, defs, useStore } from '../store/store.ts'
 
 type Target = { loc: Location; occupant?: OwnedDroid }
@@ -251,6 +251,7 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
   const live = useStore((s) => (target.occupant ? s.save.droids.find((x) => x.uid === target.occupant!.uid) : undefined))
   const [pick, setPick] = useState<string | null>(null)
   const [tier, setTier] = useState<Tier>('default')
+  const [kyber, setKyber] = useState<KyberColor>('inactive')
   const ownedIconic = useStore((s) => (pick && isIconic(pick) ? s.save.droids.find((o) => o.droidId === pick) : undefined))
 
   if (live) {
@@ -298,16 +299,7 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
               <TierPicker value={live.tier} onChange={(t) => set({ tier: t }, `${def?.name} → ${t}`)} />
             </>
           )}
-          {live.tier === 'kyber' && !isIconic(live.droidId) && (
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-dim">Kyber:</span>
-              {(['inactive', 'green', 'blue', 'purple'] as KyberColor[]).map((k) => (
-                <button key={k} className={`btn ${(live.kyber ?? 'inactive') === k ? 'btn-primary' : ''}`} onClick={() => set({ kyber: k })}>
-                  {k}
-                </button>
-              ))}
-            </div>
-          )}
+          {live.tier === 'kyber' && !isIconic(live.droidId) && <KyberPicker value={live.kyber} onChange={(k) => set({ kyber: k })} />}
           <div className="flex flex-wrap gap-2">
             <button className="btn" onClick={() => onMove(live.uid)}>
               Move / swap…
@@ -365,6 +357,7 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
       ) : (
         <div className="space-y-4">
           {isIconic(pick) ? <p className="text-sm text-dim">Iconics have no tiers.</p> : <TierPicker value={tier} onChange={setTier} />}
+          {!isIconic(pick) && tier === 'kyber' && <KyberPicker value={kyber} onChange={setKyber} />}
           <div className="flex gap-2">
             <button
               className="btn btn-primary"
@@ -372,7 +365,8 @@ function SlotSheet({ target, onClose, onMove }: { target: Target; onClose: () =>
                 const loc = target.loc
                 update((s) => {
                   if (isSingle(loc)) for (const o of s.droids) if (locKey(o.location) === locKey(loc)) o.location = { kind: 'storage' }
-                  s.droids.push({ uid: uid(), droidId: pick, tier: isIconic(pick) ? 'default' : tier, location: loc })
+                  const t = isIconic(pick) ? 'default' : tier
+                  s.droids.push({ uid: uid(), droidId: pick, tier: t, ...(t === 'kyber' ? { kyber } : {}), location: loc })
                 }, `Added ${defs.get(pick)?.name}`)
                 onClose()
               }}

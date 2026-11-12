@@ -1,11 +1,27 @@
 import { type ReactNode, useEffect, useMemo, useState } from 'react'
-import { type DroidClass, type Tier, CLASSES, TIER_LABEL, TIERS } from '../domain/types.ts'
+import { type DroidClass, type KyberColor, type Tier, CLASSES, TIER_LABEL, TIERS } from '../domain/types.ts'
 import { formatAmount, parseAmountInput } from '../engine/format.ts'
 import { data, defs, useStore } from '../store/store.ts'
 
 export function TierChip({ tier, kyber }: { tier: Tier; kyber?: string }) {
   const label = tier === 'kyber' && kyber && kyber !== 'inactive' ? `Kyber · ${kyber}` : TIER_LABEL[tier]
   return <span className={`tier tier-${tier}`}>{label}</span>
+}
+
+const KYBER_COLORS: KyberColor[] = ['inactive', 'green', 'blue', 'purple']
+
+/** Kyber activation colour. Inactive Kyber droids don't count for Kyber rebirth requirements. */
+export function KyberPicker({ value, onChange }: { value: KyberColor | undefined; onChange: (k: KyberColor) => void }) {
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-sm">
+      <span className="text-dim">Kyber colour:</span>
+      {KYBER_COLORS.map((k) => (
+        <button key={k} className={`btn capitalize ${(value ?? 'inactive') === k ? 'btn-primary' : ''}`} onClick={() => onChange(k)} aria-pressed={(value ?? 'inactive') === k}>
+          {k}
+        </button>
+      ))}
+    </div>
+  )
 }
 
 /** Iconic droids have no tiers and you can own only one of each. */
